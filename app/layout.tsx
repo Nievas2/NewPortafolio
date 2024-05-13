@@ -22,7 +22,12 @@ export default function RootLayout({
       <body className={`${inter.className} bg-gray-900`}>
         <nav
           className="w-full"
-          style={{ backgroundColor: "#00171F", position: "sticky", top: 0, zIndex: 10000 }}
+          style={{
+            backgroundColor: "#00171F",
+            position: "sticky",
+            top: 0,
+            zIndex: 10000,
+          }}
         >
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
             <div className="relative flex h-16 items-center justify-between">
@@ -42,13 +47,13 @@ export default function RootLayout({
                     style={{ display: activeMenuMovil ? "block" : "hidden" }}
                     fill="none"
                     viewBox="0 0 24 24"
-                    stroke-width="1.5"
+                    /*  stroke-width="1.5" */
                     stroke="currentColor"
                     aria-hidden="true"
                   >
                     <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      /* stroke-linecap="round" */
+                      /* stroke-linejoin="round" */
                       d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
                     />
                   </svg>
@@ -70,29 +75,16 @@ export default function RootLayout({
                     hover:text-white" -->
                      */}{" "}
                     <a
-                      href="#"
-                      className="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
-                      aria-current="page"
+                      href="#proyects"
+                      className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
                     >
-                      Dashboard
+                      Proyectos
                     </a>
                     <a
-                      href="#"
-                      className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                      href="#studies"
+                      className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
                     >
-                      Team
-                    </a>
-                    <a
-                      href="#"
-                      className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                    >
-                      Projects
-                    </a>
-                    <a
-                      href="#"
-                      className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                    >
-                      Calendar
+                      Estudios
                     </a>
                   </div>
                 </div>
@@ -103,31 +95,25 @@ export default function RootLayout({
           <div className="sm:hidden" id="mobile-menu" hidden={activeMenuMovil}>
             <div className="space-y-1 px-2 pb-3 pt-2">
               {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
+
               <a
                 href="#"
-                className="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
-                aria-current="page"
+                className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
               >
-                Dashboard
+                Proyectos
               </a>
               <a
                 href="#"
                 className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
               >
-                Team
+                Estudios
               </a>
-              <a
-                href="#"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-              >
-                Projects
-              </a>
-              <a
+              {/* <a
                 href="#"
                 className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
               >
                 Calendar
-              </a>
+              </a> */}
             </div>
           </div>
         </nav>

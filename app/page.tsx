@@ -1,15 +1,23 @@
+"use client";
 import Image from "next/image";
 import "./globals.css";
 import Portada from "../public/portada.webp";
-import CardProyect from "@/components/cardProyect"
+import CardProyect from "@/components/cardProyect";
 import Studies from "@/components/studies";
+import { useState } from "react";
+import ImageModal from "@/components/imageModal";
 export default function Home() {
+  const [aboutMe, setAboutMe] = useState(false);
+  const [openModal, setOpenModal] = useState(false)
+  const handlemModal = () =>{
+    setOpenModal(!openModal)
+  }
   return (
     <main>
-      <section className="h-96 content-center portada">
+      <section className="content-center portada">
         <h1
           className="text-white text-center mb-10"
-          style={{ fontSize: "2em", textShadow: "#fff 0px 1px 1px" }}
+          style={{ fontSize: "2.5em", textShadow: "#fff 0px 1px 1px" }}
         >
           PROGRAMADOR |{" "}
           <strong style={{ color: "#00A8E8", textShadow: "#fff 0px 1px 1px" }}>
@@ -33,22 +41,57 @@ export default function Home() {
         <div>
           {/* Agregar redes  */}
           {/* Linkedin, Github, Cv, Correo */}
+          <h4 className="text-white text-center">Faltan las redes acá</h4>
         </div>
       </section>
-      <section className="p-5" style={{ backgroundColor: "#00171F" }}>
+      <section
+        className="p-5 content-center text-center"
+        style={{ backgroundColor: "#00171F" }}
+      >
+        <button
+          style={{
+            fontSize: "1.8em",
+
+            color: "#fff",
+            textShadow: "#bbb 0px 1px 2px",
+            boxShadow: "#fff 0px 0px 3px",
+          }}
+          className="buttonperso rounded-xl px-4 pt-1 text-1xl justify-items-center text-center"
+          onClick={() => setAboutMe(!aboutMe)}
+        >
+          Sobre mí
+        </button>
+        {aboutMe && (
+          <section className="relative pt-2">
+            <div
+              style={{ backgroundColor: "#002e3d" }}
+              className="rounded-2xl mt-5 aboutme"
+            >
+              <p className="p-8 text-white ">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
+                quo tenetur recusandae libero provident eveniet ratione quos
+                exercitationem cumque ex, eos id a velit debitis quisquam
+                laudantium aliquam incidunt minus.
+              </p>
+            </div>
+          </section>
+        ) }
+      </section>
+      <section className="p-5" style={{ backgroundColor: "#00171F" }} id="proyects">
         <h3
           className=" text-left pl-4"
-          style={{ fontSize: "1.8em", color:"#00177F" }}
-        ><strong> Proyectos</strong>
-          
+          style={{ fontSize: "1.8em", color: "#00A8E8" }}
+        >
+          <strong> Proyectos</strong>
         </h3>
-        <CardProyect index={0}/>
-        <CardProyect index={1}/>
+        <CardProyect index={0} />
+        <CardProyect index={1} />
       </section>
-      <section style={{ backgroundColor: "#003459" }}>
+      <section style={{ backgroundColor: "#003459" }} id="studies">
         <h3 className="text-white text-center" style={{ fontSize: "1.6em" }}>
           Estudios
         </h3>
+        <ImageModal handleModal={handlemModal} openModal={openModal}/>
         <Studies></Studies>
       </section>
     </main>

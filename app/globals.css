@@ -52,9 +52,38 @@ body {
   background-color: red;
   z-index: 5;
 } */
-.portada{
+.portada {
   background-image: url("/portada.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   object-fit: cover;
+  height: 400px;
+}
+@media (max-width: 640px) {
+  .portada {
+    height: 300px /* 384px */;
+  }
+}
+.buttonperso {
+  background-color: #00a8e8;
+  transition: 320ms;
+}
+/* rounded-xl px-4 pt-1 text-1xl justify-items-center text-center hover:[backgroundColor:] */
+.buttonperso:hover {
+  background-color: #0084b8;
+}
+.aboutme{
+transition: 200ms;
+}
+.aboutme::before {
+  content: "";
+  position: absolute;
+  z-index: 5;
+  margin-top: -20px;
+  margin-left: -30px;
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 20px solid #002e3d;
 }

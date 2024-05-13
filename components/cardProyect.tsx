@@ -2,17 +2,27 @@ import LaDulce from "@/assets/images/ladulce.png";
 import Image from "next/image";
 export default function CardProyect({ index }: { index: number }) {
   return (
-    <main className="w-full flex-col  md:flex-row  flex h-full my-12">
+    <main className="w-full flex-col  md:flex-row  flex h-full mb-12">
       {index % 2 == 0 ? (
         <>
           <div className="flex-1 p-4 content-center">
-            <h4 className="text-white text-2xl" style={{ color: "#FF00FF" }}>
-              FULL STACK
-            </h4>
-            <h4 className="text-white text-2xl">
-              <strong>Nombre</strong>
-            </h4>
-            <p className="text-gray-300">
+            <div className="flex flex-row">
+              <div className="flex-1">
+                <h4 className="text-white text-3xl inline-block">
+                  <strong>Nombre</strong>
+                </h4>
+              </div>
+              <div className="flex-2 justify-end">
+                <h4
+                  className="text-white text-2xl inline-block"
+                  style={{ color: "#FF00FF" }}
+                >
+                  FULL STACK
+                </h4>
+              </div>
+            </div>
+
+            <p className="text-gray-300 p-2">
               description: Lorem ipsum dolor sit amet, consectetur adipisicing
               elit. Atque possimus consectetur minus dignissimos quidem quas?
               Eligendi suscipit dolores, veniam id iusto doloremque porro itaque
@@ -49,13 +59,23 @@ export default function CardProyect({ index }: { index: number }) {
             />
           </div>
           <div className="flex-1 p-4 content-center">
-            <h4 className="text-white text-2xl" style={{ color: "#FF00FF" }}>
-              FULL STACK
-            </h4>
-            <h4 className="text-white text-2xl">
-              <strong>Nombre</strong>
-            </h4>
-            <p className="text-gray-300">
+            <div className="flex flex-row">
+              <div className="flex-1">
+                <h4 className="text-white text-3xl inline-block">
+                  <strong>Nombre</strong>
+                </h4>
+              </div>
+              <div className="flex-2 justify-end">
+                <h4
+                  className="text-white text-2xl inline-block"
+                  style={{ color: "#FF00FF" }}
+                >
+                  FULL STACK
+                </h4>
+              </div>
+            </div>
+
+            <p className="text-gray-300 p-2">
               description: Lorem ipsum dolor sit amet, consectetur adipisicing
               elit. Atque possimus consectetur minus dignissimos quidem quas?
               Eligendi suscipit dolores, veniam id iusto doloremque porro itaque
