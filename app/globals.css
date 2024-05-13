@@ -1,7 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* 
+#00171F
+#003459
+#007EA7
+#00A8E8
+*/
 
+/* 
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -30,4 +37,24 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+ */
+* {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+/* .nose::before {
+  content: "";
+  position: absolute;
+  top: -40;
+  height: 60px;
+  width: 100%;
+  background-color: red;
+  z-index: 5;
+} */
+.portada{
+  background-image: url("/portada.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
 }
