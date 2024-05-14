@@ -4,6 +4,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { useState } from "react";
 import Head from "next/head";
+import Logo from "@/assets/logo.png"
+import Image from "next/image";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -62,9 +64,9 @@ export default function RootLayout({
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-                  <img
-                    className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                  <Image
+                    className="h-14 w-auto"
+                    src={Logo}
                     alt="Your Company"
                   />
                 </div>
@@ -77,7 +79,7 @@ export default function RootLayout({
                      */}{" "}
                     <a
                       href="#proyects"
-                      className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+                      className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium h-full"
                     >
                       Proyectos
                     </a>

@@ -1,0 +1,75 @@
+[
+  {
+    "id": 1,
+    "name": "xAcademy",
+    "dateI": "Marzo",
+    "dateF": "Octubre",
+    "description": "",
+    "src":"https://res.cloudinary.com/dmb8sscjm/image/upload/v1715725051/x0gcccghdi2qqi0j7tng.webp",
+    "tecnologies": [
+      {
+        "name": "Javascript",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+      },
+      {
+        "name": "Visual Studio Code",
+        "src": ""
+      },
+      {
+        "name": "NodeJs",
+        "src": ""
+      },
+      {
+        "name": "Angular",
+        "src": ""
+      },
+      {
+        "name": "Sequelize",
+        "src": ""
+      }
+    ]
+    
+  },
+  {
+    "id": 2,
+    "name": "Polotecnologico",
+    "dateI": "Agosto",
+    "dateF": "Octubre",
+    "description": "",
+    "src":"https://res.cloudinary.com/dmb8sscjm/image/upload/v1715725051/ircoca91ugc6frkolli6.jpg",
+    "tecnologies": [
+      {
+        "name": "C#",
+        "src": ""
+      },
+      {
+        "name": "Visual Studio",
+        "src": ""
+      },
+      {
+        "name": "",
+        "src": ""
+      }
+    ]
+    
+  },
+  {
+    "id": 3,
+    "name": "Sé programar",
+    "dateI": "Febrero",
+    "dateF": "Abril",
+    "description": "",
+    "src":"https://res.cloudinary.com/dmb8sscjm/image/upload/v1715725051/fnv1xzx2jyegztohcxl8.jpg",
+    "tecnologies": [
+      {
+        "name": "Javascript",
+        "src": ""
+      },
+      {
+        "name": "Visual Studio Code",
+        "src": ""
+      }
+    ]
+    
+  }
+]

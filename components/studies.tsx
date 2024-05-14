@@ -4,8 +4,8 @@ import Polo from "@/assets/images/certificados/Polotecnologico.jpg";
 export default function Studies() {
   return (
     <section>
-      <main className="flex flex-col sm:flex-row gap-5 ">
-        <div className="flex-1 rounded-2xl h-72 relative image-container m-3">
+      <main style={{display:"flex", flex: 2}} className="flex-col sm:flex-row gap-5 ">
+        <div className="rounded-2xl h-72 relative image-container m-3" style={{flex:1}}>
           <div className="imageperso">
             <h1 className="absolute bottom-16 text-white text-2xl drop-shadow-md ">
               Title
@@ -19,16 +19,13 @@ export default function Studies() {
             </h1>
           </div>
         </div> */}
-        <div className="flex-1 relative image-container m-3 content-center imageStudy">
-          <div className="">
-
-          </div>
-          {/* <Image src={Polo} alt="" />
+        <div className="relative image-container m-3 content-center" style={{flex:1}}>
+          <Image src={Polo} alt="" />
           <h1 className="absolute bottom-16 text-white text-2xl drop-shadow-md ">
             Title
-          </h1> */}
+          </h1>
         </div>
-        <div className="flex-1 relative image-container m-3 content-center imageStudy2">
+        <div className="relative image-container m-3 content-center imageStudy2" style={{flex:1}}>
           <div className="">
 
           </div>

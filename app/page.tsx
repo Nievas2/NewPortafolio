@@ -6,12 +6,13 @@ import CardProyect from "@/components/cardProyect";
 import Studies from "@/components/studies";
 import { useState } from "react";
 import ImageModal from "@/components/imageModal";
+import PhotoProfile from "@/assets/images/photoProfile.jpeg";
 export default function Home() {
   const [aboutMe, setAboutMe] = useState(false);
-  const [openModal, setOpenModal] = useState(false)
-  const handlemModal = () =>{
-    setOpenModal(!openModal)
-  }
+  const [openModal, setOpenModal] = useState(false);
+  const handlemModal = () => {
+    setOpenModal(!openModal);
+  };
   return (
     <main>
       <section className="content-center portada">
@@ -56,28 +57,47 @@ export default function Home() {
             textShadow: "#bbb 0px 1px 2px",
             boxShadow: "#fff 0px 0px 3px",
           }}
-          className="buttonperso rounded-xl px-4 pt-1 text-1xl justify-items-center text-center"
+          className="buttonperso rounded-xl px-8 pt-1 text-1xl justify-items-center text-center align-middle"
           onClick={() => setAboutMe(!aboutMe)}
         >
           Sobre mí
         </button>
         {aboutMe && (
-          <section className="relative pt-2">
+          <section className="relative pt-2 m-8 ">
             <div
               style={{ backgroundColor: "#002e3d" }}
               className="rounded-2xl mt-5 aboutme"
             >
-              <p className="p-8 text-white ">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
-                quo tenetur recusandae libero provident eveniet ratione quos
-                exercitationem cumque ex, eos id a velit debitis quisquam
-                laudantium aliquam incidunt minus.
-              </p>
+              <div style={{display:"flex"}} className="flex-col sm:flex-row ">
+                <div style={{flex: 3}}>
+                  <p className="p-8 text-white text-left ">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Ducimus quo tenetur recusandae libero provident eveniet
+                    ratione quos exercitationem cumque ex, eos id a velit
+                    debitis quisquam laudantium aliquam incidunt minus.
+                  </p>
+                </div>
+                <div style={{flex: 1}} className=" content-center ">
+                  <div className="flex justify-center m-5 "> 
+                    <Image
+                    src={PhotoProfile}
+                    className="rounded-2xl"
+                    alt="foto de perfil"
+                    style={{ height: "150px", width: "auto" }}
+                  />
+                  </div>
+                  
+                </div>
+              </div>
             </div>
           </section>
-        ) }
+        )}
       </section>
-      <section className="p-5" style={{ backgroundColor: "#00171F" }} id="proyects">
+      <section
+        className="p-5"
+        style={{ backgroundColor: "#00171F" }}
+        id="proyects"
+      >
         <h3
           className=" text-left pl-4"
           style={{ fontSize: "1.8em", color: "#00A8E8" }}
@@ -91,7 +111,7 @@ export default function Home() {
         <h3 className="text-white text-center" style={{ fontSize: "1.6em" }}>
           Estudios
         </h3>
-        <ImageModal handleModal={handlemModal} openModal={openModal}/>
+        <ImageModal handleModal={handlemModal} openModal={openModal} />
         <Studies></Studies>
       </section>
     </main>
