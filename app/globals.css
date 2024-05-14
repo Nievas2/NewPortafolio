@@ -43,15 +43,6 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-/* .nose::before {
-  content: "";
-  position: absolute;
-  top: -40;
-  height: 60px;
-  width: 100%;
-  background-color: red;
-  z-index: 5;
-} */
 .portada {
   background-image: url("/portada.jpg");
   background-repeat: no-repeat;
@@ -72,8 +63,8 @@ body {
 .buttonperso:hover {
   background-color: #0084b8;
 }
-.aboutme{
-transition: 200ms;
+.aboutme {
+  transition: 200ms;
 }
 .aboutme::before {
   content: "";
@@ -87,3 +78,48 @@ transition: 200ms;
   border-right: 30px solid transparent;
   border-bottom: 20px solid #002e3d;
 }
+
+.imageperso {
+  background-image: url("../assets/images/certificados/xAcademy.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.text-description {
+  color: #000;
+}
+/* .image-container:hover .imageperso {
+  opacity: 0.5;
+} */
+
+.image-container:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, #000 0%, transparent 40%);
+  
+}
+.image-container:hover{
+  .text-description{
+    color:#690404
+  }
+}
+ .imageStudy{
+  background-image: url("../assets/images/certificados/xAcademy.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  height: 250px;
+ }
+ .imageStudy2{
+  background-image: url("../assets/images/certificados/Polotecnologico.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  height: 250px;
+ }
