@@ -10,7 +10,7 @@ export default function Studies() {
           StudiesJson.map((data, index) => (
             <section
               className="col-span-full md:col-span-3 relative image-container imageStudy2 m-5 rounded-2xl"
-              style={{ backgroundImage: `url(${data.src})`, height: "350px" }} key={crypto.randomUUID()}
+              style={{ backgroundImage: `url(${data.src})`, height: "350px", width:"470px" }} key={crypto.randomUUID()}
             >
               <div className="absolute bottom-10 left-10">
                 <div className="flex flex-col">
