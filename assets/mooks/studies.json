@@ -4,72 +4,69 @@
     "name": "xAcademy",
     "dateI": "Marzo",
     "dateF": "Octubre",
-    "description": "",
-    "src":"https://res.cloudinary.com/dmb8sscjm/image/upload/v1715725051/x0gcccghdi2qqi0j7tng.webp",
+    "description": "xAcademy Dev",
+    "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1715725051/x0gcccghdi2qqi0j7tng.webp",
     "tecnologies": [
       {
         "name": "Javascript",
-        "src": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+        "src": "https://skillicons.dev/icons?i=js"
       },
       {
         "name": "Visual Studio Code",
-        "src": ""
+        "src": "https://skillicons.dev/icons?i=vscode"
       },
       {
         "name": "NodeJs",
-        "src": ""
+        "src": "https://skillicons.dev/icons?i=nodejs"
       },
       {
         "name": "Angular",
-        "src": ""
+        "src": "https://skillicons.dev/icons?i=angular"
+      },
+      {
+        "name": "Typescript",
+        "src": "https://skillicons.dev/icons?i=ts"
       },
       {
         "name": "Sequelize",
-        "src": ""
+        "src": "https://skillicons.dev/icons?i=sequelize"
       }
     ]
-    
   },
   {
     "id": 2,
     "name": "Polotecnologico",
     "dateI": "Agosto",
     "dateF": "Octubre",
-    "description": "",
-    "src":"https://res.cloudinary.com/dmb8sscjm/image/upload/v1715725051/ircoca91ugc6frkolli6.jpg",
+    "description": "Introduccion a .NET",
+    "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1715725051/ircoca91ugc6frkolli6.jpg",
     "tecnologies": [
       {
         "name": "C#",
-        "src": ""
+        "src": "https://skillicons.dev/icons?i=cs"
       },
       {
         "name": "Visual Studio",
-        "src": ""
-      },
-      {
-        "name": "",
-        "src": ""
+        "src": "https://skillicons.dev/icons?i=visualstudio"
       }
     ]
-    
   },
   {
     "id": 3,
     "name": "Sé programar",
     "dateI": "Febrero",
     "dateF": "Abril",
-    "description": "",
-    "src":"https://res.cloudinary.com/dmb8sscjm/image/upload/v1715725051/fnv1xzx2jyegztohcxl8.jpg",
+    "description": "Introduccion a Programacion Orientadas a Objetos",
+    "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1715725051/fnv1xzx2jyegztohcxl8.jpg",
     "tecnologies": [
       {
         "name": "Javascript",
-        "src": ""
+        "src": "https://skillicons.dev/icons?i=js"
       },
       {
         "name": "Visual Studio Code",
-        "src": ""
+        "src": "https://skillicons.dev/icons?i=vscode"
       }
     ]
-    
   }
 ]

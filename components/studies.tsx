@@ -1,39 +1,31 @@
 import Image from "next/image";
 import "../app/globals.css";
 import Polo from "@/assets/images/certificados/Polotecnologico.jpg";
+import StudiesJson from "@/assets/mooks/studies.json";
 export default function Studies() {
   return (
     <section>
-      <main style={{display:"flex", flex: 2}} className="flex-col sm:flex-row gap-5 ">
-        <div className="rounded-2xl h-72 relative image-container m-3" style={{flex:1}}>
-          <div className="imageperso">
-            <h1 className="absolute bottom-16 text-white text-2xl drop-shadow-md ">
-              Title
-            </h1>
-          </div>
-        </div>
-       {/*  <div className="flex-1 rounded-2xl h-72 relative image-container m-3">
-          <div className="imageperso">
-            <h1 className="absolute bottom-16 text-white text-2xl drop-shadow-md ">
-              Title
-            </h1>
-          </div>
-        </div> */}
-        <div className="relative image-container m-3 content-center" style={{flex:1}}>
-          <Image src={Polo} alt="" />
-          <h1 className="absolute bottom-16 text-white text-2xl drop-shadow-md ">
-            Title
-          </h1>
-        </div>
-        <div className="relative image-container m-3 content-center imageStudy2" style={{flex:1}}>
-          <div className="">
+      <main className="z-10 grid grid-cols-6 gap-5 ">
+        {StudiesJson &&
+          StudiesJson.map((data, index) => (
+            <section
+              className="col-span-full md:col-span-3 relative image-container imageStudy2 m-5 rounded-2xl"
+              style={{ backgroundImage: `url(${data.src})`, height: "350px" }}
+            >
+              <div className="absolute bottom-10 left-10">
+                <div className="flex flex-col">
+                  <p className="texts-study flex-1 font-thin">
+                    {data.dateI} | {data.dateF}
+                  </p>
 
-          </div>
-          {/* <Image src={Polo} alt="" />
-          <h1 className="absolute bottom-16 text-white text-2xl drop-shadow-md ">
-            Title
-          </h1> */}
-        </div>
+                  <div>
+                    <h1 className="texts-study font-bold">{data.name}</h1>
+                    <h2 className="texts-study font-semibold">{data.description}</h2>
+                  </div>
+                </div>
+              </div>
+            </section>
+          ))}
       </main>
       {/* <div className="py-16">
         <div className="mx-auto px-6 max-w-6xl text-gray-500">

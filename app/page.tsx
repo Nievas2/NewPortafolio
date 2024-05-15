@@ -68,8 +68,11 @@ export default function Home() {
               style={{ backgroundColor: "#002e3d" }}
               className="rounded-2xl mt-5 aboutme"
             >
-              <div style={{display:"flex"}} className="flex-col sm:flex-row ">
-                <div style={{flex: 3}}>
+              <div
+                style={{ display: "flex" }}
+                className="flex-col sm:flex-row "
+              >
+                <div style={{ flex: 3 }}>
                   <p className="p-8 text-white text-left ">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Ducimus quo tenetur recusandae libero provident eveniet
@@ -77,16 +80,15 @@ export default function Home() {
                     debitis quisquam laudantium aliquam incidunt minus.
                   </p>
                 </div>
-                <div style={{flex: 1}} className=" content-center ">
-                  <div className="flex justify-center m-5 "> 
+                <div style={{ flex: 1 }} className=" content-center ">
+                  <div className="flex justify-center m-5 ">
                     <Image
-                    src={PhotoProfile}
-                    className="rounded-2xl"
-                    alt="foto de perfil"
-                    style={{ height: "150px", width: "auto" }}
-                  />
+                      src={PhotoProfile}
+                      className="rounded-2xl"
+                      alt="foto de perfil"
+                      style={{ height: "150px", width: "auto" }}
+                    />
                   </div>
-                  
                 </div>
               </div>
             </div>
@@ -106,10 +108,14 @@ export default function Home() {
         </h3>
         <CardProyect index={0} />
         <CardProyect index={1} />
+        <hr />
       </section>
-      <section style={{ backgroundColor: "#003459" }} id="studies">
-        <h3 className="text-white text-center" style={{ fontSize: "1.6em" }}>
-          Estudios
+      <section style={{ backgroundColor: "#00171F" }} id="studies">
+      <h3
+          className=" text-left pl-4"
+          style={{ fontSize: "1.8em", color: "#00A8E8" }}
+        >
+          <strong> Estudios</strong>
         </h3>
         <ImageModal handleModal={handlemModal} openModal={openModal} />
         <Studies></Studies>
