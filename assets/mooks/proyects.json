@@ -1,0 +1,166 @@
+[
+  {
+    "id": 1,
+    "name": "Alioli",
+    "dateI": "Enero",
+    "dateF": "Febrero",
+    "dateYear": "2023",
+    "description": "La empresa requeria una página donde poder mostrar su servicio de catering y quienos son, con una descripcion de sus productos y servicios, con sus redes sociales y un formulario de contacto para una atención personalizada.",
+    "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1715962542/Portafolio/gir1d21yzp0t5wndgpl8.webp",
+    "link": "https://alioli-fc837.web.app/",
+    "tecnologies": [
+      {
+        "name": "Angular",
+        "src": "https://skillicons.dev/icons?i=angular"
+      },
+      {
+        "name": "Visual Studio Code",
+        "src": "https://skillicons.dev/icons?i=vscode"
+      },
+      {
+        "name": "Typescript",
+        "src": "https://skillicons.dev/icons?i=ts"
+      }
+    ],
+    "images": null,
+    "backend":null,
+    "frontend":[
+        {
+            "description":"Fue mi primera experiencia diseñando y creando una página web desde 0."
+        },
+        {
+            "description":"Fue mi primera experiencia diseñando y creando una página web desde 0."
+        }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "La Incubadora del NOC",
+    "dateI": "Agosto",
+    "dateF": "Octubre",
+    "dateYear": "2023",
+    "description": "Tenian una problematica por falta de un lugar para administrar y mostrar los cursos que brindaban y futuras convocatorias, además que los alumnos puedan inscribirse.",
+    "link": "https://xacademy-874c5.web.app/",
+    "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1715962553/Portafolio/cqivmh0jxh3h9r9l9djj.webp",
+    "tecnologies": [
+      {
+        "name": "Javascript",
+        "src": "https://skillicons.dev/icons?i=js"
+      },
+      {
+        "name": "Visual Studio Code",
+        "src": "https://skillicons.dev/icons?i=vscode"
+      },
+      {
+        "name": "NodeJs",
+        "src": "https://skillicons.dev/icons?i=nodejs"
+      },
+      {
+        "name": "Angular",
+        "src": "https://skillicons.dev/icons?i=angular"
+      },
+      {
+        "name": "Typescript",
+        "src": "https://skillicons.dev/icons?i=ts"
+      },
+      {
+        "name": "Sequelize",
+        "src": "https://skillicons.dev/icons?i=sequelize"
+      }
+    ],
+    "images": null,
+    "backend":null,
+    "frontend":[
+        {
+            "description":"Fue mi primera experiencia trabajando de forma grupal."
+        },
+        {
+            "description":"D"
+        }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "La Incubadora del NOC",
+    "dateI": "Agosto",
+    "dateF": "Octubre",
+    "dateYear": "2023",
+    "description": "La empresa necesitaba constaba de una amplia variedad de productos que mostrar, y la necesidad de un sistema de compra simplificado!",
+    "link": "https://ladulcetradicion-9b3b6.web.app/",
+    "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1715962562/Portafolio/pelkaz0tox8zfzgeemsx.webp",
+    "tecnologies": [
+      {
+        "name": "Javascript",
+        "src": "https://skillicons.dev/icons?i=js"
+      },
+      {
+        "name": "Visual Studio Code",
+        "src": "https://skillicons.dev/icons?i=vscode"
+      },
+      {
+        "name": "NodeJs",
+        "src": "https://skillicons.dev/icons?i=nodejs"
+      },
+      {
+        "name": "Angular",
+        "src": "https://skillicons.dev/icons?i=angular"
+      },
+      {
+        "name": "Typescript",
+        "src": "https://skillicons.dev/icons?i=ts"
+      },
+      {
+        "name": "Sequelize",
+        "src": "https://skillicons.dev/icons?i=sequelize"
+      }
+    ],
+    "images": null
+  },
+  {
+    "id": 4,
+    "name": "EcoSistemas",
+    "dateI": "Febrero",
+    "dateF": "Abril",
+    "dateYear": "2024",
+    "description": "El semillero LATAM brindo la oportunidad de trabajar en un proyecto de impacto real, la cual busca fomentar la inversion hacia pequeñas empresas, que buscan tener un impacto en el medio ambiente.",
+    "link": "https://xacademy-874c5.web.app/",
+    "src": null,
+    "tecnologies": [
+      {
+        "name": "Javascript",
+        "src": "https://skillicons.dev/icons?i=js"
+      },
+      {
+        "name": "Visual Studio Code",
+        "src": "https://skillicons.dev/icons?i=vscode"
+      },
+      {
+        "name": "NodeJs",
+        "src": "https://skillicons.dev/icons?i=nodejs"
+      },
+      {
+        "name": "React",
+        "src": "https://skillicons.dev/icons?i=react"
+      },
+      {
+        "name": "Java",
+        "src": "https://skillicons.dev/icons?i=java"
+      },
+      {
+        "name": "Spring boot",
+        "src": "https://skillicons.dev/icons?i=spring"
+      }
+    ],
+    "images": [
+      {
+        "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1715962602/Portafolio/nreatci3jkc8frug9nt3.png"
+      },
+      {
+        "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1715962621/Portafolio/pgumg5ufx7qguiyg31ao.png"
+      },
+      {
+        "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1715962713/Portafolio/brpyswtgdd3rkjq6yhqh.png"
+      }
+    ]
+  }
+]

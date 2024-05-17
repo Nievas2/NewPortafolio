@@ -7,6 +7,7 @@ import Studies from "@/components/studies";
 import { useState } from "react";
 import ImageModal from "@/components/imageModal";
 import PhotoProfile from "@/assets/images/photoProfile.jpeg";
+import Proyects from "@/assets/mooks/proyects.json";
 export default function Home() {
   const [aboutMe, setAboutMe] = useState(false);
   const [openModal, setOpenModal] = useState(false);
@@ -106,12 +107,15 @@ export default function Home() {
         >
           <strong> Proyectos</strong>
         </h3>
-        <CardProyect index={0} />
-        <CardProyect index={1} />
+        {Proyects &&
+          Proyects.map((data, index) => (
+            <CardProyect index={data.id} proyect={data} />
+          ))}
+
         <hr />
       </section>
       <section style={{ backgroundColor: "#00171F" }} id="studies">
-      <h3
+        <h3
           className=" text-left pl-4"
           style={{ fontSize: "1.8em", color: "#00A8E8" }}
         >

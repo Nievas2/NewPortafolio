@@ -4,6 +4,7 @@
     "name": "xAcademy",
     "dateI": "Marzo",
     "dateF": "Octubre",
+    "dateYear":"2023",
     "description": "xAcademy Dev",
     "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1715725051/x0gcccghdi2qqi0j7tng.webp",
     "tecnologies": [
@@ -38,6 +39,7 @@
     "name": "Polotecnologico",
     "dateI": "Agosto",
     "dateF": "Octubre",
+    "dateYear":"2022",
     "description": "Introduccion a .NET",
     "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1715725051/ircoca91ugc6frkolli6.jpg",
     "tecnologies": [
@@ -56,6 +58,7 @@
     "name": "Sé programar",
     "dateI": "Febrero",
     "dateF": "Abril",
+    "dateYear":"2022",
     "description": "Introduccion a Programacion Orientadas a Objetos",
     "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1715725051/fnv1xzx2jyegztohcxl8.jpg",
     "tecnologies": [
