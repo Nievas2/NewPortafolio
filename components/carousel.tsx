@@ -1,5 +1,5 @@
 import { SetStateAction, useState } from "react";
-import SwipeableViews from "react-swipeable-views-react-18-fix";
+import SwipeableViews from "react-swipeable-views-react-18-fix"
 export default function Carousel({ slides }: { slides: any }) {
   const [activeStep, setActiveStep] = useState(0);
   const [extendInfo, setExtendInfo] = useState(false);
