@@ -4,13 +4,20 @@ import "./globals.css";
 import Portada from "../public/portada.webp";
 import CardProyect from "@/components/cardProyect";
 import Studies from "@/components/studies";
-import { useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import ImageModal from "@/components/imageModal";
 import PhotoProfile from "@/assets/images/photoProfile.jpeg";
-import Proyects from "@/assets/mooks/proyects.json";
+import Projects from "@/assets/mooks/proyects.json";
+import { Project } from "@/assets/classes/proyect";
 export default function Home() {
   const [aboutMe, setAboutMe] = useState(false);
   const [openModal, setOpenModal] = useState(false);
+  const [reversedProjects, setReversedProjects] = useState<Project[]>([]);
+
+  useEffect(() => {
+    setReversedProjects([...Projects].reverse());
+  }, [Projects]);
+
   const handlemModal = () => {
     setOpenModal(!openModal);
   };
@@ -107,10 +114,15 @@ export default function Home() {
         >
           <strong> Proyectos</strong>
         </h3>
-        {Proyects &&
-          Proyects.map((data, index) => (
-            <CardProyect index={data.id} proyect={data} key={crypto.randomUUID()}/>
+        <Suspense fallback={<div>Loading...</div>}>
+          {reversedProjects.map((project) => (
+            <CardProyect
+              key={project.id}
+              proyect={project}
+              index={project.id}
+            />
           ))}
+        </Suspense>
 
         <hr />
       </section>

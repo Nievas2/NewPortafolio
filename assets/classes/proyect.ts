@@ -1,21 +1,20 @@
-export interface Proyect {
+type Technology = {
+  name: string;
+  src: string;
+};
+
+type Project = {
   id: number;
   name: string;
   dateI: string;
   dateF: string;
   dateYear: string;
+  role: string;
   description: string;
+  src: string;
   link: string;
-  src: any;
-  tecnologies: Tecnology[];
-  images: Image[];
-}
-
-export interface Tecnology {
-  name: string;
-  src: string;
-}
-
-export interface Image {
-  src: string;
-}
+  tecnologies: Technology[];
+  images: string[] | null;
+  backend: string | null;
+  frontend: Technology[] | null;
+};
