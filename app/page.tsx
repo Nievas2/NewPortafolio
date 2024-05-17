@@ -109,7 +109,7 @@ export default function Home() {
         </h3>
         {Proyects &&
           Proyects.map((data, index) => (
-            <CardProyect index={data.id} proyect={data} />
+            <CardProyect index={data.id} proyect={data} key={crypto.randomUUID()}/>
           ))}
 
         <hr />
