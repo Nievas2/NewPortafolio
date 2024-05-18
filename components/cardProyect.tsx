@@ -2,7 +2,7 @@
 import LaDulce from "@/assets/images/ladulce.png";
 import Image from "next/image";
 import Carousel from "./carousel";
-import "@/app/globals.css"
+import "@/app/globals.css";
 import {
   ReactElement,
   JSXElementConstructor,
@@ -39,11 +39,13 @@ export default function CardProyect({
           </div>
 
           <p className="text-gray-300 p-2">{proyect.description}</p>
-          <button className="buttons">
-
-
-            
-          </button>
+          {proyect.link && (
+            <button className="rounded-xl px-8 pt-1 text-1xl buttons mx-1">
+              <a href={proyect.link} target="_blank">
+                Link
+              </a>
+            </button>
+          )}
         </div>
         <div
           className="col-span-full md:col-span-3 p-4 "
@@ -58,21 +60,24 @@ export default function CardProyect({
           ) : (
             <img
               src={proyect.src}
-              alt="La dulce tradición"
+              alt={proyect.name}
               className="h-55 rounded-xl"
             />
           )}
         </div>
       </main>
-      <div className="w-full gap-9  mb-12">
+      <div className="w-full gap-9  mb-20">
         <div
           className="w-full text-white inline-block m-1 rounded-lg border-blue-900 border-2"
           style={{ backgroundColor: "#10171f" }}
         >
           {proyect.tecnologies && (
-            <div className="flex flex-row align-middle p-0">
+            <div className="mx-4 flex flex-wrap py-0 sm:py-2 md:flex-nowrap space-x-4 md:space-x-4 md:space-y-0 space-y-0 align-middle gap-4">
               {proyect.tecnologies.map((data: any) => (
-                <div className="flex flex-row flex-1 content-center justify-center my-2" key={crypto.randomUUID()}>
+                <div
+                  className="flex flex-row flex-1 content-center justify-center m-0"
+                  key={crypto.randomUUID()}
+                >
                   <img
                     src={data.src}
                     alt={data.name}
@@ -85,6 +90,18 @@ export default function CardProyect({
               ))}
             </div>
           )}
+          {/* <div className="flex flex-wrap md:flex-nowrap space-x-4 md:space-x-4 md:space-y-0 space-y-4">
+            <div className="flex-1 bg-blue-500 text-white p-4">flex-1</div>
+            <div className="flex-auto bg-green-500 text-white p-4">
+              flex-auto
+            </div>
+            <div className="flex-initial bg-red-500 text-white p-4">
+              flex-initial
+            </div>
+            <div className="flex-none bg-yellow-500 text-white p-4">
+              flex-none
+            </div>
+          </div> */}
         </div>
       </div>
     </>

@@ -9,32 +9,41 @@ export default function Studies() {
         {StudiesJson &&
           StudiesJson.map((data, index) => (
             <section
-              className="h-[200px] w-[270px] sm:h-[350px] sm:w-[470px] col-span-full lg:col-span-3 relative image-container imageStudy2 m-5 rounded-2xl "
+              className="h-[200px] w-[270px] sm:h-[350px] sm:w-[470px] col-span-full lg:col-span-3 relative image-container imageStudy m-0 mt-1 sm:m-5 rounded-2xl "
               style={{ backgroundImage: `url(${data.src})` }}
               key={crypto.randomUUID()}
             >
-              <div className="absolute bottom-5 left-10">
-                <div className="flex flex-col">
-                  <p className="texts-study flex-1 font-thin">
-                    {data.dateI} | {data.dateF}
-                  </p>
-
-                  <div>
-                    <h1 className="texts-study font-bold">{data.name}</h1>
-                    <h2 className="texts-study font-semibold">
-                      {data.description}
-                    </h2>
-                  </div>
-                  <div className="flex flex-row bg-slate-400 p-1 rounded-md">
-                    <img
-                      src={data.tecnologies[0].src}
-                      alt=""
-                      height={20}
-                      width={20}
-                    />
-                    <p className="texts-study font-semibold pl-1">
-                      {data.tecnologies[0].name}
+              <div className="absolute bottom-0 content-description w-full">
+                <div className="flex flex-col ">
+                  <div className="ml-10">
+                    <p className="flex-1 font-thin">
+                      {data.dateI} | {data.dateF}
                     </p>
+
+                    <div>
+                      <h1 className="font-bold">{data.name}</h1>
+                      <h2 className="font-semibold">{data.description}</h2>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-wrap bg-[rgba(255,255,255,0.21)] p-1 rounded-b-2xl">
+                    {data.tecnologies &&
+                      data.tecnologies.map((info, index) => (
+                        <div
+                          key={index}
+                          className="flex flex-row items-center justify-center p-1" style={{width: data.tecnologies.length > 4 ? "25%" :"50%"}}
+                        >
+                          <img
+                            src={info.src}
+                            alt={info.name}
+                            height={20}
+                            width={20}
+                          />
+                          <p className="text-sm text-center font-semibold pl-1">
+                            {info.name}
+                          </p>
+                        </div>
+                      ))}
                   </div>
                 </div>
               </div>

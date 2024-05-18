@@ -20,7 +20,7 @@ export type Project = {
   role: string;
   description: string;
   src: string | null;
-  link: string;
+  link: string | null;
   tecnologies: Technology[];
   images: Images[] | null;
   backend: Backend[] | null;

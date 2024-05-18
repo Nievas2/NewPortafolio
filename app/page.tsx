@@ -72,9 +72,9 @@ export default function Home() {
           NIEVAS
         </h2>
         <section className="mt-3">
-          <div className="flex flex-row justify-center text-center align-middle content-center">
+          <div className="flex flex-wrap md:flex-nowrap space-x-4 md:space-x-4 md:space-y-0 space-y-0 justify-center text-center align-middle content-center">
             <div>
-              <button className="rounded-xl px-8 pt-1 text-1xl buttons mx-1">
+              <button className="rounded-xl my-1 px-8 py-1 text-1xl buttons mx-1">
                 <a
                   href="https://www.linkedin.com/in/gabriel-nievas/"
                   target="_blank"
@@ -84,7 +84,7 @@ export default function Home() {
               </button>
             </div>
             <div>
-              <button className="rounded-xl px-8 pt-1 text-1xl buttons mx-1">
+              <button className="rounded-xl my-1 px-8 py-1 text-1xl buttons mx-1">
                 <a href="https://github.com/Nievas2" target="_blank">
                   Github
                 </a>
@@ -92,7 +92,7 @@ export default function Home() {
             </div>
             <div>
               <button
-                className="rounded-xl px-8 pt-1 text-1xl buttons mx-1"
+                className="rounded-xl my-1 px-8 py-1 text-1xl buttons mx-1"
                 onClick={downloadCV}
               >
                 Curriculum
@@ -100,7 +100,7 @@ export default function Home() {
             </div>
             <div className="relative">
               <button
-                className="rounded-xl px-8 pt-1 text-1xl buttons mx-1"
+                className="rounded-xl my-1 px-8 py-1 text-1xl buttons mx-1"
                 onClick={() => copyToClipboard("angelgabrielnievas@gmail.com")}
               >
                 Correo electrónico

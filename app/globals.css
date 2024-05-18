@@ -52,7 +52,7 @@ body {
 }
 @media (max-width: 640px) {
   .portada {
-    height: 300px /* 384px */;
+    height: 400px;
   }
 }
 .buttonperso {
@@ -95,7 +95,9 @@ body {
 /* .image-container {
   transition: 200ms;
 } */
-
+.content-description{
+  display: none;
+}
 .image-container:hover::before {
   content: "";
   position: absolute;
@@ -107,18 +109,18 @@ body {
   border-radius: 13px;
 }
 .image-container:hover {
-  .texts-study {
-    color: #fff;
+  .content-description{
+    display: block;
+    color: #fff
   }
 }
 .imageStudy {
-  background-image: url("../assets/images/certificados/xAcademy.webp");
   background-repeat: no-repeat;
   background-size: cover;
   object-fit: cover;
 }
 .buttons {
-  transition: 200ms;
+  transition: 300ms;
   border-width: 1px;
   border-color: #002e3d;
   color: #fff

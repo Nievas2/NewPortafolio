@@ -15,7 +15,7 @@
         "src": "https://skillicons.dev/icons?i=angular"
       },
       {
-        "name": "Visual Studio Code",
+        "name": "VS Code",
         "src": "https://skillicons.dev/icons?i=vscode"
       },
       {
@@ -50,7 +50,7 @@
         "src": "https://skillicons.dev/icons?i=js"
       },
       {
-        "name": "Visual Studio Code",
+        "name": "VS Code",
         "src": "https://skillicons.dev/icons?i=vscode"
       },
       {
@@ -97,7 +97,7 @@
         "src": "https://skillicons.dev/icons?i=js"
       },
       {
-        "name": "Visual Studio Code",
+        "name": "VS Code",
         "src": "https://skillicons.dev/icons?i=vscode"
       },
       {
@@ -136,7 +136,7 @@
     "dateYear": "2024",
     "role":"FULL STACK",
     "description": "El semillero LATAM brindo la oportunidad de trabajar en un proyecto de impacto real, la cual busca fomentar la inversion hacia pequeñas empresas, que buscan tener un impacto en el medio ambiente.",
-    "link": "https://xacademy-874c5.web.app/",
+    "link": null,
     "src": null,
     "tecnologies": [
       {
@@ -144,7 +144,7 @@
         "src": "https://skillicons.dev/icons?i=js"
       },
       {
-        "name": "Visual Studio Code",
+        "name": "VS Code",
         "src": "https://skillicons.dev/icons?i=vscode"
       },
       {
