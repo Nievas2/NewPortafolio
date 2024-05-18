@@ -13,13 +13,37 @@ export default function Home() {
   const [aboutMe, setAboutMe] = useState(false);
   const [openModal, setOpenModal] = useState(false);
   const [reversedProjects, setReversedProjects] = useState<Project[]>([]);
-
+  const [emailAlert, setEmailAlert] = useState(true);
   useEffect(() => {
     setReversedProjects([...Projects].reverse());
   }, [Projects]);
 
   const handlemModal = () => {
     setOpenModal(!openModal);
+  };
+
+  const downloadCV = () => {
+    const url = "/archives/CV Nievas Angel Gabriel.pdf";
+    const link = document.createElement("a");
+    link.href = url;
+    link.setAttribute("download", "CV Nievas Angel Gabriel.pdf");
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+  const copyToClipboard = (text: string) => {
+    setEmailAlert(false);
+    navigator.clipboard
+      .writeText(text)
+      .then(() => {
+        /* alert("Text copied to clipboard!"); */
+        setTimeout(() => {
+          setEmailAlert(true);
+        }, 2000);
+      })
+      .catch((err) => {
+        console.error("Failed to copy text: ", err);
+      });
   };
   return (
     <main>
@@ -47,11 +71,55 @@ export default function Home() {
           </strong>{" "}
           NIEVAS
         </h2>
-        <div>
-          {/* Agregar redes  */}
-          {/* Linkedin, Github, Cv, Correo */}
-          <h4 className="text-white text-center">Faltan las redes acá</h4>
-        </div>
+        <section className="mt-3">
+          <div className="flex flex-row justify-center text-center align-middle content-center">
+            <div>
+              <button className="rounded-xl px-8 pt-1 text-1xl buttons mx-1">
+                <a
+                  href="https://www.linkedin.com/in/gabriel-nievas/"
+                  target="_blank"
+                >
+                  Linkedin
+                </a>
+              </button>
+            </div>
+            <div>
+              <button className="rounded-xl px-8 pt-1 text-1xl buttons mx-1">
+                <a href="https://github.com/Nievas2" target="_blank">
+                  Github
+                </a>
+              </button>
+            </div>
+            <div>
+              <button
+                className="rounded-xl px-8 pt-1 text-1xl buttons mx-1"
+                onClick={downloadCV}
+              >
+                Curriculum
+              </button>
+            </div>
+            <div className="relative">
+              <button
+                className="rounded-xl px-8 pt-1 text-1xl buttons mx-1"
+                onClick={() => copyToClipboard("angelgabrielnievas@gmail.com")}
+              >
+                Correo electrónico
+              </button>
+              <div className="absolute text-center rounded-xl px-4 pt-1 text-1xl mx-1">
+                <div
+                  hidden={emailAlert}
+                  className="bg-[#007EA7] rounded-md border-0 mr-3 z-50 font-normal leading-normal text-sm max-w-xs text-left no-underline break-words "
+                >
+                  <div>
+                    <div className="bg-[#007EA7] text-white opacity-75 font-semibold p-3 mb-0 uppercase rounded-lg">
+                      Copiado en el portapapeles
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </section>
       <section
         className="p-5 content-center text-center"
