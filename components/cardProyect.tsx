@@ -2,6 +2,7 @@
 import LaDulce from "@/assets/images/ladulce.png";
 import Image from "next/image";
 import Carousel from "./carousel";
+import "@/app/globals.css"
 import {
   ReactElement,
   JSXElementConstructor,
@@ -38,6 +39,11 @@ export default function CardProyect({
           </div>
 
           <p className="text-gray-300 p-2">{proyect.description}</p>
+          <button className="buttons">
+
+
+            
+          </button>
         </div>
         <div
           className="col-span-full md:col-span-3 p-4 "
