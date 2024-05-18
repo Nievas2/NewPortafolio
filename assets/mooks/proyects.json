@@ -117,7 +117,16 @@
         "src": "https://skillicons.dev/icons?i=sequelize"
       }
     ],
-    "images": null
+    "images": null,
+    "backend":null,
+    "frontend":[
+        {
+            "description":"Fue mi primera experiencia trabajando de forma grupal."
+        },
+        {
+            "description":"D"
+        }
+    ]
   },
   {
     "id": 4,
@@ -165,6 +174,15 @@
       {
         "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1715962713/Portafolio/brpyswtgdd3rkjq6yhqh.png"
       }
+    ],
+    "backend":null,
+    "frontend":[
+        {
+            "description":"Fue mi primera experiencia trabajando de forma grupal."
+        },
+        {
+            "description":"D"
+        }
     ]
   }
 ]

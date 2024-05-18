@@ -117,6 +117,11 @@ body {
   background-size: cover;
   object-fit: cover;
 }
-.buttons{
-  
+.buttons {
+  transition: 200ms;
+}
+.buttons:hover {
+  background-color: #0084b8;
+  padding-left: 3rem;
+  padding-right: 3rem;
 }

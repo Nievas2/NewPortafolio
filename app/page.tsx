@@ -8,7 +8,7 @@ import { Suspense, useEffect, useState } from "react";
 import ImageModal from "@/components/imageModal";
 import PhotoProfile from "@/assets/images/photoProfile.jpeg";
 import Projects from "@/assets/mooks/proyects.json";
-import { Project } from "@/assets/classes/proyect";
+import { Project } from "@/assets/classes/project";
 export default function Home() {
   const [aboutMe, setAboutMe] = useState(false);
   const [openModal, setOpenModal] = useState(false);
