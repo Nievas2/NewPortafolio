@@ -208,17 +208,13 @@ export default function Home() {
             <strong>Proyectos</strong>
           </h3>
         </div>
-
-        {reversedProjects.map((project) => (
-          <Suspense fallback={<ProductsSkeleton index={project.id} />}>
+          {reversedProjects.map((project) => (
             <CardProyect
-              key={project.id}
+              key={crypto.randomUUID()}
               proyect={project}
               index={project.id}
             />
-          </Suspense>
-        ))}
-
+          ))}
         <hr />
       </section>
       <section
