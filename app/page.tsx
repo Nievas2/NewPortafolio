@@ -10,6 +10,7 @@ import PhotoProfile from "@/assets/images/photoProfile.jpeg";
 import Projects from "@/assets/mooks/proyects.json";
 import { Project } from "@/assets/classes/project";
 import Footer from "@/components/footer";
+import ProductsSkeleton from "@/components/skeletons/productsSkeleton";
 export default function Home() {
   const [aboutMe, setAboutMe] = useState(false);
   const [openModal, setOpenModal] = useState(false);
@@ -46,8 +47,14 @@ export default function Home() {
         console.error("Failed to copy text: ", err);
       });
   };
+  const ScrollToTopButton = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   return (
-    <main>
+    <main className="relative">
       <section className="content-center portada">
         <h1
           className="text-white text-center mb-10"
@@ -151,13 +158,14 @@ export default function Home() {
               >
                 <div className="p-8" style={{ flex: 3 }}>
                   <p className=" text-white text-left text-xl">
-                    ¡Hola soy Gabriel!👨🏻‍💻 un programador autodidacta
-                     con 21 años que vive en Córdoba, Argentina.
+                    ¡Hola soy Gabriel!👨🏻‍💻 un programador autodidacta con 21 años
+                    que vive en Córdoba, Argentina.
                   </p>
                   <p className="mt-4 text-white text-left text-xl">
                     Buscando incorporarme en el mercado laboral para mejorar mis
                     conocimientos y aprender junto a un equipo de trabajo.
-                    </p>{/* 
+                  </p>
+                  {/* 
                     <p>
                       Estoy entusiasmado por la oportunidad de aportar mis
                       conocimientos y aprender de profesionales experimentados en
@@ -201,15 +209,15 @@ export default function Home() {
           </h3>
         </div>
 
-        <Suspense fallback={<div>Loading...</div>}>
-          {reversedProjects.map((project) => (
+        {reversedProjects.map((project) => (
+          <Suspense fallback={<ProductsSkeleton index={project.id} />}>
             <CardProyect
               key={project.id}
               proyect={project}
               index={project.id}
             />
-          ))}
-        </Suspense>
+          </Suspense>
+        ))}
 
         <hr />
       </section>
@@ -219,11 +227,11 @@ export default function Home() {
         id="studies"
       >
         <div
-          className="border-x-4 border-y-2 border-y-[#00A8E8] border-x-[#00A8E8] block"
+          className="border-x-4 border-y-2 border-y-[#00A8E8] border-x-[#00A8E8] block mb-10"
           style={{ maxWidth: "170px" }}
         >
           <h3
-            className=" text-left pl-4 block"
+            className=" text-left pl-4 block "
             style={{
               fontSize: "1.8em",
               color: "#00A8E8",
@@ -238,6 +246,24 @@ export default function Home() {
         <Studies />
       </section>
       <Footer />
+
+      <button
+        className="fixed bottom-0 right-0 m-5 bg-[rgb(123,123,123,.5)] rounded-full"
+        onClick={() => ScrollToTopButton()}
+      >
+        <svg
+          width="50px"
+          height="50px"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.2929 15.2893C18.6834 14.8988 18.6834 14.2656 18.2929 13.8751L13.4007 8.98766C12.6195 8.20726 11.3537 8.20757 10.5729 8.98835L5.68257 13.8787C5.29205 14.2692 5.29205 14.9024 5.68257 15.2929C6.0731 15.6835 6.70626 15.6835 7.09679 15.2929L11.2824 11.1073C11.673 10.7168 12.3061 10.7168 12.6966 11.1073L16.8787 15.2893C17.2692 15.6798 17.9024 15.6798 18.2929 15.2893Z"
+            fill="#0F0F0F"
+          />
+        </svg>
+      </button>
     </main>
   );
 }

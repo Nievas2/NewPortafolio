@@ -23,9 +23,9 @@ export default function CardProyect({
   return (
     <>
       <main className="w-full grid grid-cols-6 h-full reveal">
-        <div
-          className="col-span-full md:col-span-3 p-4 content-center"
-          style={{ order: index % 2 == 1 ? 9999 : -9999 }}
+        <div /* quiero que cuando index sea 1 este este primero */
+          className={`col-span-full order-last md:col-span-3 p-4 content-center md:${index % 2 == 0 ? "order-first" : "order-last"} `}
+     
         >
           <div className="flex-1">
             <h4 className="text-white text-3xl inline-block">
@@ -56,13 +56,12 @@ export default function CardProyect({
             Más información
           </button>
         </div>
-        <div
-          className="col-span-full md:col-span-3 p-4 "
-          style={{ order: index % 2 == 0 ? 9999 : -9999 }}
+        <div /* cuando este sea 1 quiero que sea ultimo */
+          className={`col-span-full md:col-span-3 p-4 order-first md:${index % 2 == 0 ? "order-last" : "order-first"}`}
         >
           {proyect.images != null ? (
             <div>
-              <div className="w-[50%] h-[100%] m-auto sm:h-[50%]">
+              <div className="w-[50%] h-[100%] m-auto sm:h-[50%] flex justify-center">
                 <Carousel slides={proyect.images} />
               </div>
             </div>
@@ -142,18 +141,6 @@ export default function CardProyect({
               ))}
             </div>
           )}
-          {/* <div className="flex flex-wrap md:flex-nowrap space-x-4 md:space-x-4 md:space-y-0 space-y-4">
-            <div className="flex-1 bg-blue-500 text-white p-4">flex-1</div>
-            <div className="flex-auto bg-green-500 text-white p-4">
-              flex-auto
-            </div>
-            <div className="flex-initial bg-red-500 text-white p-4">
-              flex-initial
-            </div>
-            <div className="flex-none bg-yellow-500 text-white p-4">
-              flex-none
-            </div>
-          </div> */}
         </div>
       </div>
     </>
