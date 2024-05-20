@@ -17,7 +17,7 @@ export default function Studies() {
                 <div className="flex flex-col ">
                   <div className="ml-10">
                     <p className="flex-1 font-thin">
-                      {data.dateI} | {data.dateF}
+                      {data.dateI} | {data.dateF} | {data.dateYear}
                     </p>
 
                     <div>

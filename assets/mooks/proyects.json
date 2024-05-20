@@ -136,12 +136,12 @@
         "description": "Creé una API desde 0 solo."
       },
       {
-        "description": "Creé un sistema de roles y permisos para los usuarios 'administradores' y 'usuarios'."
+        "description": "Creé un sistema de roles y permisos para los usuarios ('administradores' y 'usuarios')."
       }
     ],
     "frontend": [
       {
-        "description": "Desarrolle por primera vez una página completa solo con conección a backend."
+        "description": "Desarrolle por primera vez una página completa solo con conexión a backend."
       },
       {
         "description": "Cree un sistema de 'carrito'."
@@ -206,7 +206,7 @@
         "description": "Programe en Java y spring boot."
       },
       {
-        "description": "Utilizé pro primera vez la autenticación de google y spring security a la vez."
+        "description": "Utilizé por primera vez la autenticación de google y spring security a la vez."
       },
       {
         "description": "Desarrolle el proyecto en base a un UML y trello para la gestión."
@@ -214,10 +214,10 @@
     ],
     "frontend": [
       {
-        "description": "Mejore mi capacidad de estructuracion y componetización."
+        "description": "Mejore mi capacidad de estructuración y componetización."
       },
       {
-        "description": "Utilizé pro primera vez la autenticación de google."
+        "description": "Utilizé por primera vez la autenticación de google."
       }
     ]
   }

@@ -149,13 +149,20 @@ export default function Home() {
                 style={{ display: "flex" }}
                 className="flex-col sm:flex-row "
               >
-                <div style={{ flex: 3 }}>
-                  <p className="p-8 text-white text-left ">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Ducimus quo tenetur recusandae libero provident eveniet
-                    ratione quos exercitationem cumque ex, eos id a velit
-                    debitis quisquam laudantium aliquam incidunt minus.
+                <div className="p-8" style={{ flex: 3 }}>
+                  <p className=" text-white text-left text-xl">
+                    ¡Hola soy Gabriel!👨🏻‍💻 un programador autodidacta
+                     con 21 años que vive en Córdoba, Argentina.
                   </p>
+                  <p className="mt-4 text-white text-left text-xl">
+                    Buscando incorporarme en el mercado laboral para mejorar mis
+                    conocimientos y aprender junto a un equipo de trabajo.
+                    </p>{/* 
+                    <p>
+                      Estoy entusiasmado por la oportunidad de aportar mis
+                      conocimientos y aprender de profesionales experimentados en
+                      el campo.
+                    </p> */}
                 </div>
                 <div style={{ flex: 1 }} className=" content-center ">
                   <div className="flex justify-center m-5 ">
@@ -177,12 +184,23 @@ export default function Home() {
         style={{ backgroundColor: "#00171F" }}
         id="proyects"
       >
-        <h3
-          className=" text-left pl-4"
-          style={{ fontSize: "1.8em", color: "#00A8E8" }}
+        <div
+          className="border-x-4 border-y-2 border-y-[#00A8E8] border-x-[#00A8E8] block"
+          style={{ maxWidth: "170px" }}
         >
-          <strong> Proyectos</strong>
-        </h3>
+          <h3
+            className=" text-left pl-4 block"
+            style={{
+              fontSize: "1.8em",
+              color: "#00A8E8",
+              display: "block",
+              maxWidth: "25px",
+            }}
+          >
+            <strong>Proyectos</strong>
+          </h3>
+        </div>
+
         <Suspense fallback={<div>Loading...</div>}>
           {reversedProjects.map((project) => (
             <CardProyect
@@ -195,17 +213,31 @@ export default function Home() {
 
         <hr />
       </section>
-      <section style={{ backgroundColor: "#00171F" }} id="studies">
-        <h3
-          className=" text-left pl-4"
-          style={{ fontSize: "1.8em", color: "#00A8E8" }}
+      <section
+        className="p-5"
+        style={{ backgroundColor: "#00171F" }}
+        id="studies"
+      >
+        <div
+          className="border-x-4 border-y-2 border-y-[#00A8E8] border-x-[#00A8E8] block"
+          style={{ maxWidth: "170px" }}
         >
-          <strong> Estudios</strong>
-        </h3>
+          <h3
+            className=" text-left pl-4 block"
+            style={{
+              fontSize: "1.8em",
+              color: "#00A8E8",
+              display: "block",
+              maxWidth: "25px",
+            }}
+          >
+            <strong>Estudios</strong>
+          </h3>
+        </div>
         <ImageModal handleModal={handlemModal} openModal={openModal} />
-        <Studies></Studies>
+        <Studies />
       </section>
-      <Footer/>
+      <Footer />
     </main>
   );
 }

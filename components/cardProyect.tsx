@@ -29,8 +29,15 @@ export default function CardProyect({
         >
           <div className="flex-1">
             <h4 className="text-white text-3xl inline-block">
-              <strong>{proyect.name}</strong>
+              <strong>{proyect.name} | </strong>
             </h4>
+            {proyect.link && (
+              <button className="rounded-xl px-4 pt-1 text-1xl buttons mx-1">
+                <a href={proyect.link} target="_blank">
+                  Link
+                </a>
+              </button>
+            )}
           </div>
           <div className="flex-2 justify-end">
             <h4
@@ -41,15 +48,13 @@ export default function CardProyect({
             </h4>
           </div>
 
-          <p className="text-gray-300 p-2">{proyect.description}</p>
-          {proyect.link && (
-            <button className="rounded-xl px-4 pt-1 text-1xl buttons mx-1">
-              <a href={proyect.link} target="_blank">
-                Link
-              </a>
-            </button>
-          )}
-          <section></section>
+          <p className="text-gray-300 py-2">{proyect.description}</p>
+          <button
+            className="rounded-xl px-4 py-2 pt-1 text-1xl buttons mx-1 mb-8"
+            onClick={() => setRevealInfo(!revealInfo)}
+          >
+            Más información
+          </button>
         </div>
         <div
           className="col-span-full md:col-span-3 p-4 "
@@ -71,15 +76,9 @@ export default function CardProyect({
         </div>
       </main>
       <section className="m-5">
-        <button
-          className="rounded-xl px-4 py-2 pt-1 text-1xl buttons mx-1 mb-8"
-          onClick={() => setRevealInfo(!revealInfo)}
-        >
-          Más información
-        </button>
         {revealInfo && (
           <div className="flex flex-wrap md:flex-nowrap space-x-4 md:space-x-4 md:space-y-0 space-y-0">
-            <div className="flex-1 mx-5 my-4">
+            <div className="flex-1 mx-0 my-4 sm:mx-5">
               {proyect.frontend && (
                 <>
                   <h3 className="text-white text-2xl">
@@ -96,8 +95,8 @@ export default function CardProyect({
                 </>
               )}
             </div>
-            <div className="flex-1 mx-5 my-4">
-              {proyect.backend != null ? (
+            {proyect.backend != null ? (
+              <div className="flex-1 mx-0 my-4 sm:mx-5">
                 <>
                   <h3 className="text-white text-2xl">
                     <strong>BackEnd</strong>
@@ -111,10 +110,10 @@ export default function CardProyect({
                     </h5>
                   ))}
                 </>
-              ) : (
-                ""
-              )}
-            </div>
+              </div>
+            ) : (
+              ""
+            )}
           </div>
         )}
       </section>
