@@ -9,6 +9,7 @@ import {
   ReactNode,
   ReactPortal,
   AwaitedReactNode,
+  useState,
 } from "react";
 export default function CardProyect({
   index,
@@ -17,6 +18,8 @@ export default function CardProyect({
   index: number;
   proyect: any;
 }) {
+  const [revealInfo, setRevealInfo] = useState(false);
+
   return (
     <>
       <main className="w-full grid grid-cols-6 h-full reveal">
@@ -46,6 +49,7 @@ export default function CardProyect({
               </a>
             </button>
           )}
+          <section></section>
         </div>
         <div
           className="col-span-full md:col-span-3 p-4 "
@@ -66,6 +70,55 @@ export default function CardProyect({
           )}
         </div>
       </main>
+      <section className="m-5">
+        <button
+          className="rounded-xl px-4 py-2 pt-1 text-1xl buttons mx-1 mb-8"
+          onClick={() => setRevealInfo(!revealInfo)}
+        >
+          Más información
+        </button>
+        {revealInfo && (
+          <div className="flex flex-wrap md:flex-nowrap space-x-4 md:space-x-4 md:space-y-0 space-y-0">
+            <div className="flex-1 mx-5 my-4">
+              {proyect.frontend && (
+                <>
+                  <h3 className="text-white text-2xl">
+                    <strong>FrontEnd</strong>
+                  </h3>
+                  {proyect.frontend.map((data: any, index: any) => (
+                    <h5
+                      key={crypto.randomUUID()}
+                      className="text-white font-extralight"
+                    >
+                      - {data.description}
+                    </h5>
+                  ))}
+                </>
+              )}
+            </div>
+            <div className="flex-1 mx-5 my-4">
+              {proyect.backend != null ? (
+                <>
+                  <h3 className="text-white text-2xl">
+                    <strong>BackEnd</strong>
+                  </h3>
+                  {proyect.backend.map((data: any, index: any) => (
+                    <h5
+                      key={crypto.randomUUID()}
+                      className="text-white font-extralight "
+                    >
+                      - {data.description}
+                    </h5>
+                  ))}
+                </>
+              ) : (
+                ""
+              )}
+            </div>
+          </div>
+        )}
+      </section>
+
       <div className="w-full gap-9  mb-20">
         <div
           className="w-full text-white inline-block m-1 rounded-lg border-blue-900 border-2"
