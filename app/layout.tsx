@@ -24,13 +24,7 @@ export default function RootLayout({
     <html lang="es">
       <body className={`${inter.className} bg-gray-900`}>
         <nav
-          className="w-full"
-          style={{
-            backgroundColor: "#00171F",
-            position: "sticky",
-            top: 0,
-            zIndex: 10000,
-          }}
+          className="w-full navbar"
         >
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
             <div className="relative flex h-16 items-center justify-between">
@@ -59,7 +53,7 @@ export default function RootLayout({
                   </svg>
                 </button>
               </div>
-              <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+              <div className="flex flex-1 items-center justify-center align-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
                   <Image
                     className="h-14 w-auto"
@@ -67,8 +61,8 @@ export default function RootLayout({
                     alt="Your Company"
                   />
                 </div>
-                <div className="hidden sm:ml-6 sm:block">
-                  <div className="flex space-x-4">
+                <div className="hidden sm:ml-6 sm:block content-center w-full">
+                  <div className="flex space-x-4 ">
                     {/*             
                     <!-- Current: "bg-gray-900 text-white", 
                     Default: "text-gray-300 hover:bg-gray-700 

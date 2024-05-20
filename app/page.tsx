@@ -9,6 +9,7 @@ import ImageModal from "@/components/imageModal";
 import PhotoProfile from "@/assets/images/photoProfile.jpeg";
 import Projects from "@/assets/mooks/proyects.json";
 import { Project } from "@/assets/classes/project";
+import Footer from "@/components/footer";
 export default function Home() {
   const [aboutMe, setAboutMe] = useState(false);
   const [openModal, setOpenModal] = useState(false);
@@ -71,10 +72,10 @@ export default function Home() {
           </strong>{" "}
           NIEVAS
         </h2>
-        <section className="mt-3">
-          <div className="flex flex-wrap md:flex-nowrap space-x-4 md:space-x-4 md:space-y-0 space-y-0 justify-center text-center align-middle content-center">
+        <section className="mt-3 justify-center content-center flex">
+          <div className="flex flex-wrap md:flex-nowrap space-x-4 md:space-x-4 md:space-y-0 space-y-0 justify-center text-center align-middle content-center rounded-2xl backdrop-blur-sm max-w-[650px] p-1 ">
             <div>
-              <button className="rounded-xl my-1 px-8 py-1 text-1xl buttons mx-1">
+              <button className="rounded-xl my-1 px-4 py-2 text-1xl buttons mx-1">
                 <a
                   href="https://www.linkedin.com/in/gabriel-nievas/"
                   target="_blank"
@@ -84,7 +85,7 @@ export default function Home() {
               </button>
             </div>
             <div>
-              <button className="rounded-xl my-1 px-8 py-1 text-1xl buttons mx-1">
+              <button className="rounded-xl my-1 px-4 py-2 text-1xl buttons mx-1">
                 <a href="https://github.com/Nievas2" target="_blank">
                   Github
                 </a>
@@ -92,7 +93,7 @@ export default function Home() {
             </div>
             <div>
               <button
-                className="rounded-xl my-1 px-8 py-1 text-1xl buttons mx-1"
+                className="rounded-xl my-1 px-4 py-2 text-1xl buttons mx-1"
                 onClick={downloadCV}
               >
                 Curriculum
@@ -100,7 +101,7 @@ export default function Home() {
             </div>
             <div className="relative">
               <button
-                className="rounded-xl my-1 px-8 py-1 text-1xl buttons mx-1"
+                className="rounded-xl my-1 px-4 py-2 text-1xl buttons mx-1"
                 onClick={() => copyToClipboard("angelgabrielnievas@gmail.com")}
               >
                 Correo electrónico
@@ -204,6 +205,7 @@ export default function Home() {
         <ImageModal handleModal={handlemModal} openModal={openModal} />
         <Studies></Studies>
       </section>
+      <Footer/>
     </main>
   );
 }

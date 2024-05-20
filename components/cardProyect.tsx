@@ -19,7 +19,7 @@ export default function CardProyect({
 }) {
   return (
     <>
-      <main className="w-full grid grid-cols-6 h-full">
+      <main className="w-full grid grid-cols-6 h-full reveal">
         <div
           className="col-span-full md:col-span-3 p-4 content-center"
           style={{ order: index % 2 == 1 ? 9999 : -9999 }}
@@ -40,7 +40,7 @@ export default function CardProyect({
 
           <p className="text-gray-300 p-2">{proyect.description}</p>
           {proyect.link && (
-            <button className="rounded-xl px-8 pt-1 text-1xl buttons mx-1">
+            <button className="rounded-xl px-4 pt-1 text-1xl buttons mx-1">
               <a href={proyect.link} target="_blank">
                 Link
               </a>
