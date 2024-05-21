@@ -244,7 +244,7 @@ export default function Home() {
       <Footer />
 
       <button
-        className="fixed bottom-0 right-0 m-5 bg-[rgb(123,123,123,.5)] rounded-full"
+        className="fixed bottom-0 right-0 m-5 bg-[rgb(255,255,255)] rounded-full"
         onClick={() => ScrollToTopButton()}
       >
         <svg
