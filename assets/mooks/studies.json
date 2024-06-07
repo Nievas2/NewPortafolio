@@ -1,6 +1,33 @@
 [
   {
     "id": 1,
+    "name": "EscoSistemas",
+    "dateI": "Febrero",
+    "dateF": "Mayo",
+    "dateYear":"2023",
+    "description": "Semillero LATAM",
+    "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1717770595/Portafolio/cgg9dqaywc94tvbztrxf.jpg",
+    "tecnologies": [
+      {
+        "name": "Javascript",
+        "src": "https://skillicons.dev/icons?i=js"
+      },
+      {
+        "name": "React",
+        "src": "https://skillicons.dev/icons?i=react"
+      },
+      {
+        "name": "Java",
+        "src": "https://skillicons.dev/icons?i=java"
+      },
+      {
+        "name": "Spring boot",
+        "src": "https://skillicons.dev/icons?i=spring"
+      }
+    ]
+  },
+  {
+    "id": 2,
     "name": "xAcademy",
     "dateI": "Marzo",
     "dateF": "Octubre",
@@ -35,7 +62,7 @@
     ]
   },
   {
-    "id": 2,
+    "id": 3,
     "name": "Polotecnologico",
     "dateI": "Agosto",
     "dateF": "Octubre",
@@ -54,7 +81,7 @@
     ]
   },
   {
-    "id": 3,
+    "id": 4,
     "name": "Sé programar",
     "dateI": "Febrero",
     "dateF": "Abril",
