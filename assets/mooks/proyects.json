@@ -5,7 +5,7 @@
     "dateI": "Enero",
     "dateF": "Febrero",
     "dateYear": "2023",
-    "role": "FULL STACK",
+    "role": "FRONTEND",
     "description": "La empresa requeria una página donde poder mostrar su servicio de catering y quienos son, con una descripcion de sus productos y servicios, con sus redes sociales y un formulario de contacto para una atención personalizada.",
     "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1715962542/Portafolio/gir1d21yzp0t5wndgpl8.webp",
     "link": "https://alioli-fc837.web.app/",
@@ -218,6 +218,41 @@
       },
       {
         "description": "Utilizé por primera vez la autenticación de google."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Frontend Mentor Projects",
+    "dateI": "Mayo",
+    "dateF": "Junio",
+    "dateYear": "2024",
+    "role": "FRONTEND",
+    "description": "Estos proyectos fueron realizados con el fin de mejorar mis habilidades de imitar diseños ya realizados.",
+    "link": "https://github.com/Nievas2/projects-with-fm-2",
+    "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1717770596/Portafolio/yw8mruw5vq7ivwg3k9m5.png",
+    "tecnologies": [
+      {
+        "name": "Next js",
+        "src": "https://skillicons.dev/icons?i=nextjs"
+      },
+      {
+        "name": "Tailwind",
+        "src": "https://skillicons.dev/icons?i=tailwind"
+      },
+      {
+        "name": "React",
+        "src": "https://skillicons.dev/icons?i=react"
+      }
+    ],
+    "images": null,
+    "backend": null,
+    "frontend": [
+      {
+        "description": "Mejore mis conocimientos de Tailwind."
+      },
+      {
+        "description": "Mejore conceptos basicos de css y html."
       }
     ]
   }
