@@ -222,7 +222,7 @@
     ]
   },
   {
-    "id": 4,
+    "id": 5,
     "name": "Frontend Mentor Projects",
     "dateI": "Mayo",
     "dateF": "Junio",
@@ -243,6 +243,41 @@
       {
         "name": "React",
         "src": "https://skillicons.dev/icons?i=react"
+      }
+    ],
+    "images": null,
+    "backend": null,
+    "frontend": [
+      {
+        "description": "Mejore mis conocimientos de Tailwind."
+      },
+      {
+        "description": "Mejore conceptos basicos de css y html."
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "TechLibrary",
+    "dateI": "Junio",
+    "dateF": "Agosto",
+    "dateYear": "2024",
+    "role": "FRONTEND",
+    "description": "Es una plataforma de librerías y herramientas, pensada para programadores y diseñadores. Donde encontrarás una amplia selección de las librerías más populares y útiles para tus proyectos. Una página que ofrece acceso rápido a la documentación oficial de estas librerías, además de herramientas que facilitaran tus tareas diarias. ",
+    "link": "https://tech-library-iota.vercel.app/",
+    "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1723405471/Portafolio/i3qwf2ztgn7q7zev2zhg.png",
+    "tecnologies": [
+      {
+        "name": "Tailwind",
+        "src": "https://skillicons.dev/icons?i=tailwind"
+      },
+      {
+        "name": "React",
+        "src": "https://skillicons.dev/icons?i=react"
+      },
+      {
+        "name": "NodeJs",
+        "src": "https://skillicons.dev/icons?i=nodejs"
       }
     ],
     "images": null,
