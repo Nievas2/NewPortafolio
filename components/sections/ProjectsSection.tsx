@@ -34,7 +34,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
         <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-blue-400 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200" />
 
         {/* Content container */}
-        <div className="relative p-3 sm:p-6 bg-[#12121a] rounded-lg overflow-hidden min-h-[700px]">
+        <div className="relative p-3 sm:p-6 bg-[#12121a] rounded-lg overflow-hidden min-w-fit md:min-h-[630px]">
           <img
             src={project.src!}
             alt={project.name}
