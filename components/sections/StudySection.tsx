@@ -47,7 +47,7 @@ function CardStudy({ study }: { study: Study }) {
   return (
     <section className="flex flex-col text-center md:flex-row md:text-left items-center pl-6 md:pl-16 text-white w-full gap-10 relative group">
       <img
-        className="opacity-65 group-hover:opacity-100 transition-opacity cursor-pointer"
+        className="sm:opacity-65 sm:sm:group-hover:opacity-100 transition-opacity cursor-pointer"
         src={study.src}
         alt={study.name}
         height={320}
@@ -65,25 +65,25 @@ function CardStudy({ study }: { study: Study }) {
         />
       </Modal>
       <div className="flex flex-col gap-4">
-        <h3 className="text-xl opacity-45 group-hover:opacity-100">
+        <h3 className="text-xl sm:opacity-45 sm:group-hover:opacity-100">
           {study.name}
         </h3>
-        <small className="text-lg opacity-45 group-hover:opacity-100">
+        <small className="text-lg sm:opacity-45 sm:group-hover:opacity-100">
           {study.title}
         </small>
-        <p className="text-base opacity-45 group-hover:opacity-100">
+        <p className="text-base sm:opacity-45 sm:group-hover:opacity-100">
           {study.description}
         </p>
       </div>
       <div
         className="bg-blue-700 rounded-full size-5 absolute -left-[10px] top-[50%]
-      group-hover:bg-blue-600 group-hover:scale-125
+      sm:group-hover:bg-blue-600 sm:group-hover:scale-125
       transition-transform
       "
       />
       <div
         className="rounded-full size-5 absolute -left-[10px] top-[50%]
-      group-hover:bg-blue-600 shadow shadow-blue-400 blur group-hover:scale-125
+      sm:group-hover:bg-blue-600 shadow shadow-blue-400 blur sm:group-hover:scale-125
       "
       />
     </section>

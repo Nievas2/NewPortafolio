@@ -163,7 +163,7 @@
     "role": "FULL STACK",
     "description": "El semillero LATAM brindo la oportunidad de trabajar en un proyecto de impacto real, la cual busca fomentar la inversion hacia pequeñas empresas, que buscan tener un impacto en el medio ambiente.",
     "link": null,
-    "src": null,
+    "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1735244264/Portafolio/ep82nytfuzb05lfomdb8.webp",
     "tecnologies": [
       {
         "name": "Javascript",
@@ -190,17 +190,7 @@
         "src": "https://skillicons.dev/icons?i=spring"
       }
     ],
-    "images": [
-      {
-        "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1715962602/Portafolio/nreatci3jkc8frug9nt3.png"
-      },
-      {
-        "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1715962621/Portafolio/pgumg5ufx7qguiyg31ao.png"
-      },
-      {
-        "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1715962713/Portafolio/brpyswtgdd3rkjq6yhqh.png"
-      }
-    ],
+    "images": null,
     "backend": [
       {
         "description": "Programe en Java y spring boot."

@@ -12,6 +12,7 @@ import ContactSection from "@/components/sections/ContactSection"
 import AboutSection from "@/components/sections/AboutSection"
 import HeroSection from "@/components/sections/HeroSection"
 import StudySection from "@/components/sections/StudySection"
+import ProjectsSection from "@/components/sections/ProjectsSection"
 
 export default function Home() {
   const [aboutMe, setAboutMe] = useState(false)
@@ -35,14 +36,14 @@ export default function Home() {
   }
   return (
     <main className="relative flex flex-col w-full bg-[#00171F] items-center justify-center">
-      <div className="flex flex-col max-w-8xl mb-6">
+      <div className="flex flex-col max-w-8xl gap-4 mb-6">
         {/* hero */}
         <HeroSection />
 
         {/* About */}
        <AboutSection />
 
-        <section
+        {/* <section
           className="p-5"
           style={{ backgroundColor: "#00171F" }}
           id="proyects"
@@ -71,7 +72,9 @@ export default function Home() {
             />
           ))}
           <hr />
-        </section>
+        </section> */}
+        {/* Projects */}
+        <ProjectsSection />
 {/* 
         <section
           className="p-5"

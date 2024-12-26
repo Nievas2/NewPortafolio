@@ -28,13 +28,13 @@ const AboutSection = () => {
               </p>
             </div>
             <div className="flex items-center justify-center relative group">
-              <div className="absolute inset-y-auto bg-gradient-to-r from-blue-600 to-blue-400 rounded-2xl transform rotate-3 w-[280px] h-[360px] transition-transform group-hover:rotate-0 group-hover:scale-105 " />
+              <div className="hidden sm:absolute inset-y-auto bg-gradient-to-r from-blue-600 to-blue-400 rounded-2xl transform rotate-3 w-[280px] h-[360px] transition-transform group-hover:rotate-0 group-hover:scale-105 " />
               <Image
                 width={400}
                 height={400}
                 src="/photoProfile.jpeg"
                 alt="Profile"
-                className="relative z-10 rounded-2xl w-[280px] h-[360px] transform -rotate-3 transition-transform group-hover:rotate-0"
+                className="relative z-10 rounded-2xl w-[240px] h-[320px] sm:w-[280px] sm:h-[360px] transform rotate-0 sm:-rotate-3 transition-transform group-hover:rotate-0"
               />
             </div>
           </div>

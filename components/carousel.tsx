@@ -1,26 +1,26 @@
-import { SetStateAction, useState } from "react";
-/* import SwipeableViews from "react-swipeable-views-react-18-fix"; */
-/* import ArrowRight from "@/assets/svgs/arrowRight.svg";
-import ArrowLeft from "@/assets/svgs/arrowLeft.svg"; */
+import { SetStateAction, useState } from "react"
+import SwipeableViews from "react-swipeable-views-react-18-fix"
+import ArrowRight from "@/assets/svgs/arrowRight.svg"
+import ArrowLeft from "@/assets/svgs/arrowLeft.svg"
 export default function Carousel({ slides }: { slides: any }) {
-  const [activeStep, setActiveStep] = useState(0);
-  const [extendInfo, setExtendInfo] = useState(false);
-  let maxSteps = slides.length;
+  const [activeStep, setActiveStep] = useState(0)
+  const [extendInfo, setExtendInfo] = useState(false)
+  let maxSteps = slides.length
 
   const handleStepChange = (step: SetStateAction<number>) => {
-    setActiveStep(step);
-  };
+    setActiveStep(step)
+  }
   const handleNext = () => {
     if (activeStep + 1 < maxSteps) {
-      setActiveStep(activeStep + 1);
+      setActiveStep(activeStep + 1)
     }
-  };
+  }
 
   const handleBack = () => {
     if (activeStep - 1 >= 0) {
-      setActiveStep(activeStep - 1);
+      setActiveStep(activeStep - 1)
     }
-  };
+  }
   return (
     <main className="relative" style={{ width: "175px", height: "350px" }}>
       <div
@@ -68,13 +68,47 @@ export default function Carousel({ slides }: { slides: any }) {
             </svg>
           </button>
         </div>
-        <div style={{ position: "absolute", bottom: "0%", left: "30%", zIndex: 10, }}>
-            <div style={{borderRadius:"50%", backgroundColor:activeStep == 0 ? "#fff" : "#888", height:"15px", width:"15px", display:"inline-block", marginInline:"5px"}}/>
-            <div style={{borderRadius:"50%", backgroundColor:activeStep == 1 ? "#fff" : "#888", height:"15px", width:"15px", display:"inline-block", marginInline:"5px"}}/>
-            <div style={{borderRadius:"50%", backgroundColor:activeStep == 2 ? "#fff" : "#888", height:"15px", width:"15px", display:"inline-block", marginInline:"5px"}}/>
+        <div
+          style={{
+            position: "absolute",
+            bottom: "0%",
+            left: "30%",
+            zIndex: 10,
+          }}
+        >
+          <div
+            style={{
+              borderRadius: "50%",
+              backgroundColor: activeStep == 0 ? "#fff" : "#888",
+              height: "15px",
+              width: "15px",
+              display: "inline-block",
+              marginInline: "5px",
+            }}
+          />
+          <div
+            style={{
+              borderRadius: "50%",
+              backgroundColor: activeStep == 1 ? "#fff" : "#888",
+              height: "15px",
+              width: "15px",
+              display: "inline-block",
+              marginInline: "5px",
+            }}
+          />
+          <div
+            style={{
+              borderRadius: "50%",
+              backgroundColor: activeStep == 2 ? "#fff" : "#888",
+              height: "15px",
+              width: "15px",
+              display: "inline-block",
+              marginInline: "5px",
+            }}
+          />
         </div>
       </div>
-      <div>{/* 
+      <div>
         <SwipeableViews
           index={activeStep}
           onChangeIndex={handleStepChange}
@@ -114,8 +148,8 @@ export default function Carousel({ slides }: { slides: any }) {
               </div>
             )
           )}
-        </SwipeableViews> */}
+        </SwipeableViews>
       </div>
     </main>
-  );
+  )
 }

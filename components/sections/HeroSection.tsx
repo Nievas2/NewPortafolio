@@ -1,5 +1,7 @@
 import { motion } from "framer-motion"
 import Link from "next/link"
+import { useEffect, useRef } from "react"
+import Typed from "typed.js"
 
 const HeroSection = () => {
   const downloadCV = () => {
@@ -11,6 +13,20 @@ const HeroSection = () => {
     link.click()
     document.body.removeChild(link)
   }
+  const el = useRef(null)
+
+  useEffect(() => {
+    const typed = new Typed(el.current, {
+      strings: ["Frontend Developer"],
+      typeSpeed: 50,
+      backSpeed: 50,
+      showCursor: false,
+    })
+
+    return () => {
+      typed.destroy()
+    }
+  }, [])
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-blue-900/20 to-transparent" />
@@ -23,9 +39,7 @@ const HeroSection = () => {
         <h1 className="text-6xl leading-tight md:text-8xl md:leading-[130px] font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-600">
           Angel Gabriel Nievas
         </h1>
-        <p className="mt-4 text-2xl md:text-4xl text-blue-200">
-          Frontend Developer
-        </p>
+        <p className="mt-4 text-2xl md:text-4xl text-blue-200" ref={el}></p>
         <div className="mt-8">
           <div className="flex flex-wrap items-center gap-6">
             <Link

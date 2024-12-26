@@ -16,6 +16,9 @@
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18",
+    "react-swipeable-views-react-18-fix": "^0.14.1",
+    "react-swipeable-views-utils-react-18-fix": "^0.14.1",
+    "typed-js": "^0.2.3",
     "yup": "^1.6.1"
   },
   "devDependencies": {
@@ -24,6 +27,7 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@types/tailwindcss": "^3.1.0",
+    "@types/typed.js": "^2.0.9",
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
     "postcss": "^8",
