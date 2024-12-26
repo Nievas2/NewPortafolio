@@ -1,7 +1,7 @@
 import { SetStateAction, useState } from "react";
-import SwipeableViews from "react-swipeable-views-react-18-fix";
-import ArrowRight from "@/assets/svgs/arrowRight.svg";
-import ArrowLeft from "@/assets/svgs/arrowLeft.svg";
+/* import SwipeableViews from "react-swipeable-views-react-18-fix"; */
+/* import ArrowRight from "@/assets/svgs/arrowRight.svg";
+import ArrowLeft from "@/assets/svgs/arrowLeft.svg"; */
 export default function Carousel({ slides }: { slides: any }) {
   const [activeStep, setActiveStep] = useState(0);
   const [extendInfo, setExtendInfo] = useState(false);
@@ -74,7 +74,7 @@ export default function Carousel({ slides }: { slides: any }) {
             <div style={{borderRadius:"50%", backgroundColor:activeStep == 2 ? "#fff" : "#888", height:"15px", width:"15px", display:"inline-block", marginInline:"5px"}}/>
         </div>
       </div>
-      <div>
+      <div>{/* 
         <SwipeableViews
           index={activeStep}
           onChangeIndex={handleStepChange}
@@ -114,7 +114,7 @@ export default function Carousel({ slides }: { slides: any }) {
               </div>
             )
           )}
-        </SwipeableViews>
+        </SwipeableViews> */}
       </div>
     </main>
   );
