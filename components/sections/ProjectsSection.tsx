@@ -35,13 +35,12 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
 
         {/* Content container */}
         <div className="relative p-3 sm:p-6 bg-[#12121a] rounded-lg overflow-hidden min-h-[700px]">
-          {project.images != null && (
-            <img
-              src={project.src!}
-              alt={project.name}
-              className="h-[100%] rounded-xl"
-            />
-          )}
+          <img
+            src={project.src!}
+            alt={project.name}
+            className="h-[100%] rounded-xl"
+          />
+
           {/* Floating circles decoration */}
           <div className="absolute top-0 right-0 -mr-8 -mt-8 w-32 h-32 bg-blue-600/10 rounded-full blur-2xl transform group-hover:translate-x-4 group-hover:-translate-y-4 transition-transform duration-700" />
           <div className="absolute bottom-0 left-0 -ml-8 -mb-8 w-32 h-32 bg-blue-400/10 rounded-full blur-2xl transform group-hover:-translate-x-4 group-hover:translate-y-4 transition-transform duration-700" />
