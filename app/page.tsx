@@ -1,13 +1,7 @@
 "use client"
 import Image from "next/image"
 import "./globals.css"
-/* import Portada from "../public/portada.webp"
- */ import CardProyect from "@/components/cardProyect"
-import Studies from "@/components/studies"
-import { Suspense, useEffect, useState } from "react"
-import ImageModal from "@/components/imageModal"
-import Projects from "@/assets/mooks/proyects.json"
-import { Project } from "@/assets/classes/project"
+import { useEffect, useState } from "react"
 import ContactSection from "@/components/sections/ContactSection"
 import AboutSection from "@/components/sections/AboutSection"
 import HeroSection from "@/components/sections/HeroSection"
@@ -17,12 +11,7 @@ import ProjectsSection from "@/components/sections/ProjectsSection"
 export default function Home() {
   const [aboutMe, setAboutMe] = useState(false)
   const [openModal, setOpenModal] = useState(false)
-  const [reversedProjects, setReversedProjects] = useState<Project[]>([])
   const [emailAlert, setEmailAlert] = useState(true)
-  useEffect(() => {
-    setReversedProjects([...Projects].reverse())
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [Projects])
 
   const handlemModal = () => {
     setOpenModal(!openModal)
@@ -41,65 +30,12 @@ export default function Home() {
         <HeroSection />
 
         {/* About */}
-       <AboutSection />
+        <AboutSection />
 
-        {/* <section
-          className="p-5"
-          style={{ backgroundColor: "#00171F" }}
-          id="proyects"
-        >
-          <div
-            className="border-x-4 border-y-2 border-y-[#00A8E8] border-x-[#00A8E8] block"
-            style={{ maxWidth: "170px" }}
-          >
-            <h3
-              className=" text-left pl-4 block"
-              style={{
-                fontSize: "1.8em",
-                color: "#00A8E8",
-                display: "block",
-                maxWidth: "25px",
-              }}
-            >
-              <strong>Proyectos</strong>
-            </h3>
-          </div>
-          {reversedProjects.map((project) => (
-            <CardProyect
-              key={crypto.randomUUID()}
-              proyect={project}
-              index={project.id}
-            />
-          ))}
-          <hr />
-        </section> */}
         {/* Projects */}
         <ProjectsSection />
-{/* 
-        <section
-          className="p-5"
-          style={{ backgroundColor: "#00171F" }}
-          id="studies"
-        >
-          <div
-            className="border-x-4 border-y-2 border-y-[#00A8E8] border-x-[#00A8E8] block mb-10"
-            style={{ maxWidth: "170px" }}
-          >
-            <h3
-              className=" text-left pl-4 block "
-              style={{
-                fontSize: "1.8em",
-                color: "#00A8E8",
-                display: "block",
-                maxWidth: "25px",
-              }}
-            >
-              <strong>Estudios</strong>
-            </h3>
-          </div>
 
-          <Studies />
-        </section> */}
+        {/* Study */}
         <StudySection />
 
         {/* Contact */}

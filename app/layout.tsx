@@ -22,6 +22,7 @@ export default function RootLayout({
   const [activeMenuMovil, setActiveMenuMovil] = useState(true);
   return (
     <html lang="es">
+      <title>Nievas Angel Gabriel</title>
       <body className={`${inter.className} bg-gray-900`}>
         <nav
           className="w-full navbar"

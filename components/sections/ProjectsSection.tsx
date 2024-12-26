@@ -1,7 +1,6 @@
 import { motion } from "framer-motion"
 import { Project } from "@/interfaces/project"
 import ProjectsJson from "@/assets/mooks/proyects.json"
-import Carousel from "../carousel"
 const ProjectsSection = () => {
   const projects = ProjectsJson.reverse()
   return (
@@ -36,13 +35,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
 
         {/* Content container */}
         <div className="relative p-3 sm:p-6 bg-[#12121a] rounded-lg overflow-hidden min-h-[700px]">
-          {project.images != null ? (
-            <div>
-              <div className="w-[50%] h-[100%] m-auto sm:h-[50%] flex justify-center">
-                <Carousel slides={project.images} />
-              </div>
-            </div>
-          ) : (
+          {project.images != null && (
             <img
               src={project.src!}
               alt={project.name}
