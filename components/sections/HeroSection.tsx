@@ -20,10 +20,10 @@ const HeroSection = () => {
         transition={{ duration: 0.8 }}
         className="container relative z-10 px-4"
       >
-        <h1 className="text-6xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-600">
-          Gabriel Nievas
+        <h1 className="text-6xl leading-tight md:text-8xl md:leading-[130px] font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-600">
+          Angel Gabriel Nievas
         </h1>
-        <p className="mt-4 text-2xl md:text-2xl text-blue-200">
+        <p className="mt-4 text-2xl md:text-4xl text-blue-200">
           Frontend Developer
         </p>
         <div className="mt-8">

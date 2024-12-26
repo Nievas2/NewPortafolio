@@ -11,6 +11,7 @@ import { Project } from "@/assets/classes/project"
 import ContactSection from "@/components/sections/ContactSection"
 import AboutSection from "@/components/sections/AboutSection"
 import HeroSection from "@/components/sections/HeroSection"
+import StudySection from "@/components/sections/StudySection"
 
 export default function Home() {
   const [aboutMe, setAboutMe] = useState(false)
@@ -71,7 +72,7 @@ export default function Home() {
           ))}
           <hr />
         </section>
-
+{/* 
         <section
           className="p-5"
           style={{ backgroundColor: "#00171F" }}
@@ -95,7 +96,8 @@ export default function Home() {
           </div>
 
           <Studies />
-        </section>
+        </section> */}
+        <StudySection />
 
         {/* Contact */}
         <ContactSection />

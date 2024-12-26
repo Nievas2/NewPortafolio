@@ -4,8 +4,9 @@
     "name": "EscoSistemas",
     "dateI": "Febrero",
     "dateF": "Mayo",
-    "dateYear":"2023",
-    "description": "Semillero LATAM",
+    "dateYear": "2023",
+    "title": "Semillero LATAM",
+    "description": "El semillero fue una academia que buscaba que personas que no tenían experiencia en cómo funciona trabajar en el mercado laboral pueda experimentarlo, aplicando metodologías agiles, con líder técnico, scrum master y más.",
     "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1717770595/Portafolio/cgg9dqaywc94tvbztrxf.jpg",
     "tecnologies": [
       {
@@ -31,8 +32,9 @@
     "name": "xAcademy",
     "dateI": "Marzo",
     "dateF": "Octubre",
-    "dateYear":"2023",
-    "description": "xAcademy Dev",
+    "dateYear": "2023",
+    "title": "xAcademy Dev",
+    "description": "xAcademy fue una academia para personas con pocos conocimientos sobre programación, donde se nos enseñó algunas tecnologías y metodologías agiles que podríamos ver en el mundo laboral, además se nos hizo trabajar en equipos para conseguir un MVP (minimum viable product) junto a un equipo de profesionales que nos acompañaron durante todo el recorrido.",
     "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1715725051/x0gcccghdi2qqi0j7tng.webp",
     "tecnologies": [
       {
@@ -66,8 +68,9 @@
     "name": "Polotecnologico",
     "dateI": "Agosto",
     "dateF": "Octubre",
-    "dateYear":"2022",
-    "description": "Introduccion a .NET",
+    "dateYear": "2022",
+    "title": "Introduccion a .NET",
+    "description": "El Polotecnologico fue un curso donde aprendí sobre el funcionamiento .NET, sobre el modelo MVC (modelo, vista y controlador) además de una excelente practica sobre lógica de programación. Ayudándome a entender mucho más cómo funcionan las APIS.",
     "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1715725051/ircoca91ugc6frkolli6.jpg",
     "tecnologies": [
       {
@@ -85,13 +88,18 @@
     "name": "Sé programar",
     "dateI": "Febrero",
     "dateF": "Abril",
-    "dateYear":"2022",
-    "description": "Introduccion a Programacion Orientadas a Objetos",
+    "dateYear": "2022",
+    "title": "Introduccion a Programacion Orientadas a Objetos",
+    "description": "Sé programar me brindo una gran ayuda en la práctica e implementación de la lógica de programación, utilizando distintos lenguajes de programación para llegar a un mismo resultado, fortaleciendo así mucho mejor las bases para adaptarme a cualquier lenguaje. ",
     "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1715725051/fnv1xzx2jyegztohcxl8.jpg",
     "tecnologies": [
       {
         "name": "Javascript",
         "src": "https://skillicons.dev/icons?i=js"
+      },
+      {
+        "name": "Ruby",
+        "src": "https://skillicons.dev/icons?i=ruby"
       },
       {
         "name": "VS Code",
