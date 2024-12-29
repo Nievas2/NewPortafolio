@@ -7,6 +7,7 @@ import AboutSection from "@/components/sections/AboutSection"
 import HeroSection from "@/components/sections/HeroSection"
 import StudySection from "@/components/sections/StudySection"
 import ProjectsSection from "@/components/sections/ProjectsSection"
+import TechnologiesSection from "@/components/sections/TechnologiesSection"
 
 export default function Home() {
   const [aboutMe, setAboutMe] = useState(false)
@@ -34,6 +35,9 @@ export default function Home() {
 
         {/* Projects */}
         <ProjectsSection />
+
+        {/* Technologies */}
+        <TechnologiesSection />
 
         {/* Study */}
         <StudySection />

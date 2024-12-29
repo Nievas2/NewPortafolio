@@ -1,0 +1,77 @@
+{
+  "main": [
+    {
+      "name": "React",
+      "icon": "logos:react"
+    },
+    {
+      "name": "Next.js",
+      "icon": "devicon:nextjs"
+    },
+    {
+      "name": "TypeScript",
+      "icon": "skill-icons:typescript"
+    },
+    {
+      "name": "JavaScript",
+      "icon": "skill-icons:javascript"
+    }
+  ],
+  "technologies": [
+    {
+      "name": "Tailwind CSS",
+      "icon": "/placeholder.svg?height=32&width=32",
+      "level": "Avanzado"
+    },
+    {
+      "name": "CSS3",
+      "icon": "/placeholder.svg?height=32&width=32",
+      "level": "Avanzado"
+    },
+    {
+      "name": "Git",
+      "icon": "/placeholder.svg?height=32&width=32",
+      "level": "Intermedio"
+    },
+    {
+      "name": "Zustand",
+      "icon": "/placeholder.svg?height=32&width=32",
+      "level": "Intermedio"
+    },
+    {
+      "name": "Tanstack query",
+      "icon": "/placeholder.svg?height=32&width=32",
+      "level": "Intermedio"
+    },
+    {
+      "name": "Shadcn",
+      "icon": "/placeholder.svg?height=32&width=32",
+      "level": "Intermedio"
+    },
+    {
+      "name": "Axios",
+      "icon": "/placeholder.svg?height=32&width=32",
+      "level": "Intermedio"
+    },
+    {
+      "name": "Yup",
+      "icon": "/placeholder.svg?height=32&width=32",
+      "level": "Intermedio"
+    },
+    {
+      "name": "Formik",
+      "icon": "/placeholder.svg?height=32&width=32",
+      "level": "Intermedio"
+    },
+    {
+      "name": "React Router DOM",
+      "icon": "/placeholder.svg?height=32&width=32",
+      "level": "Intermedio"
+    },
+    {
+      "name": "Trello",
+      "icon": "/placeholder.svg?height=32&width=32",
+      "level": "Intermedio"
+    }
+  ]
+}
