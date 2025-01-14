@@ -5,10 +5,10 @@ import Typed from "typed.js"
 
 const HeroSection = () => {
   const downloadCV = () => {
-    const url = "/archives/CV Nievas Angel Gabriel.pdf"
+    const url = "/archives/Cv Angel Gabriel Nievas.pdf"
     const link = document.createElement("a")
     link.href = url
-    link.setAttribute("download", "CV Nievas Angel Gabriel.pdf")
+    link.setAttribute("download", "Cv Angel Gabriel Nievas.pdf")
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
