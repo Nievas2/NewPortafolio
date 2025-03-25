@@ -120,6 +120,7 @@ const ContactSection = () => {
                 <input
                   type="text"
                   id="name"
+                  placeholder="Nievas Angel Gabriel"
                   className="w-full px-4 py-2 bg-white border border-blue-600/20 rounded-lg focus:outline-none focus:border-blue-600"
                   {...formik.getFieldProps("name")}
                   disabled={isPending}
@@ -143,6 +144,7 @@ const ContactSection = () => {
                   type="email"
                   id="email"
                   className="w-full px-4 py-2 bg-white border border-blue-600/20 rounded-lg focus:outline-none focus:border-blue-600"
+                  placeholder="example@gmail.com"
                   {...formik.getFieldProps("email")}
                   disabled={isPending}
                 />
@@ -163,6 +165,7 @@ const ContactSection = () => {
                 </label>
                 <textarea
                   id="message"
+                  placeholder="Ingrese su mensaje"
                   rows={4}
                   className="w-full px-4 py-2 bg-white border border-blue-600/20 rounded-lg focus:outline-none focus:border-blue-600"
                   {...formik.getFieldProps("message")}
