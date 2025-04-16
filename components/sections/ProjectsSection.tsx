@@ -40,7 +40,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
         />
 
         {/* Floating circles decoration */}
-        <div className="absolute top-0 right-0 -mr-8 -mt-8 w-32 h-32 bg-blue-600/10 rounded-full blur-2xl transform group-hover:translate-x-4 group-hover:-translate-y-4 transition-transform duration-700" />
+        <div className="absolute top-10 right-12 -mr-8 -mt-8 w-32 h-32 bg-blue-600/10 rounded-full blur-2xl transform group-hover:translate-x-4 group-hover:-translate-y-4 transition-transform duration-700" />
         <div className="absolute bottom-0 left-0 -ml-8 -mb-8 w-32 h-32 bg-blue-400/10 rounded-full blur-2xl transform group-hover:-translate-x-4 group-hover:translate-y-4 transition-transform duration-700" />
 
         {/* Company badge */}
