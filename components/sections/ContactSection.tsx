@@ -50,13 +50,13 @@ const ContactSection = () => {
     },
   })
   return (
-    <section id="contact" className="flex w-full relative">
-      <div className="flex flex-col md:flex-row gap-8 items-center justify-center w-full px-4 md:px-8">
+    <section id="contact" className="flex w-full">
+      <div className="flex flex-col md:flex-row gap-8 items-center justify-center w-full px-2 md:px-8">
         <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className="flex flex-col basis-full md:basis-1/2 gap-4"
+          className="flex flex-col gap-4"
         >
           <h2 className="text-3xl text-white md:text-4xl font-bold mb-8">
             Contacto
@@ -97,10 +97,10 @@ const ContactSection = () => {
         </motion.div>
 
         <motion.form
-          initial={{ opacity: 0, x: 20 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className="flex flex-col basis-full md:basis-1/2 gap-4 w-full"
+          className="flex flex-col gap-4 w-full"
           onSubmit={formik.handleSubmit}
         >
           {success ? (

@@ -4,11 +4,11 @@ import ProjectsJson from "@/assets/mooks/proyects.json"
 const ProjectsSection = () => {
   const projects = ProjectsJson.reverse()
   return (
-    <section className="flex flex-col gap-8 w-full">
+    <section className="flex flex-col gap-8 w-[99vw]">
       <h2 className="text-3xl md:text-4xl font-bold text-white px-4">
         Experiencia
       </h2>
-      <div className="grid lg:grid-cols-2 gap-8 relative px-0 sm:px-6">
+      <div className="grid md:grid-cols-2 gap-8 relative px-0 sm:px-2 w-[99vw]">
         {projects.map((project, index) => (
           <ProjectCard project={project} index={index} />
         ))}
@@ -29,7 +29,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       className="group relative h-full"
     >
       {/* Decorative elements */}
-      <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-blue-400 rounded-lg blur-md opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200" />
+      <div className="absolute -inset-0 bg-gradient-to-r from-blue-600 to-blue-400 rounded-lg blur-md opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200" />
       <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-blue-400 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200" />
       {/* Content container */}
       <div className="flex flex-col gap-2 relative p-3 sm:p-6 bg-[#12121a] rounded-lg h-full md:min-h-[630px]">
