@@ -6,7 +6,7 @@
     "dateF": "Febrero",
     "dateYear": "2023",
     "role": "FRONTEND",
-    "description": "La empresa requeria una página donde poder mostrar su servicio de catering y quienos son, con una descripcion de sus productos y servicios, con sus redes sociales y un formulario de contacto para una atención personalizada.",
+    "description": "La empresa requería una página para mostrar sus servicios de catering, quiénes son, una descripción de sus productos y servicios, sus redes sociales, y un formulario de contacto para una atención personalizada.",
     "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1715962542/Portafolio/gir1d21yzp0t5wndgpl8.webp",
     "link": "https://alioli-fc837.web.app/",
     "tecnologies": [
@@ -27,10 +27,10 @@
     "backend": null,
     "frontend": [
       {
-        "description": "Fue mi primera experiencia diseñando y creando una página web desde 0."
+        "description": "Fue mi primera experiencia diseñando y creando una página web desde cero."
       },
       {
-        "description": "Deploye por primera vez un FrontEnd."
+        "description": "Realicé el despliegue de un FrontEnd por primera vez."
       }
     ]
   },
@@ -41,7 +41,7 @@
     "dateF": "Octubre",
     "dateYear": "2023",
     "role": "FULL STACK",
-    "description": "Tenian una problematica por falta de un lugar para administrar, mostrar los cursos que brindaban y futuras convocatorias, además que los alumnos puedan inscribirse.",
+    "description": "La empresa enfrentaba la problemática de no contar con un lugar para administrar y mostrar los cursos que ofrecían, así como futuras convocatorias. Además, los alumnos necesitaban un sistema para inscribirse.",
     "link": "https://xacademy-874c5.web.app/",
     "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1715962553/Portafolio/cqivmh0jxh3h9r9l9djj.webp",
     "tecnologies": [
@@ -73,95 +73,35 @@
     "images": null,
     "backend": [
       {
-        "description": "Aprendi a crear APIS con express."
+        "description": "Aprendí a crear APIs con Express."
       },
       {
-        "description": "Mejoré mis conocimientos con SQL."
+        "description": "Mejoré mis conocimientos en SQL."
       },
       {
-        "description": "Cree por primera vez un sistema de envio de emails."
+        "description": "Desarrollé por primera vez un sistema de envío de correos electrónicos."
       },
       {
-        "description": "Deploye por primera vez un Backend."
+        "description": "Realicé el despliegue de un Backend por primera vez."
       }
     ],
     "frontend": [
       {
-        "description": "Mejore mucho mis conocimientos de Html y css"
+        "description": "Mejoré significativamente mis conocimientos en HTML y CSS."
       },
       {
-        "description": "Aprendi mas sobre el Ui y el Ux"
+        "description": "Aprendí más sobre diseño UI y UX."
       }
     ]
   },
   {
     "id": 3,
-    "name": "La Dulce Tradición",
-    "dateI": "Agosto",
-    "dateF": "Octubre",
-    "dateYear": "2023",
-    "role": "FULL STACK",
-    "description": "La empresa constaba de una amplia variedad de productos que mostrar, y la necesidad de un sistema de compra simplificado.",
-    "link": "https://ladulcetradicion-9b3b6.web.app/",
-    "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1715962562/Portafolio/pelkaz0tox8zfzgeemsx.webp",
-    "tecnologies": [
-      {
-        "name": "Javascript",
-        "src": "https://skillicons.dev/icons?i=js"
-      },
-      {
-        "name": "VS Code",
-        "src": "https://skillicons.dev/icons?i=vscode"
-      },
-      {
-        "name": "NodeJs",
-        "src": "https://skillicons.dev/icons?i=nodejs"
-      },
-      {
-        "name": "Angular",
-        "src": "https://skillicons.dev/icons?i=angular"
-      },
-      {
-        "name": "Typescript",
-        "src": "https://skillicons.dev/icons?i=ts"
-      },
-      {
-        "name": "Sequelize",
-        "src": "https://skillicons.dev/icons?i=sequelize"
-      }
-    ],
-    "images": null,
-    "backend": [
-      {
-        "description": "Creé una API desde 0 solo."
-      },
-      {
-        "description": "Creé un sistema de roles y permisos para los usuarios ('administradores' y 'usuarios')."
-      }
-    ],
-    "frontend": [
-      {
-        "description": "Desarrolle por primera vez una página completa solo con conexión a backend."
-      },
-      {
-        "description": "Cree un sistema de 'carrito'."
-      },
-      {
-        "description": "Adapte un diseño de figma a web por primera vez."
-      },
-      {
-        "description": "Me enfrente a problematicas de parte del cliente."
-      }
-    ]
-  },
-  {
-    "id": 4,
     "name": "EcoSistemas",
     "dateI": "Febrero",
     "dateF": "Abril",
     "dateYear": "2024",
     "role": "FULL STACK",
-    "description": "El semillero LATAM brindo la oportunidad de trabajar en un proyecto de impacto real, la cual busca fomentar la inversion hacia pequeñas empresas, que buscan tener un impacto en el medio ambiente.",
+    "description": "El semillero LATAM brindó la oportunidad de trabajar en un proyecto de impacto real, enfocado en fomentar la inversión hacia pequeñas empresas que buscan generar un impacto positivo en el medio ambiente.",
     "link": null,
     "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1735244264/Portafolio/ep82nytfuzb05lfomdb8.webp",
     "tecnologies": [
@@ -193,32 +133,32 @@
     "images": null,
     "backend": [
       {
-        "description": "Programe en Java y spring boot."
+        "description": "Programé en Java y Spring Boot."
       },
       {
-        "description": "Utilizé por primera vez la autenticación de google y spring security a la vez."
+        "description": "Implementé por primera vez autenticación con Google y Spring Security simultáneamente."
       },
       {
-        "description": "Desarrolle el proyecto en base a un UML y trello para la gestión."
+        "description": "Desarrollé el proyecto basado en un UML y gestionado con Trello."
       }
     ],
     "frontend": [
       {
-        "description": "Mejore mi capacidad de estructuración y componetización."
+        "description": "Mejoré mi capacidad de estructuración y componentización."
       },
       {
-        "description": "Utilizé por primera vez la autenticación de google."
+        "description": "Implementé por primera vez autenticación con Google."
       }
     ]
   },
   {
-    "id": 5,
+    "id": 4,
     "name": "Frontend Mentor Projects",
     "dateI": "Mayo",
     "dateF": "Junio",
     "dateYear": "2024",
     "role": "FRONTEND",
-    "description": "Estos proyectos fueron realizados con el fin de mejorar mis habilidades de imitar diseños ya realizados.",
+    "description": "Estos proyectos fueron realizados con el objetivo de mejorar mis habilidades para replicar diseños ya existentes.",
     "link": "https://github.com/Nievas2/projects-with-fm-2",
     "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1717770596/Portafolio/yw8mruw5vq7ivwg3k9m5.png",
     "tecnologies": [
@@ -239,21 +179,21 @@
     "backend": null,
     "frontend": [
       {
-        "description": "Mejore mis conocimientos de Tailwind."
+        "description": "Mejoré mis conocimientos en Tailwind."
       },
       {
-        "description": "Mejore conceptos basicos de css y html."
+        "description": "Reforcé conceptos básicos de CSS y HTML."
       }
     ]
   },
   {
-    "id": 6,
+    "id": 5,
     "name": "TechLibrary",
     "dateI": "Junio",
     "dateF": "Agosto",
     "dateYear": "2024",
     "role": "FRONTEND",
-    "description": "Es una plataforma de librerías y herramientas, pensada para programadores y diseñadores. Donde encontrarás una amplia selección de las librerías más populares y útiles para tus proyectos. Una página que ofrece acceso rápido a la documentación oficial de estas librerías, además de herramientas que facilitaran tus tareas diarias. ",
+    "description": "Es una plataforma de librerías y herramientas pensada para programadores y diseñadores. Ofrece una amplia selección de las librerías más populares y útiles para proyectos, con acceso rápido a su documentación oficial y herramientas que facilitan tareas diarias.",
     "link": "https://tech-library-iota.vercel.app/",
     "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1723405471/Portafolio/i3qwf2ztgn7q7zev2zhg.png",
     "tecnologies": [
@@ -274,10 +214,74 @@
     "backend": null,
     "frontend": [
       {
-        "description": "Mejore mis conocimientos de Tailwind."
+        "description": "Mejoré mis conocimientos en Tailwind."
       },
       {
-        "description": "Mejore conceptos basicos de css y html."
+        "description": "Reforcé conceptos básicos de CSS y HTML."
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "La Dulce Tradición",
+    "dateI": "Agosto",
+    "dateF": "Marzo",
+    "dateYear": "2024/2025",
+    "role": "FULL STACK",
+    "description": "La empresa contaba con una amplia variedad de productos para mostrar y necesitaba un sistema de compra simplificado.",
+    "link": "https://ladulcetradicion.vercel.app/",
+    "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1744820408/Portafolio/ggfvfxluzmftek2jtlpm.webp",
+    "tecnologies": [
+      {
+        "name": "Javascript",
+        "src": "https://skillicons.dev/icons?i=js"
+      },
+      {
+        "name": "Typescript",
+        "src": "https://skillicons.dev/icons?i=ts"
+      },
+      {
+        "name": "NodeJs",
+        "src": "https://skillicons.dev/icons?i=nodejs"
+      },
+      {
+        "name": "Sequelize",
+        "src": "https://skillicons.dev/icons?i=sequelize"
+      },
+      {
+        "name": "React",
+        "src": "https://skillicons.dev/icons?i=react"
+      },
+      {
+        "name": "Tailwind",
+        "src": "https://skillicons.dev/icons?i=tailwind"
+      },
+      {
+        "name": "Zustand",
+        "src": "https://skillicons.dev/icons?i=zustand"
+      }
+    ],
+    "images": null,
+    "backend": [
+      {
+        "description": "Desarrollé una API desde cero."
+      },
+      {
+        "description": "Implementé un sistema de roles y permisos para usuarios ('administradores' y 'usuarios')."
+      }
+    ],
+    "frontend": [
+      {
+        "description": "Desarrollé por primera vez una página completa conectada únicamente a un backend."
+      },
+      {
+        "description": "Implementé un sistema de carrito de compras."
+      },
+      {
+        "description": "Adapté un diseño de Figma a la web por primera vez."
+      },
+      {
+        "description": "Resolví problemáticas planteadas por el cliente."
       }
     ]
   }
