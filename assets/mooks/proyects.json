@@ -159,7 +159,7 @@
     "dateYear": "2024",
     "role": "FRONTEND",
     "description": "Estos proyectos fueron realizados con el objetivo de mejorar mis habilidades para replicar diseños ya existentes.",
-    "link": "https://github.com/Nievas2/projects-with-fm-2",
+    "link": null,
     "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1717770596/Portafolio/yw8mruw5vq7ivwg3k9m5.png",
     "tecnologies": [
       {
@@ -255,10 +255,6 @@
       {
         "name": "Tailwind",
         "src": "https://skillicons.dev/icons?i=tailwind"
-      },
-      {
-        "name": "Zustand",
-        "src": "https://skillicons.dev/icons?i=zustand"
       }
     ],
     "images": null,
