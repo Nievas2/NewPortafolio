@@ -75,7 +75,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
             {project.name}
           </h3>
           <p className="text-blue-200/80 text-sm">
-            {project.dateYear} | {project.dateI} | {project.dateF}
+            {project.dateYear} | {project.dateI} - {project.dateF}
           </p>
 
           {/* Description with custom bullet points */}
