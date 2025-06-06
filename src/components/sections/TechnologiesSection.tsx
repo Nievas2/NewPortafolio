@@ -1,5 +1,5 @@
 import { Icon } from "@iconify/react/dist/iconify.js"
-import TechnologiesJson from "../../assets/mooks/technologies.json"
+import TechnologiesJson from "../../../assets/mooks/technologies.json"
 import { motion } from "framer-motion"
 const TechnologiesSection = () => {
   return (
