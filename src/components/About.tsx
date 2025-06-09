@@ -1,8 +1,14 @@
-import { motion, useScroll, useTransform } from "framer-motion"
+import {
+  motion,
+  useMotionValueEvent,
+  useScroll,
+  useTransform,
+} from "framer-motion"
 import gsap from "gsap"
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 
 const About = () => {
+  const [showContent, setShowContent] = useState(false)
   const about = useRef<HTMLDivElement>(null)
   const main = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({
@@ -10,6 +16,9 @@ const About = () => {
   })
 
   const moveImage = useTransform(scrollYProgress, [0, 0.2, 1], [0, 1, 1])
+  useMotionValueEvent(scrollYProgress, "change", (v) => {
+    setShowContent(v > 0.01)
+  })
 
   /* about */
   useEffect(() => {
@@ -132,55 +141,63 @@ const About = () => {
   }, [moveImage])
 
   const profileReveal = useTransform(scrollYProgress, [0.15, 0.35], [0, 1])
+  // Move these hooks to the top level so they're not called conditionally
+  const clipPath = useTransform(
+    profileReveal,
+    (v) => `circle(${v * 60 + 40}% at 50% 50%)`
+  )
+  const scale = useTransform(profileReveal, [0, 1], [0.7, 1])
+  const rotate = useTransform(profileReveal, [0, 1], [-20, 0])
 
   return (
     <main className="h-[200vh]" ref={main}>
-      <motion.div
-        className="w-full h-screen fixed flex justify-center items-center pb-10 inset-0 z-0"
-        ref={about}
-      >
-        <motion.div
-          className="flex flex-col w-full max-w-md gap-4 items-center justify-center"
-          style={{
-            opacity: moveImage,
-          }}
-        >
-          {/* Foto de perfil animada */}
+      {showContent && (
+        <>
           <motion.div
-            style={{
-              clipPath: useTransform(
-                profileReveal,
-                (v) => `circle(${v * 60 + 40}% at 50% 50%)`
-              ),
-              scale: useTransform(profileReveal, [0, 1], [0.7, 1]),
-              rotate: useTransform(profileReveal, [0, 1], [-20, 0]),
-              transition: "clip-path 0.7s cubic-bezier(.77,0,.18,1)",
-            }}
-            className="w-32 h-32 mb-6 rounded-full overflow-hidden shadow-lg bg-blue-900"
+            className="w-full h-screen fixed flex justify-center items-center pb-10 inset-0 z-0"
+            ref={about}
           >
-            <img
-              src="/photoProfile.jpeg" // Cambia por la ruta de tu foto
-              alt="Foto de perfil"
-              className="w-full h-full object-cover"
-              draggable={false}
-            />
+            <motion.div
+              className="flex flex-col w-full max-w-md gap-4 items-center justify-center"
+              style={{
+                opacity: moveImage,
+              }}
+            >
+              {/* Foto de perfil animada */}
+              <motion.div
+                style={{
+                  clipPath,
+                  scale,
+                  rotate,
+                  transition: "clip-path 0.7s cubic-bezier(.77,0,.18,1)",
+                }}
+                className="w-32 h-32 mb-6 rounded-full overflow-hidden shadow-lg bg-blue-900"
+              >
+                <img
+                  src="/photoProfile.jpeg" // Cambia por la ruta de tu foto
+                  alt="Foto de perfil"
+                  className="w-full h-full object-cover"
+                  draggable={false}
+                />
+              </motion.div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 about-title">
+                Sobre mí
+              </h2>
+              <p className="text-blue-200 about-description-first">
+                Soy un desarrollador frontend apasionado por crear experiencias
+                web únicas. Con 3 años de experiencia, me especializo en
+                construir interfaces modernas y accesibles.
+              </p>
+              <p className="text-blue-200 about-description-second">
+                Mi enfoque se centra en creacion de aplicaciones web de forma
+                eficiente y escalable. Me encanta aprender nuevas tecnologías y
+                compartir conocimientos con la comunidad.
+              </p>
+            </motion.div>
           </motion.div>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 about-title">
-            Sobre mí
-          </h2>
-          <p className="text-blue-200 about-description-first">
-            Soy un desarrollador frontend apasionado por crear experiencias web
-            únicas. Con 3 años de experiencia, me especializo en construir
-            interfaces modernas y accesibles.
-          </p>
-          <p className="text-blue-200 about-description-second">
-            Mi enfoque se centra en creacion de aplicaciones web de forma
-            eficiente y escalable. Me encanta aprender nuevas tecnologías y
-            compartir conocimientos con la comunidad.
-          </p>
-        </motion.div>
-      </motion.div>
-      <motion.div></motion.div>
+          <motion.div></motion.div>
+        </>
+      )}
     </main>
   )
 }
