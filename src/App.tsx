@@ -3,6 +3,7 @@ import type { LenisRef } from "lenis/react"
 import { cancelFrame, frame } from "framer-motion"
 import { useEffect, useRef } from "react"
 import Hero from "./components/Hero"
+import About from "./components/About"
 
 function App() {
   const lenisRef = useRef<LenisRef>(null)
@@ -22,7 +23,7 @@ function App() {
     <ReactLenis root options={{ autoRaf: false }} ref={lenisRef}>
       <main className="flex flex-col items-center bg-black">
         <Hero />
-        <section className="h-screen"></section>
+        <About />
       </main>
     </ReactLenis>
   )
