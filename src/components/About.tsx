@@ -20,9 +20,9 @@ const About = () => {
     [0, 0.02, 0.9, 1],
     [0, 1, 1, 0]
   )
-  useMotionValueEvent(scrollYProgress, "change", (v) => {
-    if (v > 0.99) return setShowContent(false)
-    setShowContent(v > 0.01 || v < 0.99)
+   useMotionValueEvent(scrollYProgress, "change", (v) => {
+    if (v > 0.01 && v < 0.9) return setShowContent(true)
+    if (v < 0.99 && v > 0.01) return setShowContent(false)
   })
 
   /* about */

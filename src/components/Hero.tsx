@@ -52,7 +52,8 @@ const Hero = () => {
     [0, 0, 1, 1, 0]
   )
   useMotionValueEvent(scrollYProgress, "change", (v) => {
-    setShowWhiteMask(v > 0.01 || v < 0.99)
+    if (v > 0.01 && v < 0.9) return setShowWhiteMask(true)
+    if (v < 0.99 && v > 0.01) return setShowWhiteMask(false)
   })
   useEffect(() => {
     // Estado inicial al montar el componente
@@ -91,36 +92,36 @@ const Hero = () => {
         className="bg-black text-white max-w-8xl w-full min-h-[500vh] relative"
         ref={div}
       >
-        <motion.div
-          className="flex justify-center fixed items-start w-full h-screen inset-0 z-0 bg-[url('/images/portada.png')] bg-no-repeat bg-center bg-cover"
-          style={{
-            maskImage: "url('/images/name.png')",
-            maskRepeat: "no-repeat",
-            maskPosition: "50% 20%",
-            maskSize: maskSize /* 
-            position: maskPosition, */,
-            opacity: maskOpacity,
-          }}
-        >
-          <motion.div
-            className="flex flex-col items-baseline justify-center text-2xl h-full"
-            style={{
-              opacity: contentOpacity,
-            }}
-          >
-            <img className="w-28" src="/images/name.png" alt="My name" />
-
-            <button
-              onClick={downloadCV}
-              className="px-6 py-3 bg-blue-600 rounded-full text-white hover:bg-blue-700 transition-colors w-fit cursor-pointer"
-            >
-              Descargar CV
-            </button>
-          </motion.div>
-        </motion.div>
-
         {showWhiteMask && (
           <>
+            <motion.div
+              className="flex justify-center fixed items-start w-full h-screen inset-0 z-0 bg-[url('/images/portada.png')] bg-no-repeat bg-center bg-cover"
+              style={{
+                maskImage: "url('/images/name.png')",
+                maskRepeat: "no-repeat",
+                maskPosition: "50% 20%",
+                maskSize: maskSize /* 
+            position: maskPosition, */,
+                opacity: maskOpacity,
+              }}
+            >
+              <motion.div
+                className="flex flex-col items-baseline justify-center text-2xl h-full"
+                style={{
+                  opacity: contentOpacity,
+                }}
+              >
+                <img className="w-28" src="/images/name.png" alt="My name" />
+
+                <button
+                  onClick={downloadCV}
+                  className="px-6 py-3 bg-blue-600 rounded-full text-white hover:bg-blue-700 transition-colors w-fit cursor-pointer"
+                >
+                  Descargar CV
+                </button>
+              </motion.div>
+            </motion.div>
+
             <motion.div
               className="w-full h-screen fixed inset-0 z-0 bg-white bg-no-repeat bg-center bg-cover pointer-events-none"
               style={{

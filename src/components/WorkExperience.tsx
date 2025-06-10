@@ -25,7 +25,8 @@ const WorkExperience = () => {
     target: main,
   })
   useMotionValueEvent(scrollYProgress, "change", (v) => {
-    setShowContent(v > 0.01)
+    if (v > 0.01 && v < 0.9) return setShowContent(true)
+    if (v < 0.99 && v > 0.01) return setShowContent(false)
   })
 
   const opacity = useTransform(scrollYProgress, [0, 0.1, 0.9, 1], [0, 1, 1, 0])
