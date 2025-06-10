@@ -28,7 +28,7 @@ const WorkExperience = () => {
     setShowContent(v > 0.01)
   })
 
-  const opacity = useTransform(scrollYProgress, [0, 0.02, 1], [0, 1, 1])
+  const opacity = useTransform(scrollYProgress, [0, 0.1, 0.9, 1], [0, 1, 1, 0])
 
   return (
     <main className="flex flex-col items-center h-[300vh]" ref={main}>
