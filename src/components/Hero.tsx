@@ -52,7 +52,7 @@ const Hero = () => {
     [0, 0, 1, 1, 0]
   )
   useMotionValueEvent(scrollYProgress, "change", (v) => {
-    setShowWhiteMask(v > 0.01)
+    setShowWhiteMask(v > 0.01 || v < 0.99)
   })
   useEffect(() => {
     // Estado inicial al montar el componente

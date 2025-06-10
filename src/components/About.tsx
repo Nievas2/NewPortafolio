@@ -15,9 +15,14 @@ const About = () => {
     target: main,
   })
 
-  const moveImage = useTransform(scrollYProgress, [0, 0.2, 1], [0, 1, 1])
+  const moveImage = useTransform(
+    scrollYProgress,
+    [0, 0.02, 0.9, 1],
+    [0, 1, 1, 0]
+  )
   useMotionValueEvent(scrollYProgress, "change", (v) => {
-    setShowContent(v > 0.01)
+    if (v > 0.99) return setShowContent(false)
+    setShowContent(v > 0.01 || v < 0.99)
   })
 
   /* about */
