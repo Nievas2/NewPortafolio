@@ -55,11 +55,13 @@ export default function CarouselComponent({
 
   return (
     <section className="fixed top-0">
-      <div className="relative w-screen h-screen overflow-hidden"
-      style={{ perspective: "1000px" }}>
+      <div
+        className="relative w-screen h-screen overflow-hidden"
+        style={{ perspective: "1000px" }}
+      >
         {/* Container 3D */}
         <div
-          className="absolute top-3/8 left-3/7"
+          className="absolute left-3/10 sm:left-3/8 top-3/8 md:left-3/7"
           style={{
             perspective: "1000px",
             perspectiveOrigin: "center center",
@@ -69,7 +71,7 @@ export default function CarouselComponent({
             {cards.map((card, index) => (
               <div
                 key={card.key || index}
-                className="w-96  h-[450px]"
+                className="w-80 h-96 md:w-96 md:h-[450px]"
                 style={getSlideStyle(index)}
               >
                 <div className="w-full h-full bg-gradient-to-br from-blue-600 to-purple-700 rounded-lg shadow-2xl flex items-center justify-center text-white font-bold text-lg hover:shadow-3xl transition-shadow duration-300">
