@@ -5,29 +5,39 @@ import {
   useTransform,
 } from "framer-motion"
 import gsap from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { useEffect, useRef, useState } from "react"
 
+// Registrar ScrollTrigger
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger)
+}
 const About = () => {
   const [showContent, setShowContent] = useState(false)
   const about = useRef<HTMLDivElement>(null)
   const main = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({
     target: main,
+    offset: ["start end", "end start"], // Es buena práctica definir el offset explícitamente
   })
 
+  // ✅ LA LÍNEA CORREGIDA
   const moveImage = useTransform(
     scrollYProgress,
-    [0, 0.02, 0.9, 1],
+    [0, 0.25, 0.9, 1], // Rango de animación de opacidad más suave
     [0, 1, 1, 0]
   )
+
   useMotionValueEvent(scrollYProgress, "change", (v) => {
-    if (v > 0.01 && v < 0.99) return setShowContent(true)
-    else return setShowContent(false)
+    if (v > 0.01 && v < 0.99) {
+      setShowContent(true)
+    } else {
+      setShowContent(false)
+    }
   })
 
   /* about */
   useEffect(() => {
-    // Estado inicial al montar el componente
     const aboutRef = about.current?.querySelectorAll(".about-animation")
 
     if (aboutRef) {
@@ -146,7 +156,6 @@ const About = () => {
   }, [moveImage])
 
   const profileReveal = useTransform(scrollYProgress, [0.15, 0.35], [0, 1])
-  // Move these hooks to the top level so they're not called conditionally
   const clipPath = useTransform(
     profileReveal,
     (v) => `circle(${v * 60 + 40}% at 50% 50%)`
@@ -156,21 +165,15 @@ const About = () => {
 
   return (
     <main
-      className="h-[200vh]"
+      className="h-[200vh] w-full bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900"
       style={{
-        // Aplica los estilos para ocultar sin desmontar
         visibility: showContent ? "visible" : "hidden",
         pointerEvents: showContent ? "auto" : "none",
       }}
       ref={main}
     >
-      <motion.div
-        className="w-full h-screen fixed flex justify-center items-center pb-10 inset-0 z-0"
-        style={{
-          // Aplica los estilos para ocultar sin desmontar
-          visibility: showContent ? "visible" : "hidden",
-          pointerEvents: showContent ? "auto" : "none",
-        }}
+      <div
+        className="w-full h-screen sticky top-0 flex justify-center items-center pb-10"
         ref={about}
       >
         <motion.div
@@ -210,8 +213,7 @@ const About = () => {
             compartir conocimientos con la comunidad.
           </p>
         </motion.div>
-      </motion.div>
-      <motion.div></motion.div>
+      </div>
     </main>
   )
 }
