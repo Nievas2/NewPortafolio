@@ -20,9 +20,9 @@ const About = () => {
     [0, 0.02, 0.9, 1],
     [0, 1, 1, 0]
   )
-   useMotionValueEvent(scrollYProgress, "change", (v) => {
-    if (v > 0.01 && v < 0.9) return setShowContent(true)
-    if (v < 0.99 && v > 0.01) return setShowContent(false)
+  useMotionValueEvent(scrollYProgress, "change", (v) => {
+    if (v > 0.01 && v < 0.99) return setShowContent(true)
+    else return setShowContent(false)
   })
 
   /* about */
@@ -155,54 +155,63 @@ const About = () => {
   const rotate = useTransform(profileReveal, [0, 1], [-20, 0])
 
   return (
-    <main className="h-[200vh]" ref={main}>
-      {showContent && (
-        <>
+    <main
+      className="h-[200vh]"
+      style={{
+        // Aplica los estilos para ocultar sin desmontar
+        visibility: showContent ? "visible" : "hidden",
+        pointerEvents: showContent ? "auto" : "none",
+      }}
+      ref={main}
+    >
+      <motion.div
+        className="w-full h-screen fixed flex justify-center items-center pb-10 inset-0 z-0"
+        style={{
+          // Aplica los estilos para ocultar sin desmontar
+          visibility: showContent ? "visible" : "hidden",
+          pointerEvents: showContent ? "auto" : "none",
+        }}
+        ref={about}
+      >
+        <motion.div
+          className="flex flex-col w-full max-w-md gap-4 items-center justify-center"
+          style={{
+            opacity: moveImage,
+          }}
+        >
+          {/* Foto de perfil animada */}
           <motion.div
-            className="w-full h-screen fixed flex justify-center items-center pb-10 inset-0 z-0"
-            ref={about}
+            style={{
+              clipPath,
+              scale,
+              rotate,
+              transition: "clip-path 0.7s cubic-bezier(.77,0,.18,1)",
+            }}
+            className="w-32 h-32 mb-6 rounded-full overflow-hidden shadow-lg bg-blue-900"
           >
-            <motion.div
-              className="flex flex-col w-full max-w-md gap-4 items-center justify-center"
-              style={{
-                opacity: moveImage,
-              }}
-            >
-              {/* Foto de perfil animada */}
-              <motion.div
-                style={{
-                  clipPath,
-                  scale,
-                  rotate,
-                  transition: "clip-path 0.7s cubic-bezier(.77,0,.18,1)",
-                }}
-                className="w-32 h-32 mb-6 rounded-full overflow-hidden shadow-lg bg-blue-900"
-              >
-                <img
-                  src="/photoProfile.jpeg" // Cambia por la ruta de tu foto
-                  alt="Foto de perfil"
-                  className="w-full h-full object-cover"
-                  draggable={false}
-                />
-              </motion.div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 about-title">
-                Sobre mí
-              </h2>
-              <p className="text-blue-200 about-description-first">
-                Soy un desarrollador frontend apasionado por crear experiencias
-                web únicas. Con 3 años de experiencia, me especializo en
-                construir interfaces modernas y accesibles.
-              </p>
-              <p className="text-blue-200 about-description-second">
-                Mi enfoque se centra en creacion de aplicaciones web de forma
-                eficiente y escalable. Me encanta aprender nuevas tecnologías y
-                compartir conocimientos con la comunidad.
-              </p>
-            </motion.div>
+            <img
+              src="/photoProfile.jpeg" // Cambia por la ruta de tu foto
+              alt="Foto de perfil"
+              className="w-full h-full object-cover"
+              draggable={false}
+            />
           </motion.div>
-          <motion.div></motion.div>
-        </>
-      )}
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 about-title">
+            Sobre mí
+          </h2>
+          <p className="text-blue-200 about-description-first">
+            Soy un desarrollador frontend apasionado por crear experiencias web
+            únicas. Con 3 años de experiencia, me especializo en construir
+            interfaces modernas y accesibles.
+          </p>
+          <p className="text-blue-200 about-description-second">
+            Mi enfoque se centra en creacion de aplicaciones web de forma
+            eficiente y escalable. Me encanta aprender nuevas tecnologías y
+            compartir conocimientos con la comunidad.
+          </p>
+        </motion.div>
+      </motion.div>
+      <motion.div></motion.div>
     </main>
   )
 }

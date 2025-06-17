@@ -10,7 +10,8 @@ import { useEffect, useRef, useState } from "react"
 const Hero = () => {
   const fullstackRef = useRef<HTMLHeadingElement>(null)
   const div = useRef<HTMLDivElement>(null)
-  const [showWhiteMask, setShowWhiteMask] = useState(false)
+  const [showWhiteMask, setShowWhiteMask] = useState(true)
+  const [showContent, setShowContent] = useState(false)
 
   const { scrollYProgress } = useScroll({
     target: div,
@@ -52,8 +53,13 @@ const Hero = () => {
     [0, 0, 1, 1, 0]
   )
   useMotionValueEvent(scrollYProgress, "change", (v) => {
-    if (v > 0.01 && v < 0.9) return setShowWhiteMask(true)
-    if (v < 0.99 && v > 0.01) return setShowWhiteMask(false)
+    if (v >= 0 && v < 0.99) return setShowWhiteMask(true)
+    if (v > 0.99) return setShowWhiteMask(false)
+  })
+  useMotionValueEvent(scrollYProgress, "change", (v) => {
+    if (v > 0.12 && v < 0.99) return setShowContent(true)
+    if (v > 0 && v < 0.12) return setShowContent(false)
+    if (v > 0.99) return setShowContent(false)
   })
   useEffect(() => {
     // Estado inicial al montar el componente
@@ -90,72 +96,74 @@ const Hero = () => {
     <>
       <div
         className="bg-black text-white max-w-8xl w-full min-h-[500vh] relative"
+        style={{
+          // Aplica los estilos para ocultar sin desmontar
+          visibility: showWhiteMask ? "visible" : "hidden",
+          pointerEvents: showWhiteMask ? "auto" : "none",
+        }}
         ref={div}
       >
-        {showWhiteMask && (
-          <>
-            <motion.div
-              className="flex justify-center fixed items-start w-full h-screen inset-0 z-0 bg-[url('/images/portada.png')] bg-no-repeat bg-center bg-cover"
-              style={{
-                maskImage: "url('/images/name.png')",
-                maskRepeat: "no-repeat",
-                maskPosition: "50% 20%",
-                maskSize: maskSize /* 
+        <motion.div
+          className="flex justify-center fixed items-start w-full h-screen inset-0 z-0 bg-[url('/images/portada.png')] bg-no-repeat bg-center bg-cover"
+          style={{
+            maskImage: "url('/images/name.png')",
+            maskRepeat: "no-repeat",
+            maskPosition: "50% 20%",
+            maskSize: maskSize /* 
             position: maskPosition, */,
-                opacity: maskOpacity,
-              }}
+            opacity: maskOpacity,
+          }}
+        >
+          <motion.div
+            className="flex flex-col items-baseline justify-center text-2xl h-full"
+            style={{
+              opacity: contentOpacity,
+            }}
+          >
+            <img className="w-28" src="/images/name.png" alt="My name" />
+
+            <button
+              onClick={downloadCV}
+              className="px-6 py-3 bg-blue-600 rounded-full text-white hover:bg-blue-700 transition-colors w-fit cursor-pointer"
             >
-              <motion.div
-                className="flex flex-col items-baseline justify-center text-2xl h-full"
-                style={{
-                  opacity: contentOpacity,
-                }}
-              >
-                <img className="w-28" src="/images/name.png" alt="My name" />
+              Descargar CV
+            </button>
+          </motion.div>
+        </motion.div>
 
-                <button
-                  onClick={downloadCV}
-                  className="px-6 py-3 bg-blue-600 rounded-full text-white hover:bg-blue-700 transition-colors w-fit cursor-pointer"
-                >
-                  Descargar CV
-                </button>
-              </motion.div>
-            </motion.div>
-
-            <motion.div
-              className="w-full h-screen fixed inset-0 z-0 bg-white bg-no-repeat bg-center bg-cover pointer-events-none"
-              style={{
-                maskImage: "url('/images/name.png')",
-                maskRepeat: "no-repeat",
-                maskPosition: "50% 20%",
-                maskSize: maskSize,
-                opacity: textOpacity,
-              }}
-            ></motion.div>
-
-            <motion.div
-              className="w-full h-screen fixed flex justify-center items-end pb-20 inset-0 z-0"
-              style={{
-                opacity: roleOpacity,
-              }}
-            >
-              <div className="text-center z-50 font-anta font-bold">
-                <h1 ref={fullstackRef}>
-                  {"FULLSTACK".split("").map((char) => (
-                    <span
-                      key={crypto.randomUUID()}
-                      className="inline-block text-white text-5xl role-animation"
-                      style={{
-                        opacity: 0.25,
-                      }}
-                    >
-                      {char}
-                    </span>
-                  ))}
-                </h1>
-              </div>
-            </motion.div>
-          </>
+        <motion.div
+          className="w-full h-screen fixed inset-0 z-0 bg-white bg-no-repeat bg-center bg-cover pointer-events-none"
+          style={{
+            maskImage: "url('/images/name.png')",
+            maskRepeat: "no-repeat",
+            maskPosition: "50% 20%",
+            maskSize: maskSize,
+            opacity: textOpacity,
+          }}
+        ></motion.div>
+        {showContent && (
+          <motion.div
+            className="w-full h-screen fixed flex justify-center items-end pb-20 inset-0 z-0"
+            style={{
+              opacity: roleOpacity,
+            }}
+          >
+            <div className="text-center z-50 font-anta font-bold">
+              <h1 ref={fullstackRef}>
+                {"FULLSTACK".split("").map((char) => (
+                  <span
+                    key={crypto.randomUUID()}
+                    className="inline-block text-white text-5xl role-animation"
+                    style={{
+                      opacity: 0.25,
+                    }}
+                  >
+                    {char}
+                  </span>
+                ))}
+              </h1>
+            </div>
+          </motion.div>
         )}
       </div>
     </>
