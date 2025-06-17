@@ -18,13 +18,12 @@ const About = () => {
   const main = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({
     target: main,
-    offset: ["start end", "end start"], // Es buena práctica definir el offset explícitamente
+    offset: ["start end", "end start"],
   })
 
-  // ✅ LA LÍNEA CORREGIDA
   const moveImage = useTransform(
     scrollYProgress,
-    [0, 0.25, 0.9, 1], // Rango de animación de opacidad más suave
+    [0, 0.25, 0.9, 1],
     [0, 1, 1, 0]
   )
 
