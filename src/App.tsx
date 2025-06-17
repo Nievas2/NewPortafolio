@@ -4,7 +4,7 @@ import { cancelFrame, frame } from "framer-motion"
 import { useEffect, useRef } from "react"
 import Hero from "./components/Hero"
 import About from "./components/About"
-import WorkExperience from "./components/WorkExperience"
+import Studies from "./components/Studies"
 
 function App() {
   const lenisRef = useRef<LenisRef>(null)
@@ -25,7 +25,8 @@ function App() {
       <main className="flex flex-col items-center bg-black">
         <Hero />
         <About />
-        <WorkExperience />
+        <Studies />
+        <div className="min-h-[400vh]"></div>
       </main>
     </ReactLenis>
   )
