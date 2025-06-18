@@ -6,13 +6,13 @@ import type { LenisRef } from "lenis/react"
 import { useEffect, useRef } from "react"
 import Hero from "./components/Hero"
 import About from "./components/About"
-import Studies from "./components/Studies"
 import WorkExperience from "./components/WorkExperience"
 import Projects from "./components/Projects"
 import { useGSAP } from "@gsap/react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { Icon } from "@iconify/react/dist/iconify.js"
+import Studies from "./components/Studies"
 
 gsap.registerPlugin(ScrollTrigger)
 

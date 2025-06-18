@@ -14,7 +14,11 @@ const WorkExperience = () => {
     offset: ["start end", "end start"],
   })
 
-  const experiences : Experience[] = ExperienceJson
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const experiences: Experience[] = ExperienceJson.map((exp: any) => ({
+    ...exp,
+    typeWork: exp.typeWork === "FREELANCE" ? "FREELANCE" : "EMPLOYMENT",
+  }))
   /* 
   const backgroundY = useTransform(scrollYProgress, [0, 1], [0, 200]) */
   const textY = useTransform(scrollYProgress, [0, 1], [0, -100])
