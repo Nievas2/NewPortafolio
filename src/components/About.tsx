@@ -164,7 +164,7 @@ const About = () => {
 
   return (
     <main
-      className="h-[200vh] w-full bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900"
+      className="min-h-screen w-full bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900"
       style={{
         visibility: showContent ? "visible" : "hidden",
         pointerEvents: showContent ? "auto" : "none",
