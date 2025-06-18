@@ -1,3 +1,4 @@
+import { Icon } from "@iconify/react/dist/iconify.js"
 import {
   motion,
   useMotionValueEvent,
@@ -27,6 +28,45 @@ const Hero = () => {
     document.body.removeChild(link)
   }
 
+  const socialLinks = [
+    {
+      name: "GitHub",
+      url: "https://github.com/Nievas2",
+      icon: (
+        <Icon
+          icon="mdi:github"
+          className="w-6 h-6 "
+          style={{ color: "#fbfbfb" }}
+          aria-hidden="true"
+        />
+      ),
+    },
+    {
+      name: "LinkedIn",
+      url: "https://www.linkedin.com/in/gabriel-nievas/",
+      icon: (
+        <Icon
+          icon="mdi:linkedin"
+          className="w-6 h-6 "
+          style={{ color: "#fbfbfb" }}
+          aria-hidden="true"
+        />
+      ),
+    },
+    {
+      name: "Email",
+      url: "mailto:angelgabrielnievas@gmail.com",
+      icon: (
+        <Icon
+          icon="mdi:email"
+          className="w-6 h-6 "
+          style={{ color: "#fbfbfb" }}
+          aria-hidden="true"
+        />
+      ),
+    },
+  ]
+
   /* Animations */
   const maskSize = useTransform(
     scrollYProgress,
@@ -52,15 +92,18 @@ const Hero = () => {
     [0, 0.7, 0.71, 0.99, 1],
     [0, 0, 1, 1, 0]
   )
+
   useMotionValueEvent(scrollYProgress, "change", (v) => {
     if (v >= 0 && v < 0.99) return setShowWhiteMask(true)
     if (v > 0.99) return setShowWhiteMask(false)
   })
+
   useMotionValueEvent(scrollYProgress, "change", (v) => {
     if (v > 0.12 && v < 0.99) return setShowContent(true)
     if (v > 0 && v < 0.12) return setShowContent(false)
     if (v > 0.99) return setShowContent(false)
   })
+
   useEffect(() => {
     // Estado inicial al montar el componente
     const spans = fullstackRef.current?.querySelectorAll(".role-animation")
@@ -109,25 +152,104 @@ const Hero = () => {
             maskImage: "url('/images/name.png')",
             maskRepeat: "no-repeat",
             maskPosition: "50% 20%",
-            maskSize: maskSize /* 
-            position: maskPosition, */,
+            maskSize: maskSize,
             opacity: maskOpacity,
           }}
         >
           <motion.div
-            className="flex flex-col items-baseline justify-center text-2xl h-full"
+            className="flex flex-col items-center justify-center text-2xl h-full space-y-8 px-4"
             style={{
               opacity: contentOpacity,
             }}
           >
-            <img className="w-28" src="/images/name.png" alt="My name" />
+            {/* Logo/Nombre */}
+            <motion.img
+              className="w-32 md:w-40 drop-shadow-2xl"
+              src="/images/name.png"
+              alt="Angel Gabriel Nievas"
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            />
 
-            <button
-              onClick={downloadCV}
-              className="px-6 py-3 bg-blue-600 rounded-full text-white hover:bg-blue-700 transition-colors w-fit cursor-pointer"
+            {/* Descripción breve */}
+            <motion.div
+              className="text-center max-w-md"
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
             >
-              Descargar CV
-            </button>
+              <p className="text-lg text-gray-200 leading-relaxed mb-2">
+                Desarrollador Fullstack
+              </p>
+              <p className="text-sm text-gray-400 leading-relaxed">
+                Creando experiencias digitales con tecnologías modernas
+              </p>
+            </motion.div>
+
+            {/* Redes Sociales */}
+            <motion.div
+              className="flex space-x-6"
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+            >
+              {socialLinks.map((social, index) => (
+                <motion.a
+                  key={social.name}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 bg-white/10 backdrop-blur-sm rounded-full text-white hover:bg-white/20 hover:scale-110 transition-all duration-300 border border-white/20"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                  initial={{ scale: 0, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  transition={{ duration: 0.5, delay: 0.7 + index * 0.1 }}
+                >
+                  {social.icon}
+                  <span className="sr-only">{social.name}</span>
+                </motion.a>
+              ))}
+            </motion.div>
+
+            {/* Botón de CV mejorado */}
+            <motion.button
+              onClick={downloadCV}
+              className="flex justify-center items-center group px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 overflow-hidden cursor-pointer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+            >
+              <span className=" bg-gradient-to-r from-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+              <span className="flex items-center space-x-2">
+                <Icon icon="mdi:download" className="w-6 h-6" />
+                <span>Descargar CV</span>
+              </span>
+            </motion.button>
+
+            {/* Indicador de scroll */}
+            <motion.div
+              className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 1.2 }}
+            >
+              <motion.div
+                className="flex flex-col items-center text-white/60"
+                animate={{ y: [0, 10, 0] }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              >
+                <span className="text-sm mb-2">Scroll para explorar</span>
+                <Icon icon="mdi:arrow-down" className="w-6 h-6" />
+              </motion.div>
+            </motion.div>
           </motion.div>
         </motion.div>
 
@@ -141,6 +263,7 @@ const Hero = () => {
             opacity: textOpacity,
           }}
         ></motion.div>
+
         {showContent && (
           <motion.div
             className="w-full h-screen fixed flex justify-center items-end pb-20 inset-0 z-0"
@@ -169,4 +292,5 @@ const Hero = () => {
     </>
   )
 }
+
 export default Hero
