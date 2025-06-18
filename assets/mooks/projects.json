@@ -213,9 +213,47 @@
         "description": "Mejoré mis conocimientos en Tailwind."
       },
       {
+        "description": "Aprendi a gestionar estados con zustand."
+      },
+      {
         "description": "Reforcé conceptos básicos de CSS y HTML."
       }
     ]
-  }
+  },
 
+  {
+    "id": 6,
+    "name": "Cortate Bien",
+    "dateI": "Enero",
+    "dateF": "Actualmente",
+    "dateYear": "2025",
+    "role": "FRONTEND",
+    "description": "Es una plataforma de librerías y herramientas pensada para programadores y diseñadores. Ofrece una amplia selección de las librerías más populares y útiles para proyectos, con acceso rápido a su documentación oficial y herramientas que facilitan tareas diarias.",
+    "link": "https://cortatebien.com",
+    "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1750253500/Portafolio/202aa5f36098c0ad8cb0f3d9c167392d_bcfura.png",
+    "tecnologies": [
+      {
+        "name": "Tailwind",
+        "src": "https://skillicons.dev/icons?i=tailwind"
+      },
+      {
+        "name": "React",
+        "src": "https://skillicons.dev/icons?i=react"
+      },
+      {
+        "name": "Firebase",
+        "src": "https://skillicons.dev/icons?i=firebase"
+      }
+    ],
+    "images": null,
+    "backend": null,
+    "frontend": [
+      {
+        "description": "Implementé firebase message para enviar y recibir notificaciones."
+      },
+      {
+        "description": "Desarrollé un sistema de control para administradores, para poder gestionar el contenido de la web."
+      }
+    ]
+  }
 ]
