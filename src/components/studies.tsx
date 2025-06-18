@@ -10,7 +10,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 import StudiesJson from "../../assets/mooks/studies.json"
 import { StudyCard } from "./shared/study/StudyCard"
 
-const Studies = () => {
+export const Studies = () => {
   const [showContent, setShowContent] = useState(false)
   const sectionRef = useRef(null)
   const timelineRef = useRef(null)
@@ -180,5 +180,3 @@ const Studies = () => {
     </section>
   )
 }
-
-export default Studies

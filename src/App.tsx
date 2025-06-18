@@ -1,8 +1,5 @@
-// App.tsx MODIFICADO
-
 import { ReactLenis } from "lenis/react"
 import type { LenisRef } from "lenis/react"
-// Se elimina `cancelFrame` y `frame` ya que no se usarán de esa manera
 import { useEffect, useRef } from "react"
 import Hero from "./components/Hero"
 import About from "./components/About"
@@ -12,7 +9,7 @@ import { useGSAP } from "@gsap/react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { Icon } from "@iconify/react/dist/iconify.js"
-import Studies from "./components/Studies"
+import { Studies } from "./components/Studies"
 
 gsap.registerPlugin(ScrollTrigger)
 
