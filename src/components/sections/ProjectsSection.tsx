@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
 import { Project } from "@/interfaces/project"
-import ProjectsJson from "@/assets/mooks/proyects.json"
+import ProjectsJson from "@/assets/mooks/projects.json"
 const ProjectsSection = () => {
   const projects = ProjectsJson.reverse()
   return (
