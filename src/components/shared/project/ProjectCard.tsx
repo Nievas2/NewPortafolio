@@ -1,17 +1,26 @@
 import { useRef, useState } from "react"
 import type { Project } from "../../../interfaces/project"
 import { motion } from "framer-motion"
+import { ImageModal } from "../ImageModal"
 
 export const ProjectCard = ({
-  experiencia,
+  project,
   index,
 }: {
-  experiencia: Project
+  project: Project
   index: number
 }) => {
   const cardRef = useRef(null) /* 
     const isInView = useInView(cardRef, { once: true, amount: 0.2 }) */
   const [showDetails, setShowDetails] = useState(false)
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
+  // Manejar tecla ESC para cerrar modal
+  const handleKeyDown = (e: KeyboardEvent) => {
+    if (e.key === "Escape") {
+      setIsModalOpen(false)
+    }
+  }
 
   const getRoleColor = (role: string) => {
     switch (role) {
@@ -25,6 +34,23 @@ export const ProjectCard = ({
         return "from-gray-500 to-gray-600"
     }
   }
+
+  // Agregar/remover event listener para tecla ESC
+  useState(() => {
+    if (isModalOpen) {
+      document.addEventListener("keydown", handleKeyDown)
+      // Prevenir scroll del body cuando el modal está abierto
+      document.body.style.overflow = "hidden"
+    } else {
+      document.removeEventListener("keydown", handleKeyDown)
+      document.body.style.overflow = "unset"
+    }
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown)
+      document.body.style.overflow = "unset"
+    }
+  })
 
   return (
     <motion.div
@@ -49,23 +75,22 @@ export const ProjectCard = ({
                 <div className="flex items-center space-x-4">
                   <div
                     className={`px-4 py-2 bg-gradient-to-r ${getRoleColor(
-                      experiencia.role
+                      project.role
                     )} rounded-full flex items-center space-x-2 text-white font-semibold text-sm shadow-lg`}
                   >
                     {/* 
-                      {getRoleIcon(experiencia.role)} */}
-                    <span>{experiencia.role}</span>
+                      {getRoleIcon(project.role)} */}
+                    <span>{project.role}</span>
                   </div>
                   <div className="flex items-center text-gray-400 text-sm">
                     {/* 
                       <Calendar className="w-4 h-4 mr-2" /> */}
-                    {experiencia.dateI} - {experiencia.dateF}{" "}
-                    {experiencia.dateYear}
+                    {project.dateI} - {project.dateF} {project.dateYear}
                   </div>
                 </div>
-                {experiencia.link && (
+                {project.link && (
                   <motion.a
-                    href={experiencia.link}
+                    href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg text-white font-medium hover:shadow-lg transition-all duration-300"
@@ -80,10 +105,10 @@ export const ProjectCard = ({
               </div>
 
               <h3 className="text-3xl font-bold text-white mb-2">
-                {experiencia.name}
+                {project.name}
               </h3>
               <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                {experiencia.description}
+                {project.description}
               </p>
             </div>
 
@@ -94,10 +119,10 @@ export const ProjectCard = ({
                 Stack Tecnológico
               </h4>
               <div className="flex flex-wrap gap-3">
-                {experiencia.tecnologies.map((tech) => (
+                {project.tecnologies.map((tech) => (
                   <motion.div
                     key={crypto.randomUUID()}
-                    className="flex items-center space-x-2 bg-slate-800/80 px-4 py-2 rounded-lg border border-slate-600/50 hover:border-orange-500/50 transition-all duration-300"
+                    className="flex items-center space-x-2 bg-slate-800/80 px-4 py-2 rounded-lg border border-slate-600/50 hover:border-orange-500/50 transition-all duration-300 cursor-pointer"
                     whileHover={{ scale: 1.05, y: -2 }}
                     transition={{ duration: 0.2 }}
                   >
@@ -114,7 +139,7 @@ export const ProjectCard = ({
             <div className="card-content">
               <motion.button
                 onClick={() => setShowDetails(!showDetails)}
-                className="flex items-center space-x-2 text-orange-400 hover:text-orange-300 font-semibold transition-colors duration-300"
+                className="flex items-center space-x-2 text-orange-400 hover:text-orange-300 font-semibold transition-colors duration-300 cursor-pointer"
                 whileHover={{ x: 5 }}
               >
                 <span>Ver Detalles del Proyecto</span>
@@ -138,7 +163,7 @@ export const ProjectCard = ({
               >
                 <div className="pt-6 grid md:grid-cols-2 gap-6">
                   {/* Frontend Tasks */}
-                  {experiencia.frontend && (
+                  {project.frontend && (
                     <div className="space-y-3">
                       <h5 className="text-lg font-semibold text-green-400 flex items-center">
                         {/* 
@@ -146,7 +171,7 @@ export const ProjectCard = ({
                         Frontend
                       </h5>
                       <div className="space-y-2">
-                        {experiencia.frontend.map((task, idx) => (
+                        {project.frontend.map((task, idx) => (
                           <motion.div
                             key={crypto.randomUUID()}
                             className="flex items-start space-x-3 p-3 bg-slate-800/50 rounded-lg"
@@ -165,7 +190,7 @@ export const ProjectCard = ({
                   )}
 
                   {/* Backend Tasks */}
-                  {experiencia.backend && (
+                  {project.backend && (
                     <div className="space-y-3">
                       <h5 className="text-lg font-semibold text-blue-400 flex items-center">
                         {/* 
@@ -173,7 +198,7 @@ export const ProjectCard = ({
                         Backend
                       </h5>
                       <div className="space-y-2">
-                        {experiencia.backend.map((task, idx) => (
+                        {project.backend.map((task, idx) => (
                           <motion.div
                             key={crypto.randomUUID()}
                             className="flex items-start space-x-3 p-3 bg-slate-800/50 rounded-lg"
@@ -200,16 +225,47 @@ export const ProjectCard = ({
             <div className="relative group">
               <div className="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-red-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
               <motion.div
-                className="relative overflow-hidden rounded-2xl border border-slate-600/50"
+                className="relative overflow-hidden rounded-2xl border border-slate-600/50 cursor-pointer"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.4 }}
+                onClick={() => setIsModalOpen(true)}
               >
                 <img
-                  src={experiencia.src ?? ""}
-                  alt={experiencia.name}
+                  src={project.src ?? ""}
+                  alt={project.name}
                   className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+                {/* Overlay con indicador de zoom */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <motion.div
+                    className="bg-white/20 backdrop-blur-sm rounded-full p-3"
+                    initial={{ scale: 0.8, opacity: 0 }}
+                    whileHover={{ scale: 1, opacity: 1 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <svg
+                      className="w-8 h-8 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
+                      />
+                    </svg>
+                  </motion.div>
+                </div>
+
+                {/* Indicador de "Click para ampliar" */}
+                <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="bg-black/60 text-white text-xs px-2 py-1 rounded-full">
+                    Click para ampliar
+                  </span>
+                </div>
               </motion.div>
             </div>
 
@@ -220,12 +276,20 @@ export const ProjectCard = ({
                 <span className="text-orange-400 font-semibold">100%</span>
               </div>
               <div className="w-full bg-slate-700 rounded-full h-2">
-                <div className="progress-bar bg-gradient-to-r from-orange-500 to-red-600 h-2 rounded-full"></div>
+                <div className="progress-bar bg-gradient-to-r from-orange-500 to-red-600 h-2 rounded-full w-full"></div>
               </div>
             </div>
           </div>
         </div>
       </motion.div>
+      {/* Modal de imagen */}
+      <ImageModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        imageSrc={project.src ?? ""}
+        imageAlt={project.name}
+        projectName={project.name}
+      />
     </motion.div>
   )
 }

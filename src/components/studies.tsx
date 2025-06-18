@@ -10,11 +10,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 import StudiesJson from "../../assets/mooks/studies.json"
 import { StudyCard } from "./shared/study/StudyCard"
 
-// Registrar ScrollTrigger
-if (typeof window !== "undefined") {
-  gsap.registerPlugin(ScrollTrigger)
-}
-
 const Studies = () => {
   const [showContent, setShowContent] = useState(false)
   const sectionRef = useRef(null)
@@ -39,78 +34,79 @@ const Studies = () => {
   const opacity = useTransform(scrollYProgress, [0, 0.3, 0.9, 1], [0, 1, 1, 0])
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      // Animación de la línea de tiempo
-      gsap.set(".timeline-line", { scaleY: 0, transformOrigin: "top" })
+    if (showContent) {
+      const ctx = gsap.context(() => {
+        // Animación de la línea de tiempo
+        gsap.set(".timeline-line", { scaleY: 0, transformOrigin: "top" })
 
-      ScrollTrigger.create({
-        trigger: timelineRef.current,
-        start: "top 80%",
-        end: "bottom 50%",
-        scrub: 1,
-        onUpdate: (self) => {
-          gsap.to(".timeline-line", {
-            scaleY: self.progress,
-            duration: 0.3,
-            ease: "none",
-          })
-        },
-      })
-
-      // Animaciones de las tarjetas
-      gsap.fromTo(
-        ".study-card",
-        {
-          opacity: 0,
-          y: 100,
-          scale: 0.8,
-        },
-        {
-          opacity: 1,
-          y: 0,
-          scale: 1,
-          duration: 1,
-          stagger: 0.2,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: ".study-card",
-            start: "top 85%",
-            toggleActions: "play none none reverse",
+        ScrollTrigger.create({
+          trigger: timelineRef.current,
+          start: "top 80%",
+          end: "bottom 50%",
+          scrub: 1,
+          onUpdate: (self) => {
+            gsap.to(".timeline-line", {
+              scaleY: self.progress,
+              duration: 0.3,
+              ease: "none",
+            })
           },
-        }
-      )
+        })
 
-      // Animación de las tecnologías
-      gsap.fromTo(
-        ".tech-icon",
-        {
-          opacity: 0,
-          scale: 0,
-          rotation: -180,
-        },
-        {
-          opacity: 1,
-          scale: 1,
-          rotation: 0,
-          duration: 0.8,
-          stagger: 0.1,
-          ease: "back.out(1.7)",
-          scrollTrigger: {
-            trigger: ".tech-icon",
-            start: "top 90%",
-            toggleActions: "play none none reverse",
+        // Animaciones de las tarjetas
+        gsap.fromTo(
+          ".study-card",
+          {
+            opacity: 0,
+            y: 100,
+            scale: 0.8,
           },
-        }
-      )
-    }, sectionRef)
+          {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            duration: 1,
+            stagger: 0.2,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: ".study-card",
+              start: "top 85%",
+              toggleActions: "play none none reverse",
+            },
+          }
+        )
 
-    return () => ctx.revert()
-  }, [])
+        // Animación de las tecnologías
+        gsap.fromTo(
+          ".tech-icon",
+          {
+            opacity: 0,
+            scale: 0,
+            rotation: -180,
+          },
+          {
+            opacity: 1,
+            scale: 1,
+            rotation: 0,
+            duration: 0.8,
+            stagger: 0.1,
+            ease: "back.out(1.7)",
+            scrollTrigger: {
+              trigger: ".tech-icon",
+              start: "top 90%",
+              toggleActions: "play none none reverse",
+            },
+          }
+        )
+      }, sectionRef)
+      return () => ctx.revert()
+    }
+  }, [showContent])
 
   return (
     <section
       ref={sectionRef}
-      className="min-h-screen w-full py-20 px-4 overflow-hidden"
+      className="min-h-screen w-full py-20 px-4 overflow-hidden panel"
       style={{
         // Aplica los estilos para ocultar sin desmontar
         visibility: showContent ? "visible" : "hidden",

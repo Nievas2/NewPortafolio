@@ -2,6 +2,7 @@
   {
     "id": 1,
     "name": "Enpatados",
+    "typeWork": "FREELANCE",
     "dateI": "Noviembre",
     "dateF": "Enero",
     "dateYear": "2024/2025",
@@ -54,6 +55,7 @@
   {
     "id": 2,
     "name": "La Dulce Tradición",
+    "typeWork": "FREELANCE",
     "dateI": "Agosto",
     "dateF": "Marzo",
     "dateYear": "2024/2025",

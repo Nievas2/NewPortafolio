@@ -136,9 +136,9 @@ const Hero = () => {
   }, [role])
 
   return (
-    <>
+    
       <div
-        className="bg-black text-white max-w-8xl w-full min-h-[500vh] relative"
+        className="bg-black text-white max-w-8xl w-full min-h-[500vh] relative panel"
         style={{
           // Aplica los estilos para ocultar sin desmontar
           visibility: showWhiteMask ? "visible" : "hidden",
@@ -160,6 +160,7 @@ const Hero = () => {
             className="flex flex-col items-center justify-center text-2xl h-full space-y-8 px-4"
             style={{
               opacity: contentOpacity,
+              scale: contentOpacity ,
             }}
           >
             {/* Logo/Nombre */}
@@ -289,7 +290,7 @@ const Hero = () => {
           </motion.div>
         )}
       </div>
-    </>
+    
   )
 }
 

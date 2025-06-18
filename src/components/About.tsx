@@ -5,13 +5,9 @@ import {
   useTransform,
 } from "framer-motion"
 import gsap from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { useEffect, useRef, useState } from "react"
 
-// Registrar ScrollTrigger
-if (typeof window !== "undefined") {
-  gsap.registerPlugin(ScrollTrigger)
-}
+
 const About = () => {
   const [showContent, setShowContent] = useState(false)
   const about = useRef<HTMLDivElement>(null)
@@ -164,7 +160,7 @@ const About = () => {
 
   return (
     <main
-      className="min-h-screen w-full bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900"
+      className="min-h-screen w-full bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 panel"
       style={{
         visibility: showContent ? "visible" : "hidden",
         pointerEvents: showContent ? "auto" : "none",

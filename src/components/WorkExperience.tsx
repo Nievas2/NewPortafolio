@@ -1,15 +1,11 @@
 import { useEffect, useRef } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
 import { gsap } from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
-import type { Project } from "../interfaces/project"
 
 import ExperienceJson from "../../assets/mooks/experience.json"
 import { ExperienceCard } from "./shared/workExperience/ExperienceCard"
-// Registrar ScrollTrigger
-if (typeof window !== "undefined") {
-  gsap.registerPlugin(ScrollTrigger)
-}
+import type { Experience } from "../interfaces/experience"
+
 
 const WorkExperience = () => {
   const sectionRef = useRef(null)
@@ -18,7 +14,7 @@ const WorkExperience = () => {
     offset: ["start end", "end start"],
   })
 
-  const experiencias = ExperienceJson
+  const experiences : Experience[] = ExperienceJson
   /* 
   const backgroundY = useTransform(scrollYProgress, [0, 1], [0, 200]) */
   const textY = useTransform(scrollYProgress, [0, 1], [0, -100])
@@ -95,17 +91,8 @@ const WorkExperience = () => {
   return (
     <section
       ref={sectionRef}
-      className="min-h-screen py-20 px-4 relative overflow-hidden w-full "
+      className="min-h-screen py-20 px-4 relative overflow-hidden w-full panel"
     >
-      {/* Efectos de fondo */}
-      {/*    <motion.div
-        className="absolute inset-0 overflow-hidden"
-        style={{ y: backgroundY }}
-      >
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-orange-500/10 rounded-full mix-blend-multiply filter blur-3xl"></div>
-        <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-red-500/10 rounded-full mix-blend-multiply filter blur-3xl"></div>
-      </motion.div> */}
-
       <motion.div
         className="max-w-6xl mx-auto relative z-10"
         style={{ y: textY }}
@@ -127,24 +114,24 @@ const WorkExperience = () => {
           </p>
         </motion.div>
 
-        {/* Timeline de experiencias */}
+        {/* Timeline de experiences */}
         <div className="relative">
           {/* Línea vertical principal */}
-          <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-gradient-to-b from-orange-500 via-red-500 to-pink-600"></div>
+          <div className="hidden sm:static absolute left-4 top-0 bottom-0 w-0.5 bg-gradient-to-b from-orange-500 via-red-500 to-pink-600"></div>
 
           {/* Experiencias */}
           <div className="space-y-12">
-            {experiencias.map((experiencia: Project, index) => (
+            {experiences.map((experience: Experience, index) => (
               <ExperienceCard
                 key={crypto.randomUUID()}
-                experiencia={experiencia}
+                experience={experience}
                 index={index}
               />
             ))}
           </div>
         </div>
 
-        {/* Métricas de experiencia */}
+        {/* Métricas de experience */}
         <motion.div
           className="flex flex-col md:flex-row justify-center items-center gap-6"
           initial={{ opacity: 0, y: 50 }}

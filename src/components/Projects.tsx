@@ -1,15 +1,11 @@
 import { useEffect, useRef } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
 import { gsap } from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
 import type { Project } from "../interfaces/project"
 
 import ProjectJson from "../../assets/mooks/projects.json"
 import { ProjectCard } from "./shared/project/ProjectCard"
-// Registrar ScrollTrigger
-if (typeof window !== "undefined") {
-  gsap.registerPlugin(ScrollTrigger)
-}
+
 
 const Projects = () => {
   const sectionRef = useRef(null)
@@ -18,7 +14,7 @@ const Projects = () => {
     offset: ["start end", "end start"],
   })
 
-  const experiencias = [...ProjectJson].reverse()
+  const projects = [...ProjectJson].reverse()
   /* 
   const backgroundY = useTransform(scrollYProgress, [0, 1], [0, 200]) */
   const textY = useTransform(scrollYProgress, [0, 1], [0, -100])
@@ -95,7 +91,7 @@ const Projects = () => {
   return (
     <section
       ref={sectionRef}
-      className="min-h-screen py-20 px-4 relative overflow-hidden w-full bg-gradient-to-br from-slate-900 via-orange-900/20 to-red-900/20"
+      className="min-h-screen py-20 px-4 relative overflow-hidden w-full bg-gradient-to-br from-slate-900 via-orange-900/20 to-red-900/20 panel"
     >
       {/* Efectos de fondo */}
       {/*    <motion.div
@@ -129,10 +125,10 @@ const Projects = () => {
         <div className="relative">
           {/* Experiencias */}
           <div className="space-y-12">
-            {experiencias.map((experiencia: Project, index) => (
+            {projects.map((project: Project, index) => (
               <ProjectCard
                 key={crypto.randomUUID()}
-                experiencia={experiencia}
+                project={project}
                 index={index}
               />
             ))}
