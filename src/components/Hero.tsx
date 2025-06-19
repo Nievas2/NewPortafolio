@@ -7,6 +7,7 @@ import {
 } from "framer-motion"
 import gsap from "gsap"
 import { useEffect, useRef, useState } from "react"
+import { Tooltip } from "react-tooltip"
 
 const Hero = () => {
   const fullstackRef = useRef<HTMLHeadingElement>(null)
@@ -47,18 +48,6 @@ const Hero = () => {
       icon: (
         <Icon
           icon="mdi:linkedin"
-          className="w-6 h-6 "
-          style={{ color: "#fbfbfb" }}
-          aria-hidden="true"
-        />
-      ),
-    },
-    {
-      name: "Email",
-      url: "mailto:angelgabrielnievas@gmail.com",
-      icon: (
-        <Icon
-          icon="mdi:email"
           className="w-6 h-6 "
           style={{ color: "#fbfbfb" }}
           aria-hidden="true"
@@ -135,163 +124,203 @@ const Hero = () => {
     return () => unsub()
   }, [role])
 
+  // EmailCopyButton component definition
+  function EmailCopyButton() {
+    const [copied, setCopied] = useState(false)
+
+    const handleCopy = () => {
+      navigator.clipboard.writeText("I5w0y@example.com")
+      setCopied(true)
+      setTimeout(() => setCopied(false), 1500)
+    }
+
+    return (
+      <>
+        <motion.button
+          onClick={handleCopy}
+          className="p-3 bg-white/10 backdrop-blur-sm rounded-full text-white hover:bg-white/20 hover:scale-110 transition-all duration-300 border border-white/20"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          initial={{ scale: 0, opacity: 0, rotate:180 }}
+          animate={{ scale: 1, opacity: 1, rotate:0 }}
+          transition={{ duration: 0.5, delay: 0.7 + 2 * 0.1 }}
+          data-tooltip-id="email-tooltip"
+          data-tooltip-content={copied ? "¡Copiado!" : "Copiar email"}
+          aria-label="Copiar email"
+          type="button"
+        >
+          <Icon
+            icon="mdi:email"
+            className="w-6 h-6"
+            style={{ color: "#fbfbfb" }}
+            aria-hidden="true"
+          />
+          <span className="sr-only">Copiar email</span>
+        </motion.button>
+        <Tooltip
+          id="email-tooltip"
+          place="bottom"
+          style={{ fontSize: "0.8rem" }}
+        />
+      </>
+    )
+  }
+
   return (
-    
-      <div
-        className="bg-black text-white max-w-8xl w-full min-h-[500vh] relative panel"
+    <div
+      className="bg-black text-white max-w-8xl w-full min-h-[500vh] relative panel"
+      style={{
+        // Aplica los estilos para ocultar sin desmontar
+        visibility: showWhiteMask ? "visible" : "hidden",
+        pointerEvents: showWhiteMask ? "auto" : "none",
+      }}
+      ref={div}
+      id="home"
+    >
+      <motion.div
+        className="flex justify-center fixed items-start w-full h-screen inset-0 z-0 bg-[url('/images/portada.png')] bg-no-repeat bg-center bg-cover"
         style={{
-          // Aplica los estilos para ocultar sin desmontar
-          visibility: showWhiteMask ? "visible" : "hidden",
-          pointerEvents: showWhiteMask ? "auto" : "none",
+          maskImage: "url('/images/name.png')",
+          maskRepeat: "no-repeat",
+          maskPosition: "50% 20%",
+          maskSize: maskSize,
+          opacity: maskOpacity,
         }}
-        ref={div}
-        id="home"
       >
         <motion.div
-          className="flex justify-center fixed items-start w-full h-screen inset-0 z-0 bg-[url('/images/portada.png')] bg-no-repeat bg-center bg-cover"
+          className="flex flex-col items-center justify-center text-2xl h-full space-y-8 px-4"
           style={{
-            maskImage: "url('/images/name.png')",
-            maskRepeat: "no-repeat",
-            maskPosition: "50% 20%",
-            maskSize: maskSize,
-            opacity: maskOpacity,
+            opacity: contentOpacity,
+            scale: contentOpacity,
           }}
         >
+          {/* Logo/Nombre */}
+          <motion.img
+            className="w-32 md:w-40 drop-shadow-2xl"
+            src="/images/name.png"
+            alt="Angel Gabriel Nievas"
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          />
+
+          {/* Descripción breve */}
           <motion.div
-            className="flex flex-col items-center justify-center text-2xl h-full space-y-8 px-4"
-            style={{
-              opacity: contentOpacity,
-              scale: contentOpacity ,
-            }}
+            className="text-center max-w-md"
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
           >
-            {/* Logo/Nombre */}
-            <motion.img
-              className="w-32 md:w-40 drop-shadow-2xl"
-              src="/images/name.png"
-              alt="Angel Gabriel Nievas"
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-            />
+            <p className="text-lg text-gray-200 leading-relaxed mb-2">
+              Desarrollador Fullstack
+            </p>
+            <p className="text-sm text-gray-400 leading-relaxed">
+              Creando experiencias digitales con tecnologías modernas
+            </p>
+          </motion.div>
 
-            {/* Descripción breve */}
-            <motion.div
-              className="text-center max-w-md"
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-            >
-              <p className="text-lg text-gray-200 leading-relaxed mb-2">
-                Desarrollador Fullstack
-              </p>
-              <p className="text-sm text-gray-400 leading-relaxed">
-                Creando experiencias digitales con tecnologías modernas
-              </p>
-            </motion.div>
-
-            {/* Redes Sociales */}
-            <motion.div
-              className="flex space-x-6"
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-            >
-              {socialLinks.map((social, index) => (
-                <motion.a
-                  key={social.name}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-3 bg-white/10 backdrop-blur-sm rounded-full text-white hover:bg-white/20 hover:scale-110 transition-all duration-300 border border-white/20"
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
-                  initial={{ scale: 0, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  transition={{ duration: 0.5, delay: 0.7 + index * 0.1 }}
-                >
-                  {social.icon}
-                  <span className="sr-only">{social.name}</span>
-                </motion.a>
-              ))}
-            </motion.div>
-
-            {/* Botón de CV mejorado */}
-            <motion.button
-              onClick={downloadCV}
-              className="flex justify-center items-center group px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 overflow-hidden cursor-pointer"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
-            >
-              <span className=" bg-gradient-to-r from-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-              <span className="flex items-center space-x-2">
-                <Icon icon="mdi:download" className="w-6 h-6" />
-                <span>Descargar CV</span>
-              </span>
-            </motion.button>
-
-            {/* Indicador de scroll */}
-            <motion.div
-              className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 1.2 }}
-            >
-              <motion.div
-                className="flex flex-col items-center text-white/60"
-                animate={{ y: [0, 10, 0] }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
+          {/* Redes Sociales */}
+          <motion.div
+            className="flex space-x-6"
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+          >
+            {socialLinks.map((social, index) => (
+              <motion.a
+                key={social.name}
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 bg-white/10 backdrop-blur-sm rounded-full text-white hover:bg-white/20 hover:scale-110 transition-all duration-300 border border-white/20"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+                initial={{ scale: 0, opacity: 0, rotate: 180 }}
+                animate={{ scale: 1, opacity: 1, rotate: 0 }}
+                transition={{ duration: 1, delay: 0.7 + index * 0.1 }}
               >
-                <span className="text-sm mb-2">Scroll para explorar</span>
-                <Icon icon="mdi:arrow-down" className="w-6 h-6" />
-              </motion.div>
+                {social.icon}
+                <span className="sr-only">{social.name}</span>
+              </motion.a>
+            ))}
+            {/* Email button with tooltip on click */}
+            <EmailCopyButton />
+          </motion.div>
+
+          <motion.button
+            onClick={downloadCV}
+            className="flex justify-center items-center group px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 overflow-hidden cursor-pointer"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+          >
+            <span className="flex items-center space-x-2">
+              <Icon icon="mdi:download" className="w-6 h-6" />
+              <span>Descargar CV</span>
+            </span>
+          </motion.button>
+
+          {/* Indicador de scroll */}
+          <motion.div
+            className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 1.2 }}
+          >
+            <motion.div
+              className="flex flex-col items-center text-white/60"
+              animate={{ y: [0, 10, 0] }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            >
+              <span className="text-sm mb-2">Scroll para explorar</span>
+              <Icon icon="mdi:arrow-down" className="w-6 h-6" />
             </motion.div>
           </motion.div>
         </motion.div>
+      </motion.div>
 
+      <motion.div
+        className="w-full h-screen fixed inset-0 z-0 bg-white bg-no-repeat bg-center bg-cover pointer-events-none"
+        style={{
+          maskImage: "url('/images/name.png')",
+          maskRepeat: "no-repeat",
+          maskPosition: "50% 20%",
+          maskSize: maskSize,
+          opacity: textOpacity,
+        }}
+      ></motion.div>
+
+      {showContent && (
         <motion.div
-          className="w-full h-screen fixed inset-0 z-0 bg-white bg-no-repeat bg-center bg-cover pointer-events-none"
+          className="w-full h-screen fixed flex justify-center items-end pb-20 inset-0 z-0"
           style={{
-            maskImage: "url('/images/name.png')",
-            maskRepeat: "no-repeat",
-            maskPosition: "50% 20%",
-            maskSize: maskSize,
-            opacity: textOpacity,
+            opacity: roleOpacity,
           }}
-        ></motion.div>
-
-        {showContent && (
-          <motion.div
-            className="w-full h-screen fixed flex justify-center items-end pb-20 inset-0 z-0"
-            style={{
-              opacity: roleOpacity,
-            }}
-          >
-            <div className="text-center z-50 font-anta font-bold">
-              <h1 ref={fullstackRef}>
-                {"FULLSTACK".split("").map((char) => (
-                  <span
-                    key={crypto.randomUUID()}
-                    className="inline-block text-white text-5xl role-animation"
-                    style={{
-                      opacity: 0.25,
-                    }}
-                  >
-                    {char}
-                  </span>
-                ))}
-              </h1>
-            </div>
-          </motion.div>
-        )}
-      </div>
-    
+        >
+          <div className="text-center z-50 font-anta font-bold">
+            <h1 ref={fullstackRef}>
+              {"FULLSTACK".split("").map((char) => (
+                <span
+                  key={crypto.randomUUID()}
+                  className="inline-block text-white text-5xl role-animation"
+                  style={{
+                    opacity: 0.25,
+                  }}
+                >
+                  {char}
+                </span>
+              ))}
+            </h1>
+          </div>
+        </motion.div>
+      )}
+    </div>
   )
 }
 
