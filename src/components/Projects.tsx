@@ -26,29 +26,6 @@ const Projects = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Animación de entrada para las tarjetas
-      gsap.fromTo(
-        ".project-card",
-        {
-          opacity: 0,
-          x: -100,
-          rotateY: -15,
-        },
-        {
-          opacity: 1,
-          x: 0,
-          rotateY: 0,
-          duration: 1.2,
-          stagger: 0.3,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: ".project-card",
-            start: "top 80%",
-            toggleActions: "play none none reverse",
-          },
-        }
-      )
-
       // Animación de los elementos internos
       gsap.fromTo(
         ".card-content",

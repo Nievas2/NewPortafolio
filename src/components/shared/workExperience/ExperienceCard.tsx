@@ -61,11 +61,6 @@ export const ExperienceCard = ({
         {/* Tarjeta principal */}
         <motion.div
           className="bg-gradient-to-br from-slate-900/95 to-slate-800/95 backdrop-blur-md rounded-3xl p-8 shadow-2xl border border-slate-700/50 ml-0 sm:ml-8 relative overflow-hidden"
-          whileHover={{
-            scale: 1.02,
-            boxShadow: "0 30px 60px -12px rgba(0, 0, 0, 0.6)",
-          }}
-          transition={{ duration: 0.4 }}
         >
           {/* Efecto de brillo */}
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -skew-x-12 transform translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
