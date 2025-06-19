@@ -40,7 +40,9 @@ function App() {
         const targetBullet = `.bullet-${index + 1}`
 
         gsap.to(targetBullet, {
-          background: "#fff",
+          color: "#fff",
+          borderBottomColor: "#fff",
+          fontWeight: "bold",
           scrollTrigger: {
             trigger: panel as HTMLElement,
             toggleActions: "play reverse play reverse",
@@ -60,27 +62,42 @@ function App() {
         <Projects />
         <Courses />
       </main>
-      <div className="fixed top-1/2 right-10 z-50 flex flex-col justify-center items-center">
-        <div className="rounded-full bg-white/25 bullet-1">
+      <div className="fixed top-2/6 right-8 z-50 flex flex-col justify-center items-center gap-1 p-2 rounded-full bg-black/25 backdrop-blur-md">
+        <a
+          href="#home"
+          className="text-white/25 border-b-[1px] border-b-white/25 pb-1 bullet-1 hover:scale-110"
+        >
           {/* home */}
           <Icon icon="mdi:home" className="size-6" aria-hidden="true" />
-        </div>
-        <div className="rounded-full bg-white/25 bullet-2">
+        </a>
+        <a
+          href="#about"
+          className="text-white/25 border-b-[1px] border-b-white/25 pb-1 hover:scale-110 bullet-2"
+        >
           {/* about */}
-          <Icon icon="mdi:account" className="size-6" aria-hidden="true" />
-        </div>
-        <div className="rounded-full bg-white/25 bullet-3">
+          <Icon icon="material-symbols:info-outline" className="size-6" aria-hidden="true" />
+        </a>
+        <a
+          href="#work-experience"
+          className="text-white/25 border-b-[1px] border-b-white/25 pb-1 hover:scale-110 bullet-3"
+        >
           {/* Experience */}
-          <Icon icon="mdi:briefcase" className="size-6" aria-hidden="true" />
-        </div>
-        <div className="rounded-full bg-white/25 bullet-4">
+          <Icon icon="ix:work-case" className="size-6" aria-hidden="true" />
+        </a>
+        <a
+          href="#projects"
+          className="text-white/25 border-b-[1px] border-b-white/25 pb-1 hover:scale-110 bullet-4"
+        >
           {/* Projects */}
           <Icon icon="mdi:folder" className="size-6" aria-hidden="true" />
-        </div>
-        <div className="rounded-full bg-white/25 bullet-5">
-          {/* studies */}
-          <Icon icon="mdi:book" className="size-6" aria-hidden="true" />
-        </div>
+        </a>
+        <a
+          href="#courses"
+          className="text-white/25 border-b-[1px] border-b-white/25 pb-1 hover:scale-110 bullet-5"
+        >
+          {/* courses */}
+          <Icon icon="mdi:learn-outline" className="size-6" aria-hidden="true" />
+        </a>
       </div>
     </ReactLenis>
   )

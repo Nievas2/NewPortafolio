@@ -94,8 +94,9 @@ const WorkExperience = () => {
 
   return (
     <section
-      ref={sectionRef}
-      className="min-h-screen py-20 px-4 relative overflow-hidden w-full panel"
+    className="min-h-screen py-20 px-4 relative overflow-hidden w-full panel"
+    ref={sectionRef}
+    id="work-experience"
     >
       <motion.div
         className="max-w-6xl mx-auto relative z-10"

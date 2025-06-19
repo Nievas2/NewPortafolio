@@ -106,13 +106,14 @@ const Courses = () => {
 
   return (
     <section
-      ref={sectionRef}
-      className="min-h-screen w-full py-20 px-4 overflow-hidden panel"
-      style={{
-        // Aplica los estilos para ocultar sin desmontar
-        visibility: showContent ? "visible" : "hidden",
-        pointerEvents: showContent ? "auto" : "none",
-      }}
+    className="min-h-screen w-full py-20 px-4 overflow-hidden panel"
+    style={{
+      // Aplica los estilos para ocultar sin desmontar
+      visibility: showContent ? "visible" : "hidden",
+      pointerEvents: showContent ? "auto" : "none",
+    }}
+    ref={sectionRef}
+    id="courses"
     >
       <>
         {/* Efectos de fondo */}
@@ -168,7 +169,7 @@ const Courses = () => {
               <div className="text-gray-300">Formaciones Completadas</div>
             </div>
             <div className="text-center p-6 bg-gradient-to-br from-purple-500/20 to-pink-600/20 backdrop-blur-sm rounded-2xl border border-gray-700/30">
-              <div className="text-3xl font-bold text-white mb-2">12+</div>
+              <div className="text-3xl font-bold text-white mb-2">8+</div>
               <div className="text-gray-300">Tecnologías Aprendidas</div>
             </div>
             <div className="text-center p-6 bg-gradient-to-br from-pink-500/20 to-blue-600/20 backdrop-blur-sm rounded-2xl border border-gray-700/30">

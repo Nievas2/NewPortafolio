@@ -145,6 +145,7 @@ const Hero = () => {
           pointerEvents: showWhiteMask ? "auto" : "none",
         }}
         ref={div}
+        id="home"
       >
         <motion.div
           className="flex justify-center fixed items-start w-full h-screen inset-0 z-0 bg-[url('/images/portada.png')] bg-no-repeat bg-center bg-cover"

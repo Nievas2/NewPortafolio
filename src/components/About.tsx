@@ -166,6 +166,7 @@ const About = () => {
         pointerEvents: showContent ? "auto" : "none",
       }}
       ref={main}
+      id="about"
     >
       <div
         className="w-full h-screen sticky top-0 flex justify-center items-center pb-10"
