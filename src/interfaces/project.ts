@@ -5,6 +5,7 @@ export interface Project {
   dateF: string
   dateYear: string
   role: string
+  percentage: string
   description: string
   src: string | null
   link: string | null

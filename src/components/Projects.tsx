@@ -90,8 +90,9 @@ const Projects = () => {
 
   return (
     <section
+    className="min-h-screen py-20 px-4 relative overflow-hidden w-full bg-gradient-to-br from-slate-900 via-orange-900/20 to-red-900/20 panel"
       ref={sectionRef}
-      className="min-h-screen py-20 px-4 relative overflow-hidden w-full bg-gradient-to-br from-slate-900 via-orange-900/20 to-red-900/20 panel"
+      id="projects"
     >
       {/* Efectos de fondo */}
       {/*    <motion.div
