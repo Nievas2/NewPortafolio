@@ -160,7 +160,7 @@ const About = () => {
 
   return (
     <main
-      className="min-h-screen w-full bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 panel"
+      className="min-h-screen w-full py-20 px-4 overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 panel"
       style={{
         visibility: showContent ? "visible" : "hidden",
         pointerEvents: showContent ? "auto" : "none",
@@ -169,7 +169,7 @@ const About = () => {
       id="about"
     >
       <div
-        className="w-full h-screen sticky top-0 flex justify-center items-center pb-10"
+        className="w-full h-screen flex justify-center items-center pb-10"
         ref={about}
       >
         <motion.div
