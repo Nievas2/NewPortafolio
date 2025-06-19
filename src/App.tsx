@@ -8,8 +8,8 @@ import Projects from "./components/Projects"
 import { useGSAP } from "@gsap/react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { Icon } from "@iconify/react/dist/iconify.js"/* 
-import { Studies } from "./components/Studies" */
+import { Icon } from "@iconify/react/dist/iconify.js"
+import Courses from "./components/Courses"
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -58,7 +58,7 @@ function App() {
         <About />
         <WorkExperience />
         <Projects />
-       {/* <Studies />*/}
+        <Courses />
       </main>
       <div className="fixed top-1/2 right-10 z-50 flex flex-col justify-center items-center">
         <div className="rounded-full bg-white/25 bullet-1">
