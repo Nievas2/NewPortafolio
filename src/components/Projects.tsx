@@ -14,7 +14,12 @@ const Projects = () => {
     offset: ["start end", "end start"],
   })
 
-  const projects = [...ProjectJson].reverse()
+  const projects = [...ProjectJson]
+    .reverse()
+    .map((project) => ({
+      ...project,
+      percentage: project.percentage ?? "",
+    }))
   /* 
   const backgroundY = useTransform(scrollYProgress, [0, 1], [0, 200]) */
   const textY = useTransform(scrollYProgress, [0, 1], [0, -100])
