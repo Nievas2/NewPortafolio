@@ -233,7 +233,7 @@
     "dateYear": "2025",
     "role": "FRONTEND",
     "percentage": "90%",
-    "description": "Es una plataforma de librerías y herramientas pensada para programadores y diseñadores. Ofrece una amplia selección de las librerías más populares y útiles para proyectos, con acceso rápido a su documentación oficial y herramientas que facilitan tareas diarias.",
+    "description": "Es un sistema de gestión de turnos que simplifica la administración de barberías y mejora la experiencia de los clientes. Ofrece una plataforma intuitiva para agendar citas y gestionar turnos.",
     "link": "https://cortatebien.com",
     "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1750253500/Portafolio/202aa5f36098c0ad8cb0f3d9c167392d_bcfura.png",
     "tecnologies": [
