@@ -178,7 +178,7 @@ const Hero = () => {
       id="home"
     >
       <motion.div
-        className="flex justify-center fixed items-start w-full h-screen inset-0 z-0 bg-[url('/images/portada.png')] bg-no-repeat bg-center bg-cover"
+        className="flex justify-center fixed items-start w-full h-screen inset-0 z-0 bg-[url('/images/portada.webp')] bg-no-repeat bg-center bg-cover"
         style={{
           maskImage: "url('/images/name.png')",
           maskRepeat: "no-repeat",
