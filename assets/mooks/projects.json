@@ -9,7 +9,7 @@
     "percentage": "100%",
     "description": "La empresa requería una página para mostrar sus servicios de catering, quiénes son, una descripción de sus productos y servicios, sus redes sociales, y un formulario de contacto para una atención personalizada.",
     "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1715962542/Portafolio/gir1d21yzp0t5wndgpl8.webp",
-    "link": "https://alioli-fc837.web.app/",
+    "link": null,
     "tecnologies": [
       {
         "name": "Angular",
