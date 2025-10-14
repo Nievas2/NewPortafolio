@@ -106,5 +106,16 @@
         "src": "https://skillicons.dev/icons?i=vscode"
       }
     ]
+  },
+  {
+    "id": 5,
+    "name": "Desarrollo con IA",
+    "dateI": "Octubre",
+    "dateF": "Octubre",
+    "dateYear": "2025",
+    "title": "Curso de iniciación al Desarrollo con IA",
+    "description": "El curso de iniciación al Desarrollo con IA me brindo una gran ayuda para poder entender el funcionamiento de las inteligencias artificiales y sus distntas aplicaciones, incluyendo herramientas practicas para agilizar las tareas diarias. ",
+    "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1760458271/Portafolio/Gabriel__angelgabrielnievasgmail.com_page-0001_vl5k5g.jpg",
+    "tecnologies": []
   }
 ]

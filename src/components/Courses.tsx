@@ -165,7 +165,7 @@ const Courses = () => {
             viewport={{ once: true }}
           >
             <div className="text-center p-6 bg-gradient-to-br from-blue-500/20 to-purple-600/20 backdrop-blur-sm rounded-2xl border border-gray-700/30">
-              <div className="text-3xl font-bold text-white mb-2">4</div>
+              <div className="text-3xl font-bold text-white mb-2">5</div>
               <div className="text-gray-300">Formaciones Completadas</div>
             </div>
             <div className="text-center p-6 bg-gradient-to-br from-purple-500/20 to-pink-600/20 backdrop-blur-sm rounded-2xl border border-gray-700/30">
