@@ -1,41 +1,5 @@
 [
   {
-    "id": 1,
-    "name": "Alioli",
-    "dateI": "Enero",
-    "dateF": "Febrero",
-    "dateYear": "2023",
-    "role": "FRONTEND",
-    "percentage": "100%",
-    "description": "La empresa requería una página para mostrar sus servicios de catering, quiénes son, una descripción de sus productos y servicios, sus redes sociales, y un formulario de contacto para una atención personalizada.",
-    "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1715962542/Portafolio/gir1d21yzp0t5wndgpl8.webp",
-    "link": null,
-    "tecnologies": [
-      {
-        "name": "Angular",
-        "src": "https://skillicons.dev/icons?i=angular"
-      },
-      {
-        "name": "VS Code",
-        "src": "https://skillicons.dev/icons?i=vscode"
-      },
-      {
-        "name": "Typescript",
-        "src": "https://skillicons.dev/icons?i=ts"
-      }
-    ],
-    "images": null,
-    "backend": null,
-    "frontend": [
-      {
-        "description": "Fue mi primera experiencia diseñando y creando una página web desde cero."
-      },
-      {
-        "description": "Realicé el despliegue de un FrontEnd por primera vez."
-      }
-    ]
-  },
-  {
     "id": 2,
     "name": "La Incubadora del NOC",
     "dateI": "Agosto",
@@ -224,15 +188,14 @@
       }
     ]
   },
-
   {
     "id": 6,
     "name": "Cortate Bien",
     "dateI": "Enero",
-    "dateF": "Actualmente",
+    "dateF": "Septiembre",
     "dateYear": "2025",
     "role": "FRONTEND",
-    "percentage": "90%",
+    "percentage": "100%",
     "description": "Es un sistema de gestión de turnos que simplifica la administración de barberías y mejora la experiencia de los clientes. Ofrece una plataforma intuitiva para agendar citas y gestionar turnos.",
     "link": "https://cortatebien.com",
     "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1750253500/Portafolio/202aa5f36098c0ad8cb0f3d9c167392d_bcfura.png",
