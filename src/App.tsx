@@ -9,7 +9,7 @@ import { useGSAP } from "@gsap/react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { Icon } from "@iconify/react/dist/iconify.js"
-import { Tooltip } from 'react-tooltip'
+import { Tooltip } from "react-tooltip"
 import Courses from "./components/Courses"
 
 gsap.registerPlugin(ScrollTrigger)
@@ -54,8 +54,6 @@ function App() {
     { dependencies: [lenisRef] }
   )
 
-  
-
   return (
     <ReactLenis root ref={lenisRef}>
       <main className="flex flex-col items-center bg-black wrapper">
@@ -68,8 +66,9 @@ function App() {
       <div className="fixed top-2/6 right-8 z-50 flex flex-col justify-center items-center gap-1 p-2 rounded-full bg-black/25 backdrop-blur-md">
         <a
           href="#home"
-          className="text-white/25 border-b-[1px] border-b-white/25 pb-1 bullet-1 hover:scale-110"
-           data-tooltip-id="home" data-tooltip-content="Inicio"
+          className="text-white/25 border-b-[1px] border-b-white/25 pb-1 bullet-1 hover:scale-110 min-w-6 min-h-7"
+          data-tooltip-id="home"
+          data-tooltip-content="Inicio"
         >
           {/* home */}
           <Icon icon="mdi:home" className="size-6" aria-hidden="true" />
@@ -78,18 +77,24 @@ function App() {
 
         <a
           href="#about"
-          className="text-white/25 border-b-[1px] border-b-white/25 pb-1 hover:scale-110 bullet-2"
-          data-tooltip-id="about" data-tooltip-content="Sobre mi"
+          className="text-white/25 border-b-[1px] border-b-white/25 pb-1 hover:scale-110 bullet-2 min-w-6 min-h-7"
+          data-tooltip-id="about"
+          data-tooltip-content="Sobre mi"
         >
           {/* about */}
-          <Icon icon="material-symbols:info-outline" className="size-6" aria-hidden="true" />
+          <Icon
+            icon="material-symbols:info-outline"
+            className="size-6"
+            aria-hidden="true"
+          />
         </a>
         <Tooltip place="left" id="about" />
 
         <a
           href="#work-experience"
-          className="text-white/25 border-b-[1px] border-b-white/25 pb-1 hover:scale-110 bullet-3"
-          data-tooltip-id="work-experience" data-tooltip-content="Experiencia"
+          className="text-white/25 border-b-[1px] border-b-white/25 pb-1 hover:scale-110 bullet-3 min-w-6 min-h-7"
+          data-tooltip-id="work-experience"
+          data-tooltip-content="Experiencia"
         >
           {/* Experience */}
           <Icon icon="ix:work-case" className="size-6" aria-hidden="true" />
@@ -98,8 +103,9 @@ function App() {
 
         <a
           href="#projects"
-          className="text-white/25 border-b-[1px] border-b-white/25 pb-1 hover:scale-110 bullet-4"
-          data-tooltip-id="projects" data-tooltip-content="Proyectos"
+          className="text-white/25 border-b-[1px] border-b-white/25 pb-1 hover:scale-110 bullet-4 min-w-6 min-h-7"
+          data-tooltip-id="projects"
+          data-tooltip-content="Proyectos"
         >
           {/* Projects */}
           <Icon icon="mdi:folder" className="size-6" aria-hidden="true" />
@@ -108,11 +114,16 @@ function App() {
 
         <a
           href="#courses"
-          className="text-white/25 border-b-[1px] border-b-white/25 pb-1 hover:scale-110 bullet-5"
-          data-tooltip-id="courses" data-tooltip-content="Cursos"
+          className="text-white/25 border-b-[1px] border-b-white/25 pb-1 hover:scale-110 bullet-5 min-w-6 min-h-7"
+          data-tooltip-id="courses"
+          data-tooltip-content="Cursos"
         >
           {/* courses */}
-          <Icon icon="mdi:learn-outline" className="size-6" aria-hidden="true" />
+          <Icon
+            icon="mdi:learn-outline"
+            className="size-6"
+            aria-hidden="true"
+          />
         </a>
         <Tooltip place="left" id="courses" />
       </div>
