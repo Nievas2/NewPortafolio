@@ -12,11 +12,17 @@ import { Tooltip } from "react-tooltip"
 const Hero = () => {
   const fullstackRef = useRef<HTMLHeadingElement>(null)
   const div = useRef<HTMLDivElement>(null)
+  const roleDiv = useRef<HTMLDivElement>(null)
   const [showWhiteMask, setShowWhiteMask] = useState(true)
-  const [showContent, setShowContent] = useState(false)
 
   const { scrollYProgress } = useScroll({
     target: div,
+  })
+
+  // Scroll específico para la animación de FULLSTACK
+  const { scrollYProgress: scrollYProgressRole } = useScroll({
+    target: roleDiv,
+    offset: ["start end", "end start"],
   })
 
   const downloadCV = () => {
@@ -60,63 +66,57 @@ const Hero = () => {
   const maskSize = useTransform(
     scrollYProgress,
     [0, 0.1, 0.25, 0.4, 0.75],
-    ["18000%", "10000%", "4000%", "300%", "40%"]
+    ["18000%", "10000%", "4000%", "300%", "30%"]
   )
 
+  /* opacidad de la mascara transparente */
   const maskOpacity = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1, 0])
+  /* opacidad del nombre que se vuelve blanca */
   const textOpacity = useTransform(
     scrollYProgress,
     [0.25, 0.4, 0.9, 1],
     [0, 1, 1, 0]
   )
+  /* opacidad del contenido como redes */
   const contentOpacity = useTransform(
     scrollYProgress,
     [0, 0.1, 0.2],
     [1, 0.1, 0]
   )
 
-  const role = useTransform(scrollYProgress, [0.5, 1], [0, 1])
-  const roleOpacity = useTransform(
-    scrollYProgress,
-    [0, 0.7, 0.71, 0.99, 1],
-    [0, 0, 1, 1, 0]
-  )
+  /* animación de la palabra FULLSTACK */
+  const role = useTransform(scrollYProgressRole, [0, 0.3, 0.9, 1], [0, 0, 1, 1])
 
+  /* controla cuando la mascara blanca debe aparecer */
   useMotionValueEvent(scrollYProgress, "change", (v) => {
     if (v >= 0 && v < 0.99) return setShowWhiteMask(true)
     if (v > 0.99) return setShowWhiteMask(false)
   })
 
-  useMotionValueEvent(scrollYProgress, "change", (v) => {
-    if (v > 0.12 && v < 0.99) return setShowContent(true)
-    if (v > 0 && v < 0.12) return setShowContent(false)
-    if (v > 0.99) return setShowContent(false)
-  })
-
+  /* animación de la palabra FULLSTACK */
   useEffect(() => {
-    // Estado inicial al montar el componente
     const spans = fullstackRef.current?.querySelectorAll(".role-animation")
-    if (spans) {
-      gsap.set(spans, {
-        y: -80,
-        opacity: 0,
-      })
-    }
+    if (!spans || spans.length === 0) return
+
+    gsap.set(spans, { y: -80, opacity: 0 })
 
     const unsub = role.on("change", (v) => {
       if (spans) {
-        if (v > 0.3) {
+        // Rango más seguro
+        if (v > 0.35 && v < 0.95) {
           gsap.to(spans, {
             y: 0,
             opacity: 1,
-            stagger: 0.07,
-            ease: "bounce.out",
-            duration: 0.1,
+            stagger: 0.04,
+            ease: "bounce.in",
+            duration: 0.05,
           })
         } else {
-          gsap.set(spans, {
+          gsap.to(spans, {
             y: -80,
             opacity: 0,
+            duration: 0.15, // pequeña animación de salida
+            stagger: 0.02,
           })
         }
       }
@@ -141,8 +141,8 @@ const Hero = () => {
           className="p-3 bg-white/10 backdrop-blur-sm rounded-full text-white hover:bg-white/20 hover:scale-110 transition-all duration-300 border border-white/20"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
-          initial={{ scale: 0, opacity: 0, rotate:180 }}
-          animate={{ scale: 1, opacity: 1, rotate:0 }}
+          initial={{ scale: 0, opacity: 0, rotate: 180 }}
+          animate={{ scale: 1, opacity: 1, rotate: 0 }}
           transition={{ duration: 0.5, delay: 0.7 + 2 * 0.1 }}
           data-tooltip-id="email-tooltip"
           data-tooltip-content={copied ? "¡Copiado!" : "Copiar email"}
@@ -168,7 +168,7 @@ const Hero = () => {
 
   return (
     <div
-      className="bg-black text-white max-w-8xl w-full min-h-[500vh] relative panel"
+      className="bg-black text-white max-w-8xl w-full min-h-[400vh] md:min-h-[500vh] relative panel"
       style={{
         // Aplica los estilos para ocultar sin desmontar
         visibility: showWhiteMask ? "visible" : "hidden",
@@ -296,21 +296,18 @@ const Hero = () => {
         }}
       ></motion.div>
 
-      {showContent && (
-        <motion.div
-          className="w-full h-screen fixed flex justify-center items-end pb-20 inset-0 z-0"
-          style={{
-            opacity: roleOpacity,
-          }}
-        >
-          <div className="text-center z-50 font-anta font-bold">
-            <h1 ref={fullstackRef}>
-              {"FULLSTACK".split("").map((char) => (
+      {/* Div con altura real para generar scroll */}
+      <div className="absolute top-[250vh] w-full h-[150vh]" ref={roleDiv}>
+        {/* Contenido visual fixed */}
+        <motion.div className="w-full h-screen fixed flex justify-center items-end pb-20 inset-0 z-10 pointer-events-none">
+          <div className="text-center font-anta font-bold">
+            <h1 ref={fullstackRef} className="overflow-visible">
+              {"FULLSTACK".split("").map((char, index) => (
                 <span
-                  key={crypto.randomUUID()}
-                  className="inline-block text-white text-5xl role-animation"
+                  key={`fullstack-${index}`}
+                  className="inline-block text-5xl text-rose-500 role-animation"
                   style={{
-                    opacity: 0.25,
+                    willChange: "transform",
                   }}
                 >
                   {char}
@@ -319,7 +316,7 @@ const Hero = () => {
             </h1>
           </div>
         </motion.div>
-      )}
+      </div>
     </div>
   )
 }
