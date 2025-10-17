@@ -26,10 +26,10 @@ const Hero = () => {
   })
 
   const downloadCV = () => {
-    const url = "/archives/Cv Angel Gabriel Nievas.pdf"
+    const url = "/archives/Cv_AngelGabrielNievas_Dev_Fullstack.pdf"
     const link = document.createElement("a")
     link.href = url
-    link.setAttribute("download", "Cv Angel Gabriel Nievas.pdf")
+    link.setAttribute("download", "Cv_AngelGabrielNievas_Dev_Fullstack.pdf")
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
