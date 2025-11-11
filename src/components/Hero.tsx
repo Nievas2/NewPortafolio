@@ -25,7 +25,7 @@ const Hero = () => {
     offset: ["start end", "end start"],
   })
 
-  const downloadCV = () => {
+ /*  const downloadCV = () => {
     const url = "/archives/Cv_AngelGabrielNievas_Dev_Fullstack.pdf"
     const link = document.createElement("a")
     link.href = url
@@ -33,7 +33,7 @@ const Hero = () => {
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
-  }
+  } */
 
   const socialLinks = [
     {
@@ -247,7 +247,7 @@ const Hero = () => {
             <EmailCopyButton />
           </motion.div>
 
-          <motion.button
+         {/*  <motion.button
             onClick={downloadCV}
             className="flex justify-center items-center group px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 overflow-hidden cursor-pointer"
             whileHover={{ scale: 1.05 }}
@@ -260,7 +260,7 @@ const Hero = () => {
               <Icon icon="mdi:download" className="w-6 h-6" />
               <span>Descargar CV</span>
             </span>
-          </motion.button>
+          </motion.button> */}
 
           {/* Indicador de scroll */}
           <motion.div
