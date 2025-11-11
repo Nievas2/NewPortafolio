@@ -52,10 +52,12 @@ function App() {
 
   return (
     <ReactLenis root ref={lenisRef}>
-      <Routes>
-        <Route path="/*" element={<Home />} />
-        <Route path="/proyectos" element={<Projects />} />
-      </Routes>
+      <main className="flex flex-col items-center bg-black text-white w-full h-full min-h-screen">
+        <Routes>
+          <Route path="/*" element={<Home />} />
+          <Route path="/proyectos" element={<Projects />} />
+        </Routes>
+      </main>
     </ReactLenis>
   )
 }

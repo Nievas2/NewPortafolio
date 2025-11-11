@@ -9,7 +9,7 @@ import Hero from "../components/Hero"
 const Home = () => {
   return (
     <>
-      <main className="flex flex-col items-center bg-black wrapper">
+      <main className="flex flex-col items-center bg-black wrapper w-full">
         <Hero />
         <About />
         <WorkExperience />
