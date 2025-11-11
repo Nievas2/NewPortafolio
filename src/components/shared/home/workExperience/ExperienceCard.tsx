@@ -1,7 +1,7 @@
 import { useRef, useState } from "react"
-import type { Experience } from "../../../interfaces/experience"
+import type { Experience } from "../../../../interfaces/experience"
 import { motion } from "framer-motion"
-import { ImageModal } from "../ImageModal"
+import { ImageModal } from "../../ImageModal"
 
 
 export const ExperienceCard = ({

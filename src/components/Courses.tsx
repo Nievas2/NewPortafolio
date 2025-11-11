@@ -8,7 +8,7 @@ import {
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import StudiesJson from "../../assets/mooks/studies.json"
-import { StudyCard } from "./shared/study/StudyCard"
+import { StudyCard } from "./shared/home/study/StudyCard"
 
 
 const Courses = () => {

@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform } from "framer-motion"
 import { gsap } from "gsap"
 
 import ExperienceJson from "../../assets/mooks/experience.json"
-import { ExperienceCard } from "./shared/workExperience/ExperienceCard"
+import { ExperienceCard } from "./shared/home/workExperience/ExperienceCard"
 import type { Experience } from "../interfaces/experience"
 
 

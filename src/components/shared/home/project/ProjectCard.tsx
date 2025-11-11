@@ -1,7 +1,7 @@
 import { useRef, useState } from "react"
-import type { Project } from "../../../interfaces/project"
+import type { Project } from "../../../../interfaces/project"
 import { motion } from "framer-motion"
-import { ImageModal } from "../ImageModal"
+import { ImageModal } from "../../ImageModal"
 import { Icon } from "@iconify/react/dist/iconify.js"
 
 export const ProjectCard = ({

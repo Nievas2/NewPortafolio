@@ -1,5 +1,5 @@
 import { useRef } from "react"
-import type { Study } from "../../../interfaces/study"
+import type { Study } from "../../../../interfaces/study"
 import { useInView } from "framer-motion"
 import { motion } from "framer-motion"
 import { Icon } from "@iconify/react/dist/iconify.js"

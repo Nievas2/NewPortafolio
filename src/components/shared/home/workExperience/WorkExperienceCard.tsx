@@ -1,4 +1,4 @@
-import type { Project } from "../../../interfaces/project"
+import type { Project } from "../../../../interfaces/project"
 
 interface CarouselProjectCardProps {
   project: Project

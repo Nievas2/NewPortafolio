@@ -4,7 +4,7 @@ import { gsap } from "gsap"
 import type { Project } from "../interfaces/project"
 
 import ProjectJson from "../../assets/mooks/projects.json"
-import { ProjectCard } from "./shared/project/ProjectCard"
+import { ProjectCard } from "./shared/home/project/ProjectCard"
 
 
 const Projects = () => {
