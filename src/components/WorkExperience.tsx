@@ -114,28 +114,6 @@ const WorkExperience = () => {
             ))}
           </div>
         </div>
-
-        {/* Métricas de experience */}
-        <motion.div
-          className="flex flex-col md:flex-row justify-center items-center gap-6"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          viewport={{ once: true }}
-        >
-          <div className="text-center p-6 bg-gradient-to-br from-orange-500/20 to-red-600/20 backdrop-blur-sm rounded-2xl border border-slate-700/30">
-            <div className="text-3xl font-bold text-white mb-2">2</div>
-            <div className="text-gray-300">Proyectos Completados</div>
-          </div>
-          <div className="text-center p-6 bg-gradient-to-br from-pink-500/20 to-orange-600/20 backdrop-blur-sm rounded-2xl border border-slate-700/30">
-            <div className="text-3xl font-bold text-white mb-2">6+</div>
-            <div className="text-gray-300">Tecnologías Utilizadas</div>
-          </div>
-          <div className="text-center p-6 bg-gradient-to-br from-orange-500/20 to-red-600/20 backdrop-blur-sm rounded-2xl border border-slate-700/30">
-            <div className="text-3xl font-bold text-white mb-2">8</div>
-            <div className="text-gray-300">Meses de Experiencia</div>
-          </div>
-        </motion.div>
       </motion.div>
     </section>
   )

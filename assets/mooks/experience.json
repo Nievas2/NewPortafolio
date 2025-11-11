@@ -1,6 +1,60 @@
 [
   {
     "id": 1,
+    "name": "Enpatados",
+    "typeWork": "FREELANCE",
+    "dateI": "Noviembre",
+    "dateF": "Enero",
+    "dateYear": "2024/2025",
+    "role": "FRONTEND",
+    "description": "El emprendimiento buscaba abrirse una tienda online, donde los usuarios pudieran ver sus productos y realizar compras. La tienda cuenta con un sistema de carrito de compras y un sistema de stock.",
+    "link": "https://enpatados.vercel.app/",
+    "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1746023385/elqqwa7hqjvlzggzje0u.png",
+    "tecnologies": [
+      {
+        "name": "Javascript",
+        "src": "https://skillicons.dev/icons?i=js"
+      },
+      {
+        "name": "Typescript",
+        "src": "https://skillicons.dev/icons?i=ts"
+      },
+      {
+        "name": "React",
+        "src": "https://skillicons.dev/icons?i=react"
+      },
+      {
+        "name": "Tailwind",
+        "src": "https://skillicons.dev/icons?i=tailwind"
+      }
+    ],
+    "images": null,
+    "backend": [
+      {
+        "description": "Desarrollé una API desde cero."
+      },
+      {
+        "description": "Implementé un sistema de roles y permisos para usuarios ('administradores' y 'usuarios')."
+      }
+    ],
+    "frontend": [
+      {
+        "description": "Desarrollé por primera vez una página completa conectada únicamente a un backend."
+      },
+      {
+        "description": "Implementé un sistema de carrito de compras."
+      },
+      {
+        "description": "Adapté un diseño de Figma a la web por primera vez."
+      },
+      {
+        "description": "Resolví problemáticas planteadas por el cliente."
+      }
+    ]
+  },
+  
+  {
+    "id": 2,
     "name": "La Dulce Tradición",
     "typeWork": "FREELANCE",
     "dateI": "Agosto",
@@ -60,59 +114,7 @@
       }
     ]
   },
-  {
-    "id": 2,
-    "name": "Enpatados",
-    "typeWork": "FREELANCE",
-    "dateI": "Noviembre",
-    "dateF": "Enero",
-    "dateYear": "2024/2025",
-    "role": "FRONTEND",
-    "description": "El emprendimiento buscaba abrirse una tienda online, donde los usuarios pudieran ver sus productos y realizar compras. La tienda cuenta con un sistema de carrito de compras y un sistema de stock.",
-    "link": "https://enpatados.vercel.app/",
-    "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1746023385/elqqwa7hqjvlzggzje0u.png",
-    "tecnologies": [
-      {
-        "name": "Javascript",
-        "src": "https://skillicons.dev/icons?i=js"
-      },
-      {
-        "name": "Typescript",
-        "src": "https://skillicons.dev/icons?i=ts"
-      },
-      {
-        "name": "React",
-        "src": "https://skillicons.dev/icons?i=react"
-      },
-      {
-        "name": "Tailwind",
-        "src": "https://skillicons.dev/icons?i=tailwind"
-      }
-    ],
-    "images": null,
-    "backend": [
-      {
-        "description": "Desarrollé una API desde cero."
-      },
-      {
-        "description": "Implementé un sistema de roles y permisos para usuarios ('administradores' y 'usuarios')."
-      }
-    ],
-    "frontend": [
-      {
-        "description": "Desarrollé por primera vez una página completa conectada únicamente a un backend."
-      },
-      {
-        "description": "Implementé un sistema de carrito de compras."
-      },
-      {
-        "description": "Adapté un diseño de Figma a la web por primera vez."
-      },
-      {
-        "description": "Resolví problemáticas planteadas por el cliente."
-      }
-    ]
-  },
+
   {
     "id": 3,
     "name": "Alioli",
