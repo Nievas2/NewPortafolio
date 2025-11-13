@@ -158,7 +158,7 @@
     "role": "FRONTEND",
     "percentage": "100%",
     "description": "Es una plataforma de librerías y herramientas pensada para programadores y diseñadores. Ofrece una amplia selección de las librerías más populares y útiles para proyectos, con acceso rápido a su documentación oficial y herramientas que facilitan tareas diarias.",
-    "link": "https://tech-library-iota.vercel.app/",
+    "link": null,
     "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1723405471/Portafolio/i3qwf2ztgn7q7zev2zhg.png",
     "tecnologies": [
       {

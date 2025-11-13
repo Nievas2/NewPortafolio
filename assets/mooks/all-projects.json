@@ -1,0 +1,471 @@
+[
+  {
+    "name": "La Incubadora del NOC",
+    "dateI": "Agosto",
+    "dateF": "Octubre",
+    "dateYear": "2023",
+    "role": "FULL STACK",
+    "percentage": "100%",
+    "description": "La empresa enfrentaba la problemática de no contar con un lugar para administrar y mostrar los cursos que ofrecían, así como futuras convocatorias. Además, los alumnos necesitaban un sistema para inscribirse.",
+    "link": "https://xacademy-874c5.web.app/",
+    "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1715962553/Portafolio/cqivmh0jxh3h9r9l9djj.webp",
+    "tecnologies": [
+      {
+        "name": "Javascript",
+        "src": "https://skillicons.dev/icons?i=js"
+      },
+      {
+        "name": "VS Code",
+        "src": "https://skillicons.dev/icons?i=vscode"
+      },
+      {
+        "name": "NodeJs",
+        "src": "https://skillicons.dev/icons?i=nodejs"
+      },
+      {
+        "name": "Angular",
+        "src": "https://skillicons.dev/icons?i=angular"
+      },
+      {
+        "name": "Typescript",
+        "src": "https://skillicons.dev/icons?i=ts"
+      },
+      {
+        "name": "Sequelize",
+        "src": "https://skillicons.dev/icons?i=sequelize"
+      }
+    ],
+    "images": null,
+    "backend": [
+      {
+        "description": "Aprendí a crear APIs con Express."
+      },
+      {
+        "description": "Mejoré mis conocimientos en SQL."
+      },
+      {
+        "description": "Desarrollé por primera vez un sistema de envío de correos electrónicos."
+      },
+      {
+        "description": "Realicé el despliegue de un Backend por primera vez."
+      }
+    ],
+    "frontend": [
+      {
+        "description": "Mejoré significativamente mis conocimientos en HTML y CSS."
+      },
+      {
+        "description": "Aprendí más sobre diseño UI y UX."
+      }
+    ]
+  },
+
+  {
+    "name": "EcoSistemas",
+    "dateI": "Febrero",
+    "dateF": "Abril",
+    "dateYear": "2024",
+    "role": "FULL STACK",
+    "percentage": "100%",
+    "description": "El semillero LATAM brindó la oportunidad de trabajar en un proyecto de impacto real, enfocado en fomentar la inversión hacia pequeñas empresas que buscan generar un impacto positivo en el medio ambiente.",
+    "link": null,
+    "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1735244264/Portafolio/ep82nytfuzb05lfomdb8.webp",
+    "tecnologies": [
+      {
+        "name": "Javascript",
+        "src": "https://skillicons.dev/icons?i=js"
+      },
+      {
+        "name": "VS Code",
+        "src": "https://skillicons.dev/icons?i=vscode"
+      },
+      {
+        "name": "React",
+        "src": "https://skillicons.dev/icons?i=react"
+      },
+      {
+        "name": "Java",
+        "src": "https://skillicons.dev/icons?i=java"
+      },
+      {
+        "name": "Spring boot",
+        "src": "https://skillicons.dev/icons?i=spring"
+      }
+    ],
+    "images": null,
+    "backend": [
+      {
+        "description": "Programé en Java y Spring Boot."
+      },
+      {
+        "description": "Implementé por primera vez autenticación con Google y Spring Security simultáneamente."
+      },
+      {
+        "description": "Desarrollé el proyecto basado en un UML y gestionado con Trello."
+      }
+    ],
+    "frontend": [
+      {
+        "description": "Mejoré mi capacidad de estructuración y componentización."
+      },
+      {
+        "description": "Implementé por primera vez autenticación con Google."
+      }
+    ]
+  },
+
+  {
+    "name": "Frontend Mentor Projects",
+    "dateI": "Mayo",
+    "dateF": "Junio",
+    "dateYear": "2024",
+    "role": "FRONTEND",
+    "description": "Estos proyectos fueron realizados con el objetivo de mejorar mis habilidades para replicar diseños ya existentes.",
+    "link": null,
+    "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1717770596/Portafolio/yw8mruw5vq7ivwg3k9m5.png",
+    "tecnologies": [
+      {
+        "name": "Next js",
+        "src": "https://skillicons.dev/icons?i=nextjs"
+      },
+      {
+        "name": "Tailwind",
+        "src": "https://skillicons.dev/icons?i=tailwind"
+      },
+      {
+        "name": "React",
+        "src": "https://skillicons.dev/icons?i=react"
+      }
+    ],
+    "images": null,
+    "backend": null,
+    "frontend": [
+      {
+        "description": "Mejoré mis conocimientos en Tailwind."
+      },
+      {
+        "description": "Reforcé conceptos básicos de CSS y HTML."
+      }
+    ]
+  },
+
+  {
+    "name": "TechLibrary",
+    "dateI": "Junio",
+    "dateF": "Agosto",
+    "dateYear": "2024",
+    "role": "FRONTEND",
+    "percentage": "100%",
+    "description": "Es una plataforma de librerías y herramientas pensada para programadores y diseñadores. Ofrece una amplia selección de las librerías más populares y útiles para proyectos, con acceso rápido a su documentación oficial y herramientas que facilitan tareas diarias.",
+    "link": null,
+    "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1723405471/Portafolio/i3qwf2ztgn7q7zev2zhg.png",
+    "tecnologies": [
+      {
+        "name": "Tailwind",
+        "src": "https://skillicons.dev/icons?i=tailwind"
+      },
+      {
+        "name": "React",
+        "src": "https://skillicons.dev/icons?i=react"
+      },
+      {
+        "name": "NodeJs",
+        "src": "https://skillicons.dev/icons?i=nodejs"
+      }
+    ],
+    "images": null,
+    "backend": null,
+    "frontend": [
+      {
+        "description": "Mejoré mis conocimientos en Tailwind."
+      },
+      {
+        "description": "Aprendi a gestionar estados con zustand."
+      },
+      {
+        "description": "Reforcé conceptos básicos de CSS y HTML."
+      }
+    ]
+  },
+
+  {
+    "name": "Enpatados",
+    "typeWork": "FREELANCE",
+    "dateI": "Noviembre",
+    "dateF": "Enero",
+    "dateYear": "2024/2025",
+    "role": "FRONTEND",
+    "description": "El emprendimiento buscaba abrirse una tienda online, donde los usuarios pudieran ver sus productos y realizar compras. La tienda cuenta con un sistema de carrito de compras y un sistema de stock.",
+    "link": "https://enpatados.vercel.app/",
+    "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1746023385/elqqwa7hqjvlzggzje0u.png",
+    "tecnologies": [
+      {
+        "name": "Javascript",
+        "src": "https://skillicons.dev/icons?i=js"
+      },
+      {
+        "name": "Typescript",
+        "src": "https://skillicons.dev/icons?i=ts"
+      },
+      {
+        "name": "React",
+        "src": "https://skillicons.dev/icons?i=react"
+      },
+      {
+        "name": "Tailwind",
+        "src": "https://skillicons.dev/icons?i=tailwind"
+      }
+    ],
+    "images": null,
+    "backend": [
+      {
+        "description": "Desarrollé una API desde cero."
+      },
+      {
+        "description": "Implementé un sistema de roles y permisos para usuarios ('administradores' y 'usuarios')."
+      }
+    ],
+    "frontend": [
+      {
+        "description": "Desarrollé por primera vez una página completa conectada únicamente a un backend."
+      },
+      {
+        "description": "Implementé un sistema de carrito de compras."
+      },
+      {
+        "description": "Adapté un diseño de Figma a la web por primera vez."
+      },
+      {
+        "description": "Resolví problemáticas planteadas por el cliente."
+      }
+    ]
+  },
+
+  {
+    "name": "La Dulce Tradición",
+    "typeWork": "FREELANCE",
+    "dateI": "Agosto",
+    "dateF": "Marzo",
+    "dateYear": "2024/2025",
+    "role": "FULL STACK",
+    "description": "La empresa contaba con una amplia variedad de productos para mostrar y necesitaba un sistema de compra simplificado.",
+    "link": "https://ladulcetradicion.vercel.app/",
+    "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1744820408/Portafolio/ggfvfxluzmftek2jtlpm.webp",
+    "tecnologies": [
+      {
+        "name": "Javascript",
+        "src": "https://skillicons.dev/icons?i=js"
+      },
+      {
+        "name": "Typescript",
+        "src": "https://skillicons.dev/icons?i=ts"
+      },
+      {
+        "name": "NodeJs",
+        "src": "https://skillicons.dev/icons?i=nodejs"
+      },
+      {
+        "name": "Sequelize",
+        "src": "https://skillicons.dev/icons?i=sequelize"
+      },
+      {
+        "name": "React",
+        "src": "https://skillicons.dev/icons?i=react"
+      },
+      {
+        "name": "Tailwind",
+        "src": "https://skillicons.dev/icons?i=tailwind"
+      }
+    ],
+    "images": null,
+    "backend": [
+      {
+        "description": "Desarrollé una API desde cero."
+      },
+      {
+        "description": "Implementé un sistema de roles y permisos para usuarios ('administradores' y 'usuarios')."
+      }
+    ],
+    "frontend": [
+      {
+        "description": "Desarrollé por primera vez una página completa conectada únicamente a un backend."
+      },
+      {
+        "description": "Implementé un sistema de carrito de compras."
+      },
+      {
+        "description": "Adapté un diseño de Figma a la web por primera vez."
+      },
+      {
+        "description": "Resolví problemáticas planteadas por el cliente."
+      }
+    ]
+  },
+
+  {
+    "name": "Task Manager",
+    "typeWork": "Practicas",
+    "dateI": "Mayo",
+    "dateF": "Mayo",
+    "dateYear": "2025",
+    "role": "FRONTEND",
+    "description": "Fue un proyecto para practicar el uso de la libreria dnd-kit.",
+    "link": "task-manager-alpha-neon.vercel.app",
+    "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1762882997/Portafolio/cc8d84363eb95118f8765c9dfd43923f_bnvwax.webp",
+    "tecnologies": [
+      {
+        "name": "Typescript",
+        "src": "https://skillicons.dev/icons?i=ts"
+      },
+      {
+        "name": "React",
+        "src": "https://skillicons.dev/icons?i=react"
+      },
+      {
+        "name": "Tailwind",
+        "src": "https://skillicons.dev/icons?i=tailwind"
+      }
+    ],
+    "images": null,
+    "backend": null,
+    "frontend": null
+  },
+
+  {
+    "name": "Anotado",
+    "typeWork": "Practicas",
+    "dateI": "Julio",
+    "dateF": "Julio",
+    "dateYear": "2025",
+    "role": "FRONTEND",
+    "description": "Fue un proyecto para practicar el uso de la libreria dnd-kit y blocknote, haciendo una version simplicada de un notion.",
+    "link": "anotado.vercel.app",
+    "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1762883267/Portafolio/01cbbaf428d21b1b656212da8a0fe497_pzjdpp.webp",
+    "tecnologies": [
+      {
+        "name": "Typescript",
+        "src": "https://skillicons.dev/icons?i=ts"
+      },
+      {
+        "name": "React",
+        "src": "https://skillicons.dev/icons?i=react"
+      },
+      {
+        "name": "Tailwind",
+        "src": "https://skillicons.dev/icons?i=tailwind"
+      }
+    ],
+    "images": null,
+    "backend": null,
+    "frontend": null
+  },
+
+  {
+    "name": "Cortate Bien",
+    "dateI": "Enero",
+    "dateF": "Septiembre",
+    "dateYear": "2025",
+    "role": "FRONTEND",
+    "percentage": "100%",
+    "description": "Es un sistema de gestión de turnos que simplifica la administración de barberías y mejora la experiencia de los clientes. Ofrece una plataforma intuitiva para agendar citas y gestionar turnos.",
+    "link": "https://cortatebien.com",
+    "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1750253500/Portafolio/202aa5f36098c0ad8cb0f3d9c167392d_bcfura.png",
+    "tecnologies": [
+      {
+        "name": "Tailwind",
+        "src": "https://skillicons.dev/icons?i=tailwind"
+      },
+      {
+        "name": "React",
+        "src": "https://skillicons.dev/icons?i=react"
+      },
+      {
+        "name": "Firebase",
+        "src": "https://skillicons.dev/icons?i=firebase"
+      }
+    ],
+    "images": null,
+    "backend": null,
+    "frontend": [
+      {
+        "description": "Implementé firebase message para enviar y recibir notificaciones."
+      },
+      {
+        "description": "Desarrollé un sistema de control para administradores, para poder gestionar el contenido de la web."
+      }
+    ]
+  },
+
+  {
+    "name": "Masonry gallery",
+    "typeWork": "Practicas",
+    "dateI": "Julio",
+    "dateF": "Julio",
+    "dateYear": "2025",
+    "role": "FRONTEND",
+    "description": "Queria hacer un proyecto que utilizara el estilo masonry, aproveche para probar blendy y practicar un poco de CI/CD.",
+    "link": "https://straight-net.surge.sh/",
+    "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1762883531/Portafolio/fc4cc715c91062417a3feade1c54cd30_iqb6be.webp",
+    "tecnologies": [
+      {
+        "name": "Typescript",
+        "src": "https://skillicons.dev/icons?i=ts"
+      },
+      {
+        "name": "React",
+        "src": "https://skillicons.dev/icons?i=react"
+      },
+      {
+        "name": "Tailwind",
+        "src": "https://skillicons.dev/icons?i=tailwind"
+      }
+    ],
+    "images": null,
+    "backend": null,
+    "frontend": null
+  },
+
+  {
+    "name": "Alioli",
+    "typeWork": "FREELANCE",
+    "dateI": "Septiembre",
+    "dateF": "Octubre",
+    "dateYear": "2025",
+    "role": "FRONTEND",
+    "description": "La empresa queria mostrar sus productos y servicios de manera dinámica. ",
+    "link": "https://aliolieventos.com",
+    "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1760457140/Portafolio/f76b83598759dbd11bf1a5dc06a2a862_ainfcv.webp",
+    "tecnologies": [
+      {
+        "name": "Typescript",
+        "src": "https://skillicons.dev/icons?i=ts"
+      },
+      {
+        "name": "React",
+        "src": "https://skillicons.dev/icons?i=react"
+      },
+      {
+        "name": "Vite",
+        "src": "https://skillicons.dev/icons?i=vite"
+      },
+      {
+        "name": "Vitest",
+        "src": "https://skillicons.dev/icons?i=vitest"
+      },
+      {
+        "name": "Tailwind",
+        "src": "https://skillicons.dev/icons?i=tailwind"
+      }
+    ],
+    "images": null,
+    "backend": null,
+    "frontend": [
+      {
+        "description": "Desarrollé una web adaptada a las necesidades del cliente."
+      },
+      {
+        "description": "Mejore el CEO, accesibilidad y performance de la web."
+      }
+    ]
+  }
+]
