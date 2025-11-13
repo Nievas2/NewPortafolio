@@ -1,5 +1,4 @@
 export interface Project {
-  id: number
   name: string
   dateI: string
   dateF: string
