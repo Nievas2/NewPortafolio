@@ -5,7 +5,8 @@ import type { Project } from "../interfaces/project"
 
 import ProjectJson from "../../assets/mooks/projects.json"
 import { ProjectCard } from "./shared/home/project/ProjectCard"
-
+import { Link } from "react-router-dom"
+import { Icon } from "@iconify/react"
 
 const Projects = () => {
   const sectionRef = useRef(null)
@@ -14,12 +15,10 @@ const Projects = () => {
     offset: ["start end", "end start"],
   })
 
-  const projects = [...ProjectJson]
-    .reverse()
-    .map((project) => ({
-      ...project,
-      percentage: project.percentage ?? "",
-    }))
+  const projects = [...ProjectJson].reverse().map((project) => ({
+    ...project,
+    percentage: project.percentage ?? "",
+  }))
   /* 
   const backgroundY = useTransform(scrollYProgress, [0, 1], [0, 200]) */
   const textY = useTransform(scrollYProgress, [0, 1], [0, -100])
@@ -72,7 +71,7 @@ const Projects = () => {
 
   return (
     <section
-    className="min-h-screen py-20 px-4 relative overflow-hidden w-full bg-gradient-to-br from-slate-900 via-orange-900/20 to-red-900/20 panel"
+      className="min-h-screen py-20 px-4 relative overflow-hidden w-full bg-gradient-to-br from-slate-900 via-orange-900/20 to-red-900/20 panel"
       ref={sectionRef}
       id="projects"
     >
@@ -105,6 +104,19 @@ const Projects = () => {
             destacados.
           </p>
         </motion.div>
+
+        {/* All Proyectos */}
+        <Link
+          className="group hover:underline underline-offset-2 flex items-center justify-end text-yellow-600 mb-4"
+          to="/proyectos"
+        >
+          Todos los proyectos
+          <Icon
+            icon="mdi:arrow"
+            className="inline-block ml-2 w-6 h-6 duration-600 rotate-0 group-hover:rotate-360 transition-all ease-in-out"
+          />
+        </Link>
+
         <div className="relative">
           {/* Experiencias */}
           <div className="space-y-12">
