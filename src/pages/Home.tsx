@@ -22,6 +22,7 @@ const Home = () => {
           className="text-white/25 border-b-[1px] border-b-white/25 pb-1 bullet-1 hover:scale-110 min-w-6 min-h-7"
           data-tooltip-id="home"
           data-tooltip-content="Inicio"
+          aria-label="Inicio"
         >
           {/* home */}
           <Icon icon="mdi:home" className="size-6" aria-hidden="true" />
@@ -33,6 +34,7 @@ const Home = () => {
           className="text-white/25 border-b-[1px] border-b-white/25 pb-1 hover:scale-110 bullet-2 min-w-6 min-h-7"
           data-tooltip-id="about"
           data-tooltip-content="Sobre mi"
+          aria-label="Sobre mi"
         >
           {/* about */}
           <Icon
@@ -48,6 +50,7 @@ const Home = () => {
           className="text-white/25 border-b-[1px] border-b-white/25 pb-1 hover:scale-110 bullet-3 min-w-6 min-h-7"
           data-tooltip-id="work-experience"
           data-tooltip-content="Experiencia"
+          aria-label="Mi Experiencia laboral"
         >
           {/* Experience */}
           <Icon icon="ix:work-case" className="size-6" aria-hidden="true" />
@@ -59,6 +62,7 @@ const Home = () => {
           className="text-white/25 border-b-[1px] border-b-white/25 pb-1 hover:scale-110 bullet-4 min-w-6 min-h-7"
           data-tooltip-id="projects"
           data-tooltip-content="Proyectos"
+          aria-label="Mis Proyectos"
         >
           {/* Projects */}
           <Icon icon="mdi:folder" className="size-6" aria-hidden="true" />
@@ -70,6 +74,7 @@ const Home = () => {
           className="text-white/25 border-b-[1px] border-b-white/25 pb-1 hover:scale-110 bullet-5 min-w-6 min-h-7"
           data-tooltip-id="courses"
           data-tooltip-content="Cursos"
+          aria-label="Cursos terminados"
         >
           {/* courses */}
           <Icon
