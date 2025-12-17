@@ -1,5 +1,16 @@
 [
   {
+    "id": 6,
+    "name": "Claude Code",
+    "dateI": "Diciembre",
+    "dateF": "Diciembre",
+    "dateYear": "2025",
+    "title": "Claude code in action",
+    "description": "Ofrece formación integral sobre el uso de Claude Code para tareas de desarrollo de software, cubriendo la arquitectura subyacente de los asistentes de codificación de IA, técnicas prácticas de implementación y estrategias avanzadas de integración. ",
+    "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1766001873/Portafolio/certificate-2dixkbdjofkb-1765836031_ozj8pa.jpg",
+    "tecnologies": []
+  },
+  {
     "id": 5,
     "name": "Desarrollo con IA",
     "dateI": "Octubre",
