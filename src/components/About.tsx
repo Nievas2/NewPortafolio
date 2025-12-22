@@ -189,7 +189,7 @@ const About = () => {
             className="w-32 h-32 mb-6 rounded-full overflow-hidden shadow-lg bg-blue-900"
           >
             <img
-              src="/photoProfile.jpeg" // Cambia por la ruta de tu foto
+              src="/photoProfile.jpeg"
               alt="Foto de perfil"
               className="w-full h-full object-cover"
               draggable={false}
@@ -199,14 +199,14 @@ const About = () => {
             Sobre mí
           </h2>
           <p className="text-blue-200 about-description-first">
-            Soy un desarrollador frontend apasionado por crear experiencias web
-            únicas. Con 3 años de experiencia, me especializo en construir
+            Soy un desarrollador Fullstack apasionado por crear experiencias web
+            únicas. Con +3 años de experiencia, me especializo en construir
             interfaces modernas y accesibles.
           </p>
           <p className="text-blue-200 about-description-second">
             Mi enfoque se centra en creacion de aplicaciones web de forma
-            eficiente y escalable. Me encanta aprender nuevas tecnologías y
-            compartir conocimientos con la comunidad.
+            eficiente y escalable. Me encanta aprender nuevas tecnologías,
+            compartir conocimientos con la comunidad y desarrollar en grupo.
           </p>
         </motion.div>
       </div>
