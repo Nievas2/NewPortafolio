@@ -5,6 +5,7 @@ import { Tooltip } from "react-tooltip"
 import About from "../components/About"
 import { Icon } from "@iconify/react"
 import Hero from "../components/Hero"
+import Footer from "../components/Footer"
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
         <WorkExperience />
         <Projects />
         <Courses />
+        <Footer />
       </main>
       <div className="fixed top-2/6 right-8 z-50 flex flex-col justify-center items-center gap-1 p-2 rounded-full bg-black/25 backdrop-blur-md">
         <a
