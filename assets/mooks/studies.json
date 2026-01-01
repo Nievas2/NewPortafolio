@@ -1,5 +1,16 @@
 [
   {
+    "id": 7,
+    "name": "Habilidades blandas",
+    "dateI": "Enero",
+    "dateF": "Enero",
+    "dateYear": "2026",
+    "title": "Curso de Habilidades blandas - Franco Pisso.",
+    "description": "Un curso de habilidades blandas que te ayudara a mejorar tu comunicación y colaboración con otros. Ademas de un gran ayuda en el desarrollo de tu carrera profesional y personal. ",
+    "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1767291025/Portafolio/Certificado_Angel-Gabriel_Nievas_Habilidades_Blandas_n6kbva.webp",
+    "tecnologies": []
+  },
+  {
     "id": 6,
     "name": "Claude Code",
     "dateI": "Diciembre",
