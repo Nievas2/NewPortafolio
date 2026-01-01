@@ -320,7 +320,7 @@ const Footer = () => {
           viewport={{ once: true }}
           transition={{ delay: 0.5 }}
         >
-          © 2025 - Casi todos los derechos reservados
+          © {new Date().getFullYear()} - Casi todos los derechos reservados
         </motion.p>
       </footer>
     </section>
