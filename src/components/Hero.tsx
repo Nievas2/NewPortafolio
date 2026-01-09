@@ -25,7 +25,7 @@ const Hero = () => {
     offset: ["start end", "end start"],
   })
 
- /*  const downloadCV = () => {
+  /*  const downloadCV = () => {
     const url = "/archives/Cv_AngelGabrielNievas_Dev_Fullstack.pdf"
     const link = document.createElement("a")
     link.href = url
@@ -188,7 +188,7 @@ const Hero = () => {
         }}
       >
         <motion.div
-          className="flex flex-col items-center justify-center text-2xl h-full space-y-8 px-4"
+          className="flex flex-col items-center justify-center text-2xl h-full space-y-4 px-4"
           style={{
             opacity: contentOpacity,
             scale: contentOpacity,
@@ -196,7 +196,7 @@ const Hero = () => {
         >
           {/* Logo/Nombre */}
           <motion.img
-            className="w-32 md:w-40 drop-shadow-2xl"
+            className="w-32 md:w-40 xl:w-80 drop-shadow-2xl"
             src="/images/name.png"
             alt="Angel Gabriel Nievas"
             initial={{ scale: 0.8, opacity: 0 }}
@@ -206,15 +206,15 @@ const Hero = () => {
 
           {/* Descripción breve */}
           <motion.div
-            className="text-center max-w-md"
+            className="text-center max-w-md space-y-2"
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            <p className="text-lg text-gray-200 leading-relaxed mb-2">
+            <p className="text-lg xl:text-2xl text-white leading-relaxed text-shadow-black text-shadow-lg">
               Desarrollador Fullstack
             </p>
-            <p className="text-sm text-gray-400 leading-relaxed">
+            <p className="text-sm xl:text-xl text-white leading-relaxed text-shadow-black text-shadow-lg">
               Creando experiencias digitales con tecnologías modernas
             </p>
           </motion.div>
@@ -247,7 +247,7 @@ const Hero = () => {
             <EmailCopyButton />
           </motion.div>
 
-         {/*  <motion.button
+          {/*  <motion.button
             onClick={downloadCV}
             className="flex justify-center items-center group px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 overflow-hidden cursor-pointer"
             whileHover={{ scale: 1.05 }}
