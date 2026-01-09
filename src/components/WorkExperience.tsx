@@ -100,16 +100,12 @@ const WorkExperience = () => {
 
         {/* Timeline de experiences */}
         <div className="relative">
-          {/* Línea vertical principal */}
-          <div className="hidden sm:static absolute left-4 top-0 bottom-0 w-0.5 bg-gradient-to-b from-orange-500 via-red-500 to-pink-600"></div>
-
           {/* Experiencias */}
           <div className="space-y-12">
-            {experiences.map((experience: Experience, index) => (
+            {experiences.map((experience: Experience) => (
               <ExperienceCard
                 key={crypto.randomUUID()}
                 experience={experience}
-                index={index}
               />
             ))}
           </div>

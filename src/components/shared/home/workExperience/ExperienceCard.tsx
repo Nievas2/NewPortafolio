@@ -3,14 +3,7 @@ import type { Experience } from "../../../../interfaces/experience"
 import { motion } from "framer-motion"
 import { ImageModal } from "../../ImageModal"
 
-
-export const ExperienceCard = ({
-  experience,
-  index,
-}: {
-  experience: Experience
-  index: number
-}) => {
+export const ExperienceCard = ({ experience }: { experience: Experience }) => {
   const cardRef = useRef(null)
   const [showDetails, setShowDetails] = useState(false)
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -30,7 +23,7 @@ export const ExperienceCard = ({
 
   // Manejar tecla ESC para cerrar modal
   const handleKeyDown = (e: KeyboardEvent) => {
-    if (e.key === 'Escape') {
+    if (e.key === "Escape") {
       setIsModalOpen(false)
     }
   }
@@ -38,36 +31,30 @@ export const ExperienceCard = ({
   // Agregar/remover event listener para tecla ESC
   useState(() => {
     if (isModalOpen) {
-      document.addEventListener('keydown', handleKeyDown)
+      document.addEventListener("keydown", handleKeyDown)
       // Prevenir scroll del body cuando el modal está abierto
-      document.body.style.overflow = 'hidden'
+      document.body.style.overflow = "hidden"
     } else {
-      document.removeEventListener('keydown', handleKeyDown)
-      document.body.style.overflow = 'unset'
+      document.removeEventListener("keydown", handleKeyDown)
+      document.body.style.overflow = "unset"
     }
 
     return () => {
-      document.removeEventListener('keydown', handleKeyDown)
-      document.body.style.overflow = 'unset'
+      document.removeEventListener("keydown", handleKeyDown)
+      document.body.style.overflow = "unset"
     }
   })
   return (
     <>
-      <motion.div
-        ref={cardRef}
-        className="experience-card relative mb-8"
-        transition={{ duration: 1.2, delay: index * 0.3 }}
-      >
+      <div ref={cardRef} className="experience-card relative mb-8">
         {/* Tarjeta principal */}
-        <motion.div
-          className="bg-gradient-to-br from-slate-900/95 to-slate-800/95 backdrop-blur-md rounded-3xl p-8 shadow-2xl border border-slate-700/50 relative overflow-hidden"
-        >
+        <div className="bg-gradient-to-br from-slate-900/95 to-slate-800/95 backdrop-blur-md rounded-3xl p-8 shadow-2xl border border-slate-700/50 relative overflow-hidden">
           {/* Efecto de brillo */}
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -skew-x-12 transform translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
 
           <div className="grid lg:grid-cols-3 gap-8 items-start">
             {/* Columna izquierda - Info principal */}
-            <div className="lg:col-span-2 space-y-6">
+            <section className="lg:col-span-2 space-y-6">
               {/* Header */}
               <div className="card-content">
                 <div className="flex flex-col sm:flex-row gap-2 items-start sm:items-center justify-between mb-4">
@@ -93,8 +80,18 @@ export const ExperienceCard = ({
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                     >
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      <svg
+                        className="w-4 h-4"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                        />
                       </svg>
                       <span>Ver Proyecto</span>
                     </motion.a>
@@ -112,8 +109,12 @@ export const ExperienceCard = ({
               {/* Tecnologías */}
               <div className="card-content">
                 <h4 className="text-xl font-semibold text-white mb-4 flex items-center">
-                  <svg className="w-5 h-5 mr-2 text-yellow-500" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  <svg
+                    className="w-5 h-5 mr-2 text-yellow-500"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                   </svg>
                   Stack Tecnológico
                 </h4>
@@ -146,8 +147,18 @@ export const ExperienceCard = ({
                     animate={{ rotate: showDetails ? 90 : 0 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    <svg
+                      className="w-5 h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
                     </svg>
                   </motion.div>
                 </motion.button>
@@ -166,8 +177,18 @@ export const ExperienceCard = ({
                     {experience.frontend && (
                       <div className="space-y-3">
                         <h5 className="text-lg font-semibold text-green-400 flex items-center">
-                          <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                          <svg
+                            className="w-5 h-5 mr-2"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                            />
                           </svg>
                           Frontend
                         </h5>
@@ -194,8 +215,18 @@ export const ExperienceCard = ({
                     {experience.backend && (
                       <div className="space-y-3">
                         <h5 className="text-lg font-semibold text-blue-400 flex items-center">
-                          <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+                          <svg
+                            className="w-5 h-5 mr-2"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"
+                            />
                           </svg>
                           Backend
                         </h5>
@@ -220,10 +251,10 @@ export const ExperienceCard = ({
                   </div>
                 </motion.div>
               </div>
-            </div>
+            </section>
 
             {/* Columna derecha - Imagen */}
-            <div className="card-content">
+            <section className="card-content">
               <div className="relative group">
                 <div className="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-red-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
                 <motion.div
@@ -237,7 +268,7 @@ export const ExperienceCard = ({
                     alt={experience.name}
                     className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
                   />
-                  
+
                   {/* Overlay con indicador de zoom */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <motion.div
@@ -246,8 +277,18 @@ export const ExperienceCard = ({
                       whileHover={{ scale: 1, opacity: 1 }}
                       transition={{ duration: 0.2 }}
                     >
-                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                      <svg
+                        className="w-8 h-8 text-white"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
+                        />
                       </svg>
                     </motion.div>
                   </div>
@@ -260,21 +301,10 @@ export const ExperienceCard = ({
                   </div>
                 </motion.div>
               </div>
-
-              {/* Progreso visual */}
-              <div className="mt-6 space-y-3">
-                <div className="flex justify-between text-sm">
-                  <span className="text-gray-400">Progreso del Proyecto</span>
-                  <span className="text-orange-400 font-semibold">100%</span>
-                </div>
-                <div className="w-full bg-slate-700 rounded-full h-2">
-                  <div className="progress-bar bg-gradient-to-r from-orange-500 to-red-600 h-2 rounded-full w-full"></div>
-                </div>
-              </div>
-            </div>
+            </section>
           </div>
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
 
       {/* Modal de imagen */}
       <ImageModal
