@@ -474,5 +474,107 @@
         "description": "Mejore el CEO, accesibilidad y performance de la web."
       }
     ]
+  },
+
+  {
+    "name": "Escribiendo",
+    "typeWork": "Practicas",
+    "dateI": "Noviembre",
+    "dateF": "Enero",
+    "dateYear": "2025/2026",
+    "percentage": "100%",
+    "role": "FRONTEND",
+    "description": "Fue un proyecto que desarrolle en mis tiempos libres para practicar con Typescript y React, fue inspirado en Monkeytype, pero una versión simplificada.",
+    "link": "https://escribiendo.vercel.app",
+    "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1767974803/Portafolio/1e00b39f-2230-448a-9e97-9eea5b93ef84.png",
+    "tecnologies": [
+      {
+        "name": "Typescript",
+        "src": "https://skillicons.dev/icons?i=ts"
+      },
+      {
+        "name": "React",
+        "src": "https://skillicons.dev/icons?i=react"
+      },
+      {
+        "name": "Next js",
+        "src": "https://skillicons.dev/icons?i=nextjs"
+      },
+      {
+        "name": "Tailwind",
+        "src": "https://skillicons.dev/icons?i=tailwind"
+      }
+    ],
+    "images": null,
+    "backend": null,
+    "frontend": null
+  },
+
+  {
+    "name": "Paperly",
+    "typeWork": "Practicas",
+    "dateI": "Diciembre",
+    "dateF": "Enero",
+    "dateYear": "2025/2026",
+    "percentage": "100%",
+    "role": "FRONTEND",
+    "description": "Fue un proyecto inspirado en los juegos de busqueda del tesoro y los puzles, pensado para enviar cartas con o sin codigos para su apertura.",
+    "link": "https://paperly-letter.vercel.app",
+    "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1767974943/Portafolio/93ee5bab-81be-46e0-b6fa-70df50827249.png",
+    "tecnologies": [
+      {
+        "name": "Typescript",
+        "src": "https://skillicons.dev/icons?i=ts"
+      },
+      {
+        "name": "React",
+        "src": "https://skillicons.dev/icons?i=react"
+      },
+      {
+        "name": "Next js",
+        "src": "https://skillicons.dev/icons?i=nextjs"
+      },
+      {
+        "name": "Tailwind",
+        "src": "https://skillicons.dev/icons?i=tailwind"
+      }
+    ],
+    "images": null,
+    "backend": null,
+    "frontend": null
+  },
+
+  {
+    "name": "ReadForge",
+    "typeWork": "Practicas",
+    "dateI": "Diciembre",
+    "dateF": "Actualidad",
+    "dateYear": "2025/2026",
+    "percentage": "100%",
+    "role": "FRONTEND",
+    "description": "ReadForge es una web que busca insentivar y ayudar a las personas a leer más pero con herramientas motivadoras actuales, como son las rachas, logros y sistema de recompenza + tienda virtual.",
+    "link": "https://paperly-letter.vercel.app",
+    "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1767975130/Portafolio/3811b878-82e1-40a5-b68e-b2b694f3fe72.png",
+    "tecnologies": [
+      {
+        "name": "Typescript",
+        "src": "https://skillicons.dev/icons?i=ts"
+      },
+      {
+        "name": "React",
+        "src": "https://skillicons.dev/icons?i=react"
+      },
+      {
+        "name": "Next js",
+        "src": "https://skillicons.dev/icons?i=nextjs"
+      },
+      {
+        "name": "Tailwind",
+        "src": "https://skillicons.dev/icons?i=tailwind"
+      }
+    ],
+    "images": null,
+    "backend": null,
+    "frontend": null
   }
 ]
