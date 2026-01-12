@@ -206,15 +206,18 @@ const Hero = () => {
 
           {/* Descripción breve */}
           <motion.div
-            className="text-center max-w-md space-y-2"
+            className="text-center max-w-md space-y-2 relative"
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            <p className="text-lg xl:text-2xl text-white leading-relaxed text-shadow-black text-shadow-lg">
+            {/* Capa de fondo con gradiente */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/60 blur-xl -z-10 scale-110" />
+
+            <p className="text-lg xl:text-2xl text-white leading-relaxed font-semibold drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)]">
               Desarrollador Fullstack
             </p>
-            <p className="text-sm xl:text-xl text-white leading-relaxed text-shadow-black text-shadow-lg">
+            <p className="text-sm xl:text-xl text-white leading-relaxed drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)]">
               Creando experiencias digitales con tecnologías modernas
             </p>
           </motion.div>
