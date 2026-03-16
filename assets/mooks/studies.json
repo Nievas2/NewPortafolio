@@ -1,6 +1,30 @@
 [
   {
     "id": 7,
+    "name": "AGILE DIGITAL PRODUCT PRACTITIONER",
+    "dateI": "Febrero",
+    "dateF": "Marzo",
+    "dateYear": "2026",
+    "title": "Igrowker Training",
+    "description": "La certificación CADPP™ valida que un profesional entry-level posee competencias aplicadas en colaboración, priorización de entregables, interpretación de documentación profesional y prácticas ágiles en un entorno alineado con dinámicas reales del mercado IT.",
+    "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1773680061/Portafolio/4d4258e4-0b6c-4a3d-bc9b-8e69b3cea98b.png",
+    "tecnologies": [
+      {
+        "name": "Typescript",
+        "src": "https://skillicons.dev/icons?i=ts"
+      },
+      {
+        "name": "React",
+        "src": "https://skillicons.dev/icons?i=react"
+      },
+      {
+        "name": "Tailwind",
+        "src": "https://skillicons.dev/icons?i=tailwind"
+      }
+    ]
+  },
+  {
+    "id": 7,
     "name": "Habilidades blandas",
     "dateI": "Enero",
     "dateF": "Enero",

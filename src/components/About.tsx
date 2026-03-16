@@ -200,7 +200,7 @@ const About = () => {
           </h2>
           <p className="text-blue-200 about-description-first">
             Soy un desarrollador Fullstack apasionado por crear experiencias web
-            únicas. Con +3 años de experiencia, me especializo en construir
+            únicas. Con +4 años de experiencia, me especializo en construir
             interfaces modernas y accesibles.
           </p>
           <p className="text-blue-200 about-description-second">
