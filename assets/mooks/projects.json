@@ -136,7 +136,7 @@
     "role": "FRONTEND",
     "percentage": "100%",
     "description": "Es un sistema de gestión de turnos que simplifica la administración de barberías y mejora la experiencia de los clientes. Ofrece una plataforma intuitiva para agendar citas y gestionar turnos.",
-    "link": "https://cortatebien.com",
+    "link": null,
     "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1750253500/Portafolio/202aa5f36098c0ad8cb0f3d9c167392d_bcfura.png",
     "tecnologies": [
       {
@@ -165,9 +165,9 @@
   },
   {
     "name": "Tambo360",
-    "typeWork": "Practicas",
+    "typeWork": "Experiencia",
     "dateI": "Febrero",
-    "dateF": "Marzo",
+    "dateF": "Actualmente",
     "dateYear": "2026",
     "percentage": "100%",
     "role": "FRONTEND",

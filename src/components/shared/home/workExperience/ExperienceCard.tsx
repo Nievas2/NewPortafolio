@@ -61,7 +61,7 @@ export const ExperienceCard = ({ experience }: { experience: Experience }) => {
                   <div className="flex items-center space-x-4">
                     <div
                       className={`px-4 py-2 bg-gradient-to-r ${getRoleColor(
-                        experience.role
+                        experience.role,
                       )} rounded-full flex items-center space-x-2 text-white font-semibold text-sm shadow-lg`}
                     >
                       <span>{experience.role}</span>
@@ -136,121 +136,123 @@ export const ExperienceCard = ({ experience }: { experience: Experience }) => {
               </div>
 
               {/* Detalles expandibles */}
-              <div className="card-content">
-                <motion.button
-                  onClick={() => setShowDetails(!showDetails)}
-                  className="flex items-center space-x-2 text-orange-400 hover:text-orange-300 font-semibold transition-colors duration-300 cursor-pointer"
-                  whileHover={{ x: 5 }}
-                >
-                  <span>Ver Detalles del Proyecto</span>
-                  <motion.div
-                    animate={{ rotate: showDetails ? 90 : 0 }}
-                    transition={{ duration: 0.3 }}
+              {(experience.frontend || experience.backend) && (
+                <div className="card-content">
+                  <motion.button
+                    onClick={() => setShowDetails(!showDetails)}
+                    className="flex items-center space-x-2 text-orange-400 hover:text-orange-300 font-semibold transition-colors duration-300 cursor-pointer"
+                    whileHover={{ x: 5 }}
                   >
-                    <svg
-                      className="w-5 h-5"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
+                    <span>Ver Detalles del Proyecto</span>
+                    <motion.div
+                      animate={{ rotate: showDetails ? 90 : 0 }}
+                      transition={{ duration: 0.3 }}
                     >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg>
+                      <svg
+                        className="w-5 h-5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M9 5l7 7-7 7"
+                        />
+                      </svg>
+                    </motion.div>
+                  </motion.button>
+
+                  <motion.div
+                    initial={false}
+                    animate={{
+                      height: showDetails ? "auto" : 0,
+                      opacity: showDetails ? 1 : 0,
+                    }}
+                    transition={{ duration: 0.4, ease: "easeInOut" }}
+                    className="overflow-hidden"
+                  >
+                    <div className="pt-6 grid md:grid-cols-2 gap-6">
+                      {/* Frontend Tasks */}
+                      {experience.frontend && (
+                        <div className="space-y-3">
+                          <h5 className="text-lg font-semibold text-green-400 flex items-center">
+                            <svg
+                              className="w-5 h-5 mr-2"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                              />
+                            </svg>
+                            Frontend
+                          </h5>
+                          <div className="space-y-2">
+                            {experience.frontend.map((task, idx) => (
+                              <motion.div
+                                key={crypto.randomUUID()}
+                                className="flex items-start space-x-3 p-3 bg-slate-800/50 rounded-lg"
+                                initial={{ opacity: 0, x: -20 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{ delay: idx * 0.1 }}
+                              >
+                                <div className="w-2 h-2 bg-green-400 rounded-full mt-2 flex-shrink-0"></div>
+                                <p className="text-gray-300 text-sm">
+                                  {task.description}
+                                </p>
+                              </motion.div>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+
+                      {/* Backend Tasks */}
+                      {experience.backend && (
+                        <div className="space-y-3">
+                          <h5 className="text-lg font-semibold text-blue-400 flex items-center">
+                            <svg
+                              className="w-5 h-5 mr-2"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"
+                              />
+                            </svg>
+                            Backend
+                          </h5>
+                          <div className="space-y-2">
+                            {experience.backend.map((task, idx) => (
+                              <motion.div
+                                key={crypto.randomUUID()}
+                                className="flex items-start space-x-3 p-3 bg-slate-800/50 rounded-lg"
+                                initial={{ opacity: 0, x: -20 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{ delay: idx * 0.1 }}
+                              >
+                                <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
+                                <p className="text-gray-300 text-sm">
+                                  {task.description}
+                                </p>
+                              </motion.div>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+                    </div>
                   </motion.div>
-                </motion.button>
-
-                <motion.div
-                  initial={false}
-                  animate={{
-                    height: showDetails ? "auto" : 0,
-                    opacity: showDetails ? 1 : 0,
-                  }}
-                  transition={{ duration: 0.4, ease: "easeInOut" }}
-                  className="overflow-hidden"
-                >
-                  <div className="pt-6 grid md:grid-cols-2 gap-6">
-                    {/* Frontend Tasks */}
-                    {experience.frontend && (
-                      <div className="space-y-3">
-                        <h5 className="text-lg font-semibold text-green-400 flex items-center">
-                          <svg
-                            className="w-5 h-5 mr-2"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                            />
-                          </svg>
-                          Frontend
-                        </h5>
-                        <div className="space-y-2">
-                          {experience.frontend.map((task, idx) => (
-                            <motion.div
-                              key={crypto.randomUUID()}
-                              className="flex items-start space-x-3 p-3 bg-slate-800/50 rounded-lg"
-                              initial={{ opacity: 0, x: -20 }}
-                              animate={{ opacity: 1, x: 0 }}
-                              transition={{ delay: idx * 0.1 }}
-                            >
-                              <div className="w-2 h-2 bg-green-400 rounded-full mt-2 flex-shrink-0"></div>
-                              <p className="text-gray-300 text-sm">
-                                {task.description}
-                              </p>
-                            </motion.div>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-
-                    {/* Backend Tasks */}
-                    {experience.backend && (
-                      <div className="space-y-3">
-                        <h5 className="text-lg font-semibold text-blue-400 flex items-center">
-                          <svg
-                            className="w-5 h-5 mr-2"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"
-                            />
-                          </svg>
-                          Backend
-                        </h5>
-                        <div className="space-y-2">
-                          {experience.backend.map((task, idx) => (
-                            <motion.div
-                              key={crypto.randomUUID()}
-                              className="flex items-start space-x-3 p-3 bg-slate-800/50 rounded-lg"
-                              initial={{ opacity: 0, x: -20 }}
-                              animate={{ opacity: 1, x: 0 }}
-                              transition={{ delay: idx * 0.1 }}
-                            >
-                              <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
-                              <p className="text-gray-300 text-sm">
-                                {task.description}
-                              </p>
-                            </motion.div>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                </motion.div>
-              </div>
+                </div>
+              )}
             </section>
 
             {/* Columna derecha - Imagen */}

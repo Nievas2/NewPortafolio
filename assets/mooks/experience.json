@@ -104,5 +104,34 @@
         "description": "Mejore el CEO, accesibilidad y performance de la web."
       }
     ]
+  },
+   {
+    "name": "Tambo360",
+    "typeWork": "Experiencia",
+    "dateI": "Febrero",
+    "dateF": "Actualmente",
+    "dateYear": "2026",
+    "percentage": "100%",
+    "role": "FRONTEND",
+    "description": "Tambo360 es una plataforma web SaaS B2B diseñada para ayudar a pequeños productores lácteos a gestionar su operación diaria de forma simple y centralizada. Permite registrar producción por lotes, mermas y costos operativos, además de visualizar indicadores clave del establecimiento. La aplicación utiliza una arquitectura multi-tenant para soportar múltiples productores en una misma infraestructura e incorpora un módulo de IA para detectar posibles desvíos productivos y facilitar la toma de decisiones.",
+    "link": "https://tambo360.vercel.app",
+    "src": "https://res.cloudinary.com/dmb8sscjm/image/upload/v1773669874/Portafolio/ffdee265e718aff11c0ded1bee43539f_egie4p.png",
+    "tecnologies": [
+      {
+        "name": "Typescript",
+        "src": "https://skillicons.dev/icons?i=ts"
+      },
+      {
+        "name": "React",
+        "src": "https://skillicons.dev/icons?i=react"
+      },
+      {
+        "name": "Tailwind",
+        "src": "https://skillicons.dev/icons?i=tailwind"
+      }
+    ],
+    "images": null,
+    "backend": null,
+    "frontend": null
   }
 ]
